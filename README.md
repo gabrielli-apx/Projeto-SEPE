@@ -8,3 +8,6 @@ Esse repositório serve para armazenar o projeto de PI de 2026
 -Kézia
 -João
 -Vitória
+
+#Tema do trabalho
+-Inventando a Escrita
