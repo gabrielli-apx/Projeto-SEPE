@@ -38,6 +38,24 @@ Hoje decidimos o que cada um do grupo irá fazer, quais são as melhores habilid
 - Kézia Galeno: Como surgiram os emojis?(comparação);
 - Rafaela Cunhago: Como a escrita mudou com a história?;
 - Vitória Bragato Gonçalves: Escrita cuneiforme da antiga mesopotâmia;
+  
+---------------------------------------------------------------------------------
 
+# 8 de jun. de 2026 | Projeto integrador
+
+ # Anotações:
+Hoje, decidimos quem irá puxar as rédeas do figma e a pessoa que irá enviar o conteúdo pelo GitHub.
+
+# Ações necessárias (pesquisas):
+- Página inicial figma.
+- Página no GitHub.
+
+# Responsabilidades de cada integrante:
+- Gabrielli Dias: GitHub
+- João Vitor: Parte teórica
+- Kauany Luiza Nicolai: Figma
+- Kézia Galeno:  Parte teórica
+- Rafaela Cunhago: Figma
+- Vitória Bragato Gonçalves: Parte teórica
 
 
