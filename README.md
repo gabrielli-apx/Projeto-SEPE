@@ -12,7 +12,7 @@
 ## Tema do trabalho
 -Inventando a Escrita
 
-# Atas
+#Atas
 ------------------
     INVENTANDO A ESCRITA
 # 1 de jun. de 2026 | Projeto integrador
