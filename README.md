@@ -1,5 +1,5 @@
 
-# Esse repositório serve para armazenar o projeto da SEPE de 2026
+# Projeto da SEPE de 2026
 
 # Membros 
 - Gabrielli
@@ -17,13 +17,13 @@
     INVENTANDO A ESCRITA
 # 1 de jun. de 2026 | Projeto integrador
 
-# Ausentes: 
-- Gabrielli Dias
+## Ausentes: 
+- Gabrielli Dias: passou mal
 
-# Anotações:
+## Anotações:
 Hoje decidimos o que cada um do grupo irá fazer, quais são as melhores habilidades para que cada um possa ajudar de forma igualitária. Também começamos a elaboração de nossa página 
 
-# Ações necessárias (pesquisas):
+## Ações necessárias (pesquisas):
 - Como os humanos se comunicavam antes da escrita?;
 - Escrita cuneiforme da antiga mesopotâmia;
 - Hieróglifos do antigo egito;
@@ -31,7 +31,7 @@ Hoje decidimos o que cada um do grupo irá fazer, quais são as melhores habilid
 - Como surgiram os emojis?(comparação);
 - Como a escrita mudou com a história?;
 
-# Responsabilidades de cada integrante:
+## Responsabilidades de cada integrante:
 - Gabrielli Dias: Hieróglifos do antigo egito;
 - João Vitor: Como os humanos se comunicavam antes da escrita?;
 - Kauany Luiza Nicolai: Evolução dos alfabetos;
@@ -43,14 +43,14 @@ Hoje decidimos o que cada um do grupo irá fazer, quais são as melhores habilid
 
 # 8 de jun. de 2026 | Projeto integrador
 
- # Anotações:
+ ## Anotações:
 Hoje, decidimos quem irá puxar as rédeas do figma e a pessoa que irá enviar o conteúdo pelo GitHub.
 
-# Ações necessárias (pesquisas):
+## Ações necessárias (pesquisas):
 - Página inicial figma.
 - Página no GitHub.
 
-# Responsabilidades de cada integrante:
+## Responsabilidades de cada integrante:
 - Gabrielli Dias: GitHub
 - João Vitor: Parte teórica
 - Kauany Luiza Nicolai: Figma
@@ -61,14 +61,14 @@ Hoje, decidimos quem irá puxar as rédeas do figma e a pessoa que irá enviar o
 -------------------------------------------------------------------------------------
 # 15 de jun. de 2026 | Projeto integrador
 
-# Ausentes: 
+## Ausentes: 
 - João Vitor: passou mal
 - Kauany Luiza Nicolai: consulta médica
 
-# Anotações:
+## Anotações:
 - Hoje, conversamos sobre o nosso tema e decidimos o que queremos colocar no site, criando parte de seu design.
 
-# Ações necessárias (pesquisas):
+## Ações necessárias (pesquisas):
 decidir título
 cada um contribuir com uma ideia interativa para o site
 
@@ -80,24 +80,22 @@ Das Pedras aos Pergaminhos: A Invenção da Escrita
 Os Códigos do Passado
 Registro do mundo antigo
 
-Ideias do que colocar no site:
-
-
-## Roteiro de estudos sobre as escritas:
--Consiste em ensinar pessoas as antigas escritas de sua escolha;
+## Ideias do que colocar no site:
+- Roteiro de estudos sobre as escritas:
+- Consiste em ensinar pessoas as antigas escritas de sua escolha;
 - Vamos ter algumas escritas que a pessoa pode escolher aprender;
 - A pessoa mostra o conhecimento que tem sobre o tema e o site 
 - Mapa interativo com as escritas mais interessantes;
 - Os visitantes clicam em diferentes regiões, como Mesopotâmia, Egito, etc, para descobrir como surgiram os primeiros sistemas de escrita, ver símbolos antigos, curiosidades e participar de pequenas atividades, como escrever o próprio nome em hieróglifos ou decifrar mensagens 
 
-# Linha do tempo interativa:
+## Linha do tempo interativa:
 3500 a.C. → Escrita Cuneiforme
 3200 a.C. → Hieróglifos
 1050 a.C. → Alfabeto Fenício
 1450 → Imprensa
 Atualidade → Escrita Digital
 
-# Línguas possíveis para colocar no trabalho
+## Línguas possíveis para colocar no trabalho
 
 - Cuneiforme (sumerios)
 - Hieroglífica
@@ -109,19 +107,19 @@ Atualidade → Escrita Digital
 - Hebraico
 - Avéstico
 
-Divisórias para cada página do site:
+## Divisórias para cada página do site:
 
-Menus e em baixo do menu (opções do que por:)
-Começo do conteúdo;
-como a escrita mudou a história
-Conteúdo inicial;
-explicar como era antes da escrita surgir;
-como surgiu;
-a primeira ‘língua’ /escrita;
-2 ou + páginas para as escritas escolhidas;
-Curiosidades;
-Ideias interativas com o público;
-sobre nós.
+- Menus e em baixo do menu (opções do que por:)
+- Começo do conteúdo;
+- como a escrita mudou a história
+- Conteúdo inicial;
+- explicar como era antes da escrita surgir;
+- como surgiu;
+- a primeira ‘língua’ /escrita;
+- 2 ou + páginas para as escritas escolhidas;
+- Curiosidades;
+- Ideias interativas com o público;
+- sobre nós.
 ----------------------------------------------------------------------------------------------------------------------------------------
 # 22 de jun. de 2026 | Projeto integrador
 
