@@ -1,16 +1,16 @@
 
-## Esse repositório serve para armazenar o projeto da SEPE de 2026
+# Esse repositório serve para armazenar o projeto da SEPE de 2026
 
 # Membros 
--Gabrielli
--Rafaela
--Kauany
--Kézia
--João
--Vitória
+- Gabrielli
+- Rafaela
+- Kauany
+- Kézia
+- João
+- Vitória
 
-## Tema do trabalho
--Inventando a Escrita
+# Tema do trabalho
+- Inventando a Escrita
 
 #Atas
 ------------------
@@ -57,5 +57,106 @@ Hoje, decidimos quem irá puxar as rédeas do figma e a pessoa que irá enviar o
 - Kézia Galeno:  Parte teórica
 - Rafaela Cunhago: Figma
 - Vitória Bragato Gonçalves: Parte teórica
+
+-------------------------------------------------------------------------------------
+# 15 de jun. de 2026 | Projeto integrador
+
+# Ausentes: 
+- João Vitor: passou mal
+- Kauany Luiza Nicolai: consulta médica
+
+# Anotações:
+- Hoje, conversamos sobre o nosso tema e decidimos o que queremos colocar no site, criando parte de seu design.
+
+# Ações necessárias (pesquisas):
+decidir título
+cada um contribuir com uma ideia interativa para o site
+
+## Ideia de títulos para o site:
+Decifrando os Primeiros Símbolos
+A Invenção da Escrita: Das Imagens aos Símbolos
+Antes do Alfabeto: Como Surgiu a Escrita
+Das Pedras aos Pergaminhos: A Invenção da Escrita
+Os Códigos do Passado
+Registro do mundo antigo
+
+Ideias do que colocar no site:
+
+
+## Roteiro de estudos sobre as escritas:
+-Consiste em ensinar pessoas as antigas escritas de sua escolha;
+- Vamos ter algumas escritas que a pessoa pode escolher aprender;
+- A pessoa mostra o conhecimento que tem sobre o tema e o site 
+- Mapa interativo com as escritas mais interessantes;
+- Os visitantes clicam em diferentes regiões, como Mesopotâmia, Egito, etc, para descobrir como surgiram os primeiros sistemas de escrita, ver símbolos antigos, curiosidades e participar de pequenas atividades, como escrever o próprio nome em hieróglifos ou decifrar mensagens 
+
+# Linha do tempo interativa:
+3500 a.C. → Escrita Cuneiforme
+3200 a.C. → Hieróglifos
+1050 a.C. → Alfabeto Fenício
+1450 → Imprensa
+Atualidade → Escrita Digital
+
+# Línguas possíveis para colocar no trabalho
+
+- Cuneiforme (sumerios)
+- Hieroglífica
+- Chinesa
+- Latim
+- Glifos Maias e Pré-colombianos
+- Alfabeto Fenicio
+- Grego Antigo
+- Hebraico
+- Avéstico
+
+Divisórias para cada página do site:
+
+Menus e em baixo do menu (opções do que por:)
+Começo do conteúdo;
+como a escrita mudou a história
+Conteúdo inicial;
+explicar como era antes da escrita surgir;
+como surgiu;
+a primeira ‘língua’ /escrita;
+2 ou + páginas para as escritas escolhidas;
+Curiosidades;
+Ideias interativas com o público;
+sobre nós.
+----------------------------------------------------------------------------------------------------------------------------------------
+# 22 de jun. de 2026 | Projeto integrador
+
+## Ausentes: 
+João Vitor: passou mal
+Gabrielli Dias: consulta médica
+
+## Anotações:
+Decidimos quais escritas vamos usar no trabalho e iniciamos a pesquisa de cada uma. Hoje a aula irá até as 14:00hrs pois temos a inauguração da quadra.
+
+## Ações necessárias (pesquisas):
+passar os documentos ata para o github
+desenvolvimento da logo
+divisão de pesquisas
+
+## Responsabilidades de cada integrante:
+- Gabrielli Dias: Pesquisa cuneiforme e hieroglífica;
+- João Vitor: Pesquisa alfabeto fenício e hieroglífica;
+- Kauany Luiza Nicolai:  Figma e pesquisa sobre Latim;
+- Kézia Galeno: Wireframe e pesquisa sobre avéstico;
+- Rafaela Cunhago: Figma e pesquisa sobre Latim;
+- Vitória Bragato Gonçalves: Logo e pesquisa grego antigo;
+
+## Escritas escolhidas:
+ 3.400 a.C. → Escrita cuneiforme
+ 3.200 a.C. → Hieróglifos egípcios
+ 1.050 a.C. → Alfabeto fenício
+ 800 a.C. → Alfabeto grego antigo
+ 700 a.C. → Alfabeto latino (latim)
+ 300 a.C. → Glifos maias e escritas pré-colombianas
+ 300 d.C. → Escrita avéstica
+
+
+
+
+
 
 
