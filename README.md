@@ -152,9 +152,18 @@ divisão de pesquisas
  300 a.C. → Glifos maias e escritas pré-colombianas
  300 d.C. → Escrita avéstica
 
+----------------------------------------------------------------------------------------------------------------------------------------
+# 06 de jul. de 2026 | Projeto integrador
 
+## Anotações:
+- continuação do figma
+- todos pesquisando e procurando outros tipos de referências
 
-
-
-
+## Responsabilidades de cada integrante:
+- Gabrielli Dias: Intagram;
+- João Vitor: Ata, pesquisa e referencias;
+- Kauany Luiza Nicolai:  Figma;
+- Kézia Galeno: Figma;
+- Rafaela Cunhago: Figma;
+- Vitória Bragato Gonçalves: Ata, pesquisa e referencias.
 
