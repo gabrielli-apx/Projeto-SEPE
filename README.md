@@ -2,12 +2,12 @@
 # Projeto da SEPE de 2026
 
 # Membros 
-- Gabrielli
-- Rafaela
-- Kauany
-- Kézia
-- João
-- Vitória
+- Gabrielli Aparecida Dias
+- Rafaela Cunhago
+- Kauany Luiza Nicolai da Silva
+- Kézia de Oliveira Galeno
+- João Vitor Plocharski Theodoro
+- Vitória Bragato Gonçalves
 
 # Tema do trabalho
 - Inventando a Escrita
