@@ -171,7 +171,7 @@ divisão de pesquisas
 # 13 de jul. de 2026 | Projeto integrador
 
 ## Anotações:
-- converça com o professor sobre as equipes
+- conversa com o professor sobre as equipes
 
 ## Responsabilidades de cada integrante:
 - Gabrielli Dias: Incio do css;
