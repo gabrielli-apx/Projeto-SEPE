@@ -167,3 +167,16 @@ divisão de pesquisas
 - Rafaela Cunhago: Figma;
 - Vitória Bragato Gonçalves: Ata, pesquisa e referencias.
 
+---------------------------------------------------------------------------------------------------------------------------------------
+# 13 de jul. de 2026 | Projeto integrador
+
+## Anotações:
+- converça com o professor sobre as equipes
+
+## Responsabilidades de cada integrante:
+- Gabrielli Dias: Incio do css;
+- João Vitor: figma;
+- Kauany Luiza Nicolai: Figma;
+- Kézia Galeno: Figma;
+- Rafaela Cunhago: Figma;
+- Vitória Bragato Gonçalves: Incio do css.
