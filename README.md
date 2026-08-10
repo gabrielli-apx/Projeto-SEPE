@@ -180,3 +180,33 @@ divisão de pesquisas
 - Kézia Galeno: Figma;
 - Rafaela Cunhago: Figma;
 - Vitória Bragato Gonçalves: Incio do css.
+  ---------------------------------------------------------------------------------------------------------------------------------------
+# 03 de ago. de 2026 | Projeto integrador
+
+## Anotações:
+- Conversas sobre o incio do html
+
+## Responsabilidades de cada integrante:
+- Gabrielli Dias: Incio do css;
+- João Vitor: html;
+- Kauany Luiza Nicolai: Figma e instagram;
+- Kézia Galeno: Figma e instagram;
+- Rafaela Cunhago: Figma e instagram;
+- Vitória Bragato Gonçalves: Incio do css.
+ ---------------------------------------------------------------------------------------------------------------------------------------
+# 10 de ago. de 2026 | Projeto integrador
+
+## Ausentes: 
+- João Vitor: Dentista;
+- Kauany: Consulta
+
+## Anotações:
+
+## Responsabilidades de cada integrante:
+- Gabrielli Dias: Incio do css;
+- João Vitor: figma;
+- Kauany Luiza Nicolai: Figma;
+- Kézia Galeno: Figma;
+- Rafaela Cunhago: Figma;
+- Vitória Bragato Gonçalves: Incio do css.
+
