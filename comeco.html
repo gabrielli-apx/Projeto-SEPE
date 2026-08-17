@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/bloons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/script.js"></script>
 
     <title>Projeto SEPE</title>
   </head>
@@ -193,17 +196,5 @@
       </div>
     </footer>
 
-    <script>
-      const menuToggle = document.getElementById("menuToggle");
-      const navList = document.getElementById("navList");
-
-      menuToggle.addEventListener("click", () => {
-        const isOpen = navList.classList.toggle("open");
-
-        menuToggle.classList.toggle("active");
-
-        menuToggle.setAttribute("aria-expanded", isOpen);
-      });
-    </script>
   </body>
 </html>
