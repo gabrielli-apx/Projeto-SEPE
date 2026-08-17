@@ -209,4 +209,27 @@ divisão de pesquisas
 - Kézia Galeno: Figma;
 - Rafaela Cunhago: Figma;
 - Vitória Bragato Gonçalves: Incio do css.
+---------------------------------------------------------------------------------------------------------------------------------------
+# 17 de ago. de 2026 | Projeto integrador
 
+## Anotações:
+Conversa sobre as páginas de css.
+github fora do ar
+
+## Ações necessárias:
+- Linha do tempo
+- Começo
+- Sobre Nós
+- Menu quiz
+- Curiosidades 
+- Páginas escritas
+ 
+## Responsabilidades de cada integrante:
+
+- Gabrielli Dias: Linha do tempo;
+- João Vitor: Começo;
+- Kauany Luiza Nicolai: Sobre Nós;
+- Kézia Galeno: Menu quiz;
+- Rafaela Cunhago: Curiosidades ;
+- Vitória Bragato Gonçalves: Páginas escritas.
+  
