@@ -1,6 +1,6 @@
 /* ===== Main ===== */
 main {
-  background-image: url("../imagem/fundo.png");
+  background-image: url(fundo.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
