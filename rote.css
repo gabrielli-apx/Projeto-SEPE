@@ -1,0 +1,95 @@
+/* === main === */
+.apresentacao h1{
+    background-color: #7a1f24;
+    color:#f2e9d8;
+    padding: 29px ;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+}
+.apresentacao p{
+    background-color: #F5E9D2;
+    padding: 20px 30px 30px 30px;
+    border-radius: 36px;
+    margin: 10px;
+}
+.opcoes ul li div img{
+    width: 55%;
+    margin: 30px 0 0 0;
+}
+.opcoes ul li .hieroglifos img{
+    width: 35%;
+}
+.opcoes h1{
+    background-color: #714A3E;
+    color:#f2e9d8;
+    padding: 29px ;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 40px 0 0 0;
+}
+.opcoes ul {
+    background-color: #f2e9d8;
+    margin: 40px 35px;
+    border-radius: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.opcoes ul li .hieroglifos{
+    border: 10px solid #714A3E;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}
+.opcoes ul li .fenicio{
+    border: 10px solid #714A3E;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}
+.opcoes ul li .glifos{
+    border: 10px solid #714A3E;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}
+.opcoes ul li .atualidade{
+    border: 10px solid #714A3E;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}
+.opcoes ul li .cuneiforme{
+    border: 10px solid #7a1f24;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}
+.opcoes ul li .grego{
+    border: 10px solid #7a1f24;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}
+.opcoes ul li .latim{
+    border: 10px solid #7a1f24;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}.opcoes ul li .avestico{
+    border: 10px solid #7a1f24;
+    text-align: center;
+    border-radius: 30px;
+    margin: 35px;
+}
+.opcoes p{
+    background-color: #f5e4c4;
+    border-radius: 20px;
+    padding: 15px 0;
+    margin: 40px 40px 30px 40px;
+    font-size: 25px;
+}
+ @media only screen and (max-width: 768px){
+    
+ }
