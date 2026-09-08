@@ -1,18 +1,18 @@
 /* ===== Main ===== */
 main {
-    background-image: url(fundo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding-bottom: 0;
+  background-image: url(fundo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding-bottom: 0;
 }
 
 main h1 {
     color: white;
     background-color: #714A3E;
-    padding: 4vw 3vw;
-    font-size: 3vw;
+    padding: 3vw 3vw;
+    font-size: 2vw;
     margin: 0 0 1rem 0;
 }
 
