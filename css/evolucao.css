@@ -101,11 +101,11 @@
 /* DATA */
 .timeline li::after {
   content: attr(data-date);
-  top: -2.5rem;
+  top: -3.8rem;
 }
 
 .timeline li:nth-child(odd)::after {
-  top: 2.5rem;
+  top: 4rem;
   font-size: 1.4vw;
   text-align: center;
 }
@@ -130,7 +130,7 @@
 }
 
 .timeline li:nth-child(odd) > .title {
-  top: -2.4rem;
+  top: -2.5rem;
 }
 
 .timeline li:hover .title {
@@ -177,7 +177,7 @@
   border-radius: 1rem;
   text-align: center;
   margin-left: 0.7rem;
-  font-size: 1vw;
+  font-size: 0.8vw;
 }
 .data.show p {
   margin-left: 0;
@@ -203,7 +203,7 @@
 }
 
 .timeline h3 {
-  font-size: 2vw;
+  font-size: 1.6vw;
   text-align: center;
 }
 /*linha vermelha*/
