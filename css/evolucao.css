@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #8e1919;
+  --primary-color: #7a1f24;
 }
 
 * {
@@ -101,11 +101,11 @@
 /* DATA */
 .timeline li::after {
   content: attr(data-date);
-  top: -3.8rem;
+  top: -2.5rem;
 }
 
 .timeline li:nth-child(odd)::after {
-  top: 4rem;
+  top: 2.5rem;
   font-size: 1.4vw;
   text-align: center;
 }
@@ -130,7 +130,7 @@
 }
 
 .timeline li:nth-child(odd) > .title {
-  top: -2.5rem;
+  top: -2.4rem;
 }
 
 .timeline li:hover .title {
@@ -177,7 +177,7 @@
   border-radius: 1rem;
   text-align: center;
   margin-left: 0.7rem;
-  font-size: 0.8vw;
+  font-size: 1vw;
 }
 .data.show p {
   margin-left: 0;
@@ -191,6 +191,18 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   border: 2px solid #fff;
   margin: 1vw 0 0 0;
+
+  /* necessário agora que .close é um <a> */
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.data .close:hover,
+.data .close:visited,
+.data .close:active {
+  color: #fff;
 }
 
 .data > * {
@@ -203,7 +215,7 @@
 }
 
 .timeline h3 {
-  font-size: 1.6vw;
+  font-size: 2vw;
   text-align: center;
 }
 /*linha vermelha*/
