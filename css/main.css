@@ -72,6 +72,10 @@ section {
     font-size: 1.1rem;
 }
 
+h6{
+    opacity: 0;
+}
+
 
 /* === Celular === */
 

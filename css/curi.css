@@ -4,8 +4,10 @@
 .curiosidades ul li {
     margin: 18px ;
 }
-.curiosidades img {
-    width: 70%;
+.curiosidades ul li img {
+    width: 50%;
+    height: auto;
+    margin: 20px;
 }
 .curiosidades .cvermelho {
     text-align: center;
