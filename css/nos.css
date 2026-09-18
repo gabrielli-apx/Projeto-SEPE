@@ -1,208 +1,190 @@
 main {
-    background-color: #e8e4d8;
-    background-image: url("../css/fundo.png;");
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 20px;
+  background-color: #e8e4d8;
+  background-image: url("../css/fundo.png;");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 20px;
 }
 main {
-    background-image: url("../css/fundo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
+  background-image: url("../css/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
 }
 
-
 .titulo-secao {
-    width: 100%;
-    background-color:#841919;
-    padding: 7px 20px;
+  width: 100%;
+  background-color: #841919;
+  padding: 7px 20px;
 }
 
 .card {
-    width: 88%;
-    margin: 18px auto;
-    padding: 18px 16px;
-    box-sizing: border-box;
+  width: 88%;
+  margin: 18px auto;
+  padding: 18px 16px;
+  box-sizing: border-box;
 
-    background-color: #f5eedf;
-    border: 4px solid #841919;
-    border-radius: 25px;
+  background-color: #f5eedf;
+  border: 5px solid #841919;
+  border-radius: 25px;
 }
 
 .titulo-secao {
-    width: 100%;
-    background-color: #841919;
-    padding: 7px 20px;
-    box-sizing: border-box;
+  width: 100%;
+  background-color: #841919;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 
 .titulo-secao h2 {
-    margin: 0;
-    color: white;
-    font-family: "Inria Serif", serif;
-    font-size: 13px;
-    font-weight: 400;
+  margin: 0;
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .card {
-    width: 88%;
-    margin: 18px auto;
-    padding: 18px 16px;
-    box-sizing: border-box;
+  width: 88%;
+  margin: 18px auto;
+  padding: 18px 16px;
+  box-sizing: border-box;
 
-    background-color: #f5eedf;
-    border: 4px solid #841919;
-    border-radius: 25px;
-
-    font-family: "Inria Serif", serif;
+  background-color: #f5eedf;
+  border: 5px solid #841919;
+  border-radius: 25px;
 }
-
 
 .card h3 {
-    margin: 0 0 12px;
-
-    text-align: center;
-
-    color:#841919;
-
-    font-family: "Inria Serif", serif;
-    font-size: 16px;
-    font-weight: 400;
-    
+  margin: 0 0 12px;
+  text-align: center;
+  color: #841919;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-
-
 .card p {
-    margin: 0 0 10px;
-
-    color: #4c2924;
-
-    font-size: 9px;
-    line-height: 1.35;
-
-    text-align: justify;
+  margin: 0 0 10px;
+  color: #4c2924;
+  font-size: 9px;
+  line-height: 1.35;
+  text-align: justify;
 }
 
 .card p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
-
 
 .integrantes {
-    border: none;
-    border-radius: 35px;
-    border: 4px solid #841919;
-    padding: 18px 12px
+  border: none;
+  border-radius: 35px;
+  border: 5px solid #841919;
+  padding: 18px 12px;
 }
-
 
 .integrantes h3 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-
 .integrantes ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px 8px;
-    padding: 0;
-    margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 8px;
+  padding: 0;
+  margin: 0;
 
-    list-style: none;
+  list-style: none;
 }
 
 .integrantes li {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-    text-align: center;
-    color: #4c2924;
-    font-family: "Inria Serif", serif;
-    font-size: 7px;
-    line-height: 1.2;
-    background-color: white;
-    padding: 10px;
-    border-radius: 12px;
-    width: 120px;
-    justify-self: center; 
-    min-height: 110px;  
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  color: #4c2924;
+  font-size: 7px;
+  line-height: 1.2;
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 120px;
+  justify-self: center;
+  min-height: 110px;
 }
-
 .integrantes li img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    margin-bottom: 5px;
+  align-self: center;
 }
-.integrantes li.n img{
-   margin-top: 11px;
-
-
+.integrantes li img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-bottom: 5px;
 }
-
-
+.integrantes li.n img {
+  margin-top: 11px;
+}
 
 @media (min-width: 768px) {
+  main {
+    padding-bottom: 40px;
+  }
 
-    main {
-        padding-bottom: 40px;
-    }
+  .titulo-secao {
+    padding: 12px 60px;
+  }
 
-    .titulo-secao {
-        padding: 12px 60px;
-    }
+  .titulo-secao h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
 
-    .titulo-secao h2 {
-        font-size: 22px;
-    }
+  .card {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0px;
+    border-radius: 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
 
-    .card {
-        width: 100%;
-        max-width: none;
-        margin: 20px 0;
-        border-radius: 0;
-        box-sizing: border-box;
-        border-radius: 20px;
-    }
+  .titulo-secao {
+    width: 100%;
+    padding: 20px 20px;
+  }
 
-    .titulo-secao {
-        width: 100%;
-        padding: 12px 20px;
-    }
+  .card h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
 
-    .card h3 {
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
+  .card p {
+    font-size: 15px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+  }
 
-    .card p {
-        font-size: 15px;
-        line-height: 1.5;
-    }
+  .integrantes {
+    padding: 30px;
+  }
 
-    .integrantes {
-        padding: 30px;
-    }
+  .integrantes ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
 
-    .integrantes ul{
-     display: grid;
-     grid-template-columns: repeat(6,1fr) ;
-     gap: 20px;
-    }
+  .integrantes li {
+    font-size: 12px;
+    padding: 15px;
+    border-radius: 15px;
+    width: 190px;
+  }
 
-    .integrantes li {
-        font-size: 12px;
-        padding: 15px ;
-        border-radius: 15px;
-        width: 190px;
-    }
-
-    .integrantes li img {
-        width: 120px;
-        height: 120px;
-    }
+  .integrantes li img {
+    width: 120px;
+    height: 120px;
+  }
+.card{
+   border: 7px solid #841919;
+}
 }
