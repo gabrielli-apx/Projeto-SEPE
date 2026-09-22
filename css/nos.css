@@ -11,6 +11,9 @@ main {
     background-position: center;
     background-repeat: repeat;
 }
+.espaco{
+    padding: 0vw 5vw 0vw 5vw;
+}
 
 
 .titulo-secao {
