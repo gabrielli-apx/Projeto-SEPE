@@ -16,7 +16,7 @@ footer {
 }
 
 .footer-brand h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.25;
   margin: 0 0 4px 0;
@@ -52,7 +52,8 @@ footer .footer-logo {
   color: #f2e9d8;
   text-decoration: underline;
   text-underline-offset: 4px;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
+  margin: 10px;
 }
 
 .footer-info h4 {
@@ -103,8 +104,21 @@ footer .footer-logo {
     }
 
     .footer-social ul {
-        gap: 0px;
+        gap: 20px;
     }
+  .footer-info h4 {
+  font-weight: 400;
+  font-size: 0.9rem;
+
+}
+.footer-info nav ul li a {
+  font-size: 0.95rem;
+}
+.footer-brand h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 }
 
 
