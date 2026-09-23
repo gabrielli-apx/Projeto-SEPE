@@ -31,6 +31,16 @@ main {
     background-color: #f5eedf;
     border: 4px solid #841919;
     border-radius: 25px;
+
+    /* === Transições (mesmo estilo do .primeiro/.segundo) === */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+/* Card sobe ao passar o mouse */
+.card:hover {
+    transform: translateY(-14px);
 }
 
 .titulo-secao {
@@ -132,7 +142,16 @@ main {
     border-radius: 12px;
     width: 120px;
     justify-self: center; 
-    min-height: 110px;  
+    min-height: 110px;
+
+    /* === Transições === */
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+/* Card de integrante sobe ao passar o mouse */
+.integrantes li:hover {
+    transform: translateY(-14px);
 }
 
 .integrantes li img {
@@ -140,7 +159,14 @@ main {
     height: 55px;
     object-fit: contain;
     margin-bottom: 5px;
+    transition: transform 0.4s ease;
 }
+
+/* Imagem dá um leve zoom */
+.integrantes li:hover img {
+    transform: scale(1.06) rotate(-1.5deg);
+}
+
 .integrantes li.n img{
    margin-top: 11px;
 
@@ -210,5 +236,14 @@ main {
     .integrantes li img {
         width: 120px;
         height: 120px;
+    }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .integrantes li,
+    .integrantes li img {
+        transition: none !important;
     }
 }

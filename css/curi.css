@@ -1,14 +1,21 @@
-.curiosidades ul  {
+.curiosidades ul {
     padding: 18px;
 }
+
 .curiosidades ul li {
-    margin: 18px ;
+    margin: 18px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    will-change: transform;
 }
+
 .curiosidades ul li img {
     width: 50%;
     height: auto;
     margin: 20px;
+    transition: transform 0.4s ease;
 }
+
 .curiosidades .cvermelho {
     text-align: center;
     background-color: #F5E9D2;
@@ -16,15 +23,18 @@
     border-radius: 40px;
     padding: 10px;
 }
-.curiosidades .cvermelho h2{
+
+.curiosidades .cvermelho h2 {
     font-size: 1.18rem;
     font-weight: 600;
     margin: 8px;
 }
+
 .curiosidades .cvermelho p {
     color: rgb(92, 91, 91);
     margin: 8px;
 }
+
 .curiosidades .cmarrom {
     text-align: center;
     background-color: #F5E9D2;
@@ -32,17 +42,27 @@
     border-radius: 40px;
     padding: 10px;
 }
-.curiosidades .cmarrom h2{
+
+.curiosidades .cmarrom h2 {
     font-size: 1.18rem;
     font-weight: 600;
     margin: 8px;
 }
+
 .curiosidades .cmarrom p {
     color: rgb(92, 91, 91);
     margin: 8px;
 }
 
+/* Caixa sobe ao passar o mouse */
+.curiosidades ul li:hover {
+    transform: translateY(-20px);
+}
 
+/* Imagem dá um leve zoom */
+.curiosidades ul li:hover img {
+    transform: scale(1.06) rotate(-1.5deg);
+}
 
 @media only screen and (min-width: 600px) {
     .curiosidades ul li {
@@ -51,11 +71,21 @@
         margin: 40px 280px;
         padding: 30px;
     }
+
     .curiosidades ul li img {
-       width: 70%;
+        width: 70%;
     }
-    .curiosidades h1{
+
+    .curiosidades h1 {
         font-size: 1.4rem;
         padding: 30px;
+    }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    .curiosidades ul li,
+    .curiosidades ul li img {
+        transition: none !important;
     }
 }

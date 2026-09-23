@@ -23,7 +23,7 @@
     margin: 40px 0 0 0;
 }
 
-/* ===== Grade dos cards: um ao lado do outro ===== */
+/* ===== Grade dos cards ===== */
 .opcoes ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -33,36 +33,55 @@
     border-radius: 40px;
     text-align: center;
     padding: 10px;
-    border:  #714A3E solid 10px;
-
+    border: #714A3E solid 10px;
 }
 
-/* ===== Card (igual ao original) ===== */
+/* ===== Card (a caixa) ===== */
 .opcoes ul li div {
-    border: 10px solid #7a1f24;
+    border: 10px solid #714A3E;
     text-align: center;
     border-radius: 30px;
     margin: 35px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.3s ease;
+    will-change: transform;
 }
 
-/* cards marrons: só muda a cor da borda */
-.opcoes ul li .hieroglifos,
-.opcoes ul li .fenicio,
-.opcoes ul li .glifos,
-.opcoes ul li .atualidade {
-    border-color: #714A3E;
+/* Card sobe levemente ao passar o mouse (não conflita com o selecionado) */
+.opcoes ul li div:hover {
+    transform: translateY(-10px);
+}
+
+/* Borda vermelha na caixa (div) quando o card está selecionado */
+.opcoes ul li div:has(.botao-categoria.selecionado),
+.opcoes ul li div.card-selecionado {
+    border-color: #7a1f24 !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 
 .opcoes ul li div img {
     height: 10vw;
     margin: 30px 0 0 0;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom leve na imagem ao passar o mouse no card */
+.opcoes ul li div:hover img {
+    transform: scale(1.06);
 }
 
 .opcoes ul li .hieroglifos img {
-   /* width: 35%;*/
+    width: 35%;
 }
-
-.opcoes p {
+.opcoes ul li .cuneiforme img {
+    width: 60%;
+}
+.opcoes ul li .avestico img {
+    width: 65%;
+}
+/* ===== Nome da escrita (antigo <p>, agora <button>) ===== */
+.opcoes p,
+.opcoes .botao-categoria {
     background-color: #f5e4c4;
     border-radius: 20px;
     padding: 15px 0;
@@ -70,11 +89,61 @@
     font-size: clamp(16px, 1.8vw, 25px);
 }
 
-h6 {
-    opacity: 0;
+.opcoes .botao-categoria {
+    display: block;
+    width: calc(100% - 30px);
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
 }
-.avestico{
-   /* padding: 3.7vw;*/
+
+.opcoes .botao-categoria:hover {
+    filter: brightness(0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Botão selecionado ===== */
+.opcoes .botao-categoria.selecionado {
+    background-color: #7a1f24;
+    color: #f2e9d8;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Linha do botão Começar Quiz (dentro da caixa) ===== */
+.opcoes ul li.linha-quiz {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 0 0 25px 0;
+}
+
+#comecarQuiz {
+    display: inline-block;
+    margin: 0;
+    padding: 15px 40px;
+    background-color: #7a1f24;
+    color: #f2e9d8;
+    border: none;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: clamp(16px, 1.8vw, 25px);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
+}
+
+#comecarQuiz:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.avestico {
     max-width: 200%;
 }
 
@@ -90,5 +159,15 @@ h6 {
     .opcoes ul {
         grid-template-columns: 1fr;
         margin: 40px 15px;
+    }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    .opcoes ul li div,
+    .opcoes ul li div img,
+    .opcoes .botao-categoria,
+    #comecarQuiz {
+        transition: none !important;
     }
 }

@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #7a1f24;
+}
+.resumo h3{
+    background-color: var(--primary-color);
+    font-size: 2vw;
+    padding: 2vw;
+    color: white;
+    text-align: center;
+    
+ }
+ .resumo p{
+    background-color:antiquewhite;
+    margin: 4vw;
+    padding: 2vw;
+    font-size: 1.8vw;
+    color: rgba(0, 0, 0, 0.399);
+    border-radius: 20px;
+    
+ }
+ .text{
+    background-color: var(--primary-color);
+    padding: 1vw;
+    margin: 4vw 0;
+ }
+ .caixa{
+   background-color: antiquewhite;
+   margin: 12rem;
+   padding: 2vw;
+   border: 30px solid var(--primary-color);
+   border-radius: 30px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   /* === Transições (mesmo padrão das outras caixas) === */
+   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease;
+   will-change: transform;
+ }
+
+ /* Caixa sobe ao passar o mouse */
+ .caixa:hover{
+   transform: translateY(-14px);
+ }
+
+ .caixa h4{
+   color: #8e1919;
+   font-weight: 200;
+   font-size: 3vw;
+   padding: 3vw;
+ }
+ .caixa h3{
+   width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+ }
+
+ button{
+   border: 10px solid var(--primary-color);
+   padding: 2vw;
+   margin: 1vw;
+   border-radius: 30px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+   transition: 0.3s;
+ }
+ button:hover{
+   background-color: var(--primary-color);
+   color: white;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+   transform: translateY(-2px);
+ }
+.alternativas{
+  display: flex;
+  font-size: 2vw;
+}
+
+/* === Hover nas alternativas: entorno muda de cor === */
+.alternativas li,
+.alternativas > * {
+  padding: 0.8vw 1.2vw;
+  border-radius: 16px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.alternativas li:hover,
+.alternativas > *:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-4px);
+}
+
+
+.categoria{
+  margin: 1vw;
+  font-size: 2vw;
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    .caixa,
+    button,
+    .alternativas li,
+    .alternativas > * {
+        transition: none !important;
+    }
+}

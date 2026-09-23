@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #7a1f24;
+}
+
+.resultado h3 {
+  background-color: var(--primary-color);
+  font-size: 2vw;
+  padding: 2vw;
+  color: white;
+  text-align: center;
+}
+
+.caixa-resultado {
+  background-color: antiquewhite;
+  margin: 6rem 12rem;
+  padding: 3vw;
+  border: 20px solid var(--primary-color);
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* === Transições === */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+/* Caixa sobe ao passar o mouse */
+.caixa-resultado:hover {
+  transform: translateY(-14px);
+}
+
+.assuntos {
+  font-size: 1.4vw;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 1vw;
+}
+
+/* ===== Círculo de porcentagem (donut) ===== */
+
+.circulo-porcentagem {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary-color) 0deg, rgb(203, 185, 161) 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vw 0;
+  transition: transform 0.4s ease;
+}
+
+.circulo-porcentagem::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+}
+
+.circulo-porcentagem #porcentagemTexto {
+  position: relative;
+  z-index: 1;
+  font-size: 2.2vw;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Leve zoom no círculo quando a caixa é "hovered" */
+.caixa-resultado:hover .circulo-porcentagem {
+  transform: scale(1.06);
+}
+
+.detalhe {
+  font-size: 1.6vw;
+  color: #8e1919;
+  margin-top: 1vw;
+}
+
+.mensagem-nivel {
+  font-size: 1.4vw;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 40vw;
+}
+
+.por-categoria {
+  width: 100%;
+  margin-top: 2vw;
+  text-align: left;
+}
+
+.por-categoria h4 {
+  color: var(--primary-color);
+  font-size: 1.4vw;
+  text-align: center;
+  margin-bottom: 1vw;
+}
+
+.lista-categorias {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+
+.item-categoria {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.item-categoria .nome-categoria {
+  width: 12vw;
+  font-size: 1.1vw;
+  color: #8e1919;
+}
+
+.item-categoria .barra-fundo {
+  flex: 1;
+  height: 1.2vw;
+  background-color: rgba(122, 31, 36, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.item-categoria .barra-preenchida {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  transition: width 0.6s ease;
+}
+
+.item-categoria .valor-categoria {
+  width: 4vw;
+  font-size: 1.1vw;
+  color: #8e1919;
+  text-align: right;
+}
+
+.botoes-resultado {
+  display: flex;
+  gap: 1vw;
+  margin-top: 2vw;
+}
+
+.botoes-resultado button {
+  border: 8px solid var(--primary-color);
+  padding: 1vw 2vw;
+  border-radius: 30px;
+  background:rgb(247, 227, 201);
+  cursor: pointer;
+  font-size: 1.2vw;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.botoes-resultado button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    .caixa-resultado,
+    .circulo-porcentagem,
+    .botoes-resultado button {
+        transition: none !important;
+    }
+}
