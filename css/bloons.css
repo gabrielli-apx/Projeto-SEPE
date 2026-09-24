@@ -1,11 +1,11 @@
 /* ===== Main ===== */
 main {
-  background-image: url(fundo.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding-bottom: 0;
+    background-image: url(fundo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-bottom: 0;
 }
 
 main h1 {
@@ -14,6 +14,7 @@ main h1 {
     padding: 3vw 3vw;
     font-size: 2vw;
     margin: 0 0 1rem 0;
+    animation: entrada 0.7s ease-out;
 }
 
 .cards {
@@ -23,7 +24,6 @@ main h1 {
     justify-content: center;
     padding: 20px;
 }
-
 
 /* ===== Card ===== */
 .card {
@@ -35,6 +35,9 @@ main h1 {
     flex-wrap: wrap;
     align-items: center;
     column-gap: 18px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
 }
 
 .vermelho {
@@ -76,17 +79,7 @@ main h1 {
     font-size: 1rem;
     color: #6d6c6c;
     line-height: 1.6;
-}.card {
-    width: 420px;
-    background: #F5E9D5;
-    border-radius: 40px;
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 18px;
 }
-
 
 .botao {
     display: inline-flex;
@@ -104,6 +97,7 @@ main h1 {
     color: #000;
     font-size: 1.2rem;
     font-family: 'Inria Serif', serif;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .vermelho .botao {
@@ -121,6 +115,7 @@ main h1 {
     font-size: 20px;
     line-height: 1;
     color: #fff;
+    transition: transform 0.3s ease;
 }
 
 .vermelho .seta {
@@ -134,7 +129,6 @@ main h1 {
     border-radius: 50%;
     padding: 10px;
 }
-
 
 /* ===== Seção em destaque (showcase) ===== */
 .showcase {
@@ -152,6 +146,9 @@ main h1 {
     border: 25px solid #4a2f28;
     border-radius: 36px;
     overflow: hidden;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
 }
 
 .showcase-top {
@@ -187,6 +184,7 @@ main h1 {
     object-fit: cover;
     border-radius: 18px;
     flex-shrink: 0;
+    transition: transform 0.4s ease;
 }
 
 .showcase-bar {
@@ -201,6 +199,7 @@ main h1 {
     color: #1a1a1a;
     font-family: 'Inria Serif', serif;
     font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
 .showcase-btn {
@@ -213,6 +212,7 @@ main h1 {
     border-radius: 30px;
     font-size: 1.1rem;
     white-space: nowrap;
+    transition: background-color 0.3s ease;
 }
 
 .showcase-btn .seta {
@@ -222,7 +222,6 @@ main h1 {
     height: 30px;
     border-radius: 30px;
 }
-
 
 /* ===== Faixa vermelha ===== */
 .banner-vermelho {
@@ -238,11 +237,87 @@ main h1 {
     margin: 0;
 }
 
-h6{
+h6 {
     opacity: 0;
+    font-size: 5vw;
 }
 
+/* ===== Efeitos ao passar o mouse (só transform, para não pesar) ===== */
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
+}
 
+.botao:hover {
+    transform: translateY(-2px);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.botao:hover .seta,
+.showcase-btn:hover .seta,
+.showcase-bar:hover .seta {
+    transform: translateX(6px);
+}
+
+.showcase-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
+}
+
+.showcase-card:hover .showcase-img {
+    transform: scale(1.04);
+}
+
+.showcase-bar:hover {
+    background-color: #e4d2b0;
+}
+
+.showcase-bar:hover .showcase-btn {
+    background-color: #7a1f24;
+}
+
+/* ===== Entrada suave e aparecer ao rolar ===== */
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* A classe .reveal é adicionada pelo JS */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Depois de aparecer, o hover volta a ser rápido */
+.card.reveal.visivel,
+.showcase-card.reveal.visivel {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Precisa vir depois de .reveal.visivel, senão ele anula o hover */
+.card.reveal.visivel:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
+}
+
+.showcase-card.reveal.visivel:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
+}
+
+/* ===== Responsivo ===== */
 @media (max-width: 768px) {
     main h1 {
         font-size: 1.4rem;
@@ -284,7 +359,7 @@ h6{
     }
 
     .showcase:last-of-type {
-        margin-bottom: 1;
+        margin-bottom: 0;
     }
 
     .showcase-top {
@@ -317,5 +392,18 @@ h6{
     .banner-vermelho {
         text-align: center;
         padding: 20px 24px;
+    }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
     }
 }

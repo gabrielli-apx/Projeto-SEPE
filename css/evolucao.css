@@ -8,27 +8,62 @@
   box-sizing: border-box;
   font-family: "Inria Serif", serif;
 }
+
 .hints {
   text-align: center;
   padding: 4rem 0;
   background-color: #f5e9d2;
   font-weight: 600;
 }
+
 .hints h2 {
   color: #9fa338;
   font-size: 2vw;
   padding: 2vw 0 0 1vw;
 }
+
 .hints p {
   font-size: 2vw;
   padding: 1vw;
   color: rgba(0, 0, 0, 0.49);
   font-weight: 400;
 }
+
 .hints h3 {
   color: #841919;
   font-size: 3vw;
   padding: 0 0 0 2vw;
+}
+
+/* ===== Animação do texto da .hints ===== */
+@keyframes hints-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hints h2,
+.hints h3,
+.hints p {
+  animation: hints-entrada 0.8s ease-out both;
+}
+
+/* um de cada vez */
+.hints h2 {
+  animation-delay: 0.1s;
+}
+
+.hints h3 {
+  animation-delay: 0.35s;
+}
+
+.hints p {
+  animation-delay: 0.6s;
 }
 
 .mark {
@@ -49,7 +84,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow-x: auto;
 }
 
@@ -79,7 +113,7 @@
   transition: 0.5s ease;
 }
 
-/*linha da timeline */
+/* linha da timeline */
 .timeline li::before {
   content: "";
   top: 1rem;
@@ -110,7 +144,12 @@
   text-align: center;
 }
 
-.timeline li :hover ::after,
+.timeline li:nth-child(even)::after {
+  font-size: 1.5vw;
+  text-align: center;
+  height: 7vw;
+}
+
 .timeline li .title {
   color: var(--primary-color);
   text-align: center;
@@ -120,11 +159,9 @@
 /* TÍTULO */
 .timeline li .title {
   top: 2.4rem;
-
   font:
     600 1.1rem "Poppins",
     sans-serif;
-
   white-space: pre;
   opacity: 0;
 }
@@ -144,20 +181,20 @@
   background-color: #8e1919;
   color: white;
   border-radius: 50%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
   overflow: hidden;
   transition: 0.3s ease;
 }
+
 .timeline li:hover .data {
   background-color: var(--primary-color);
   --scale: 1.2;
   cursor: pointer;
   z-index: 200;
 }
+
 .data.show {
   width: 22rem;
   height: 22rem;
@@ -165,12 +202,13 @@
   padding: 1rem;
   background-image: linear-gradient(45deg, var(--primary-color), #700000);
   box-shadow: 0 0.1rem 0.4rem black;
-
   z-index: 100;
 }
+
 .data h3 {
   text-transform: capitalize;
 }
+
 .data p {
   background-color: rgba(220, 167, 167, 0.436);
   padding: 1rem;
@@ -179,9 +217,11 @@
   margin-left: 0.7rem;
   font-size: 1vw;
 }
+
 .data.show p {
   margin-left: 0;
 }
+
 .data .close {
   background-color: #8e1919;
   align-self: flex-start;
@@ -191,8 +231,6 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   border: 2px solid #fff;
   margin: 1vw 0 0 0;
-
-  /* necessário agora que .close é um <a> */
   color: #fff;
   text-decoration: none;
   display: inline-block;
@@ -218,12 +256,11 @@
   font-size: 2vw;
   text-align: center;
 }
-/*linha vermelha*/
-main {
-  border-top: 0.5rem solid var(--primary-color);
-}
+
+/* linha vermelha */
 main {
   position: relative;
+  border-top: 0.5rem solid var(--primary-color);
 }
 
 main::before {
@@ -233,19 +270,16 @@ main::before {
   height: 0.3rem;
   background-color: var(--primary-color);
 }
-.timeline li:nth-child(even)::after{
-  font-size: 1.5vw;
-  text-align: center;
-   height: 7vw;
-}
 
 @media (max-width: 768px) {
   .hints h2 {
     font-size: 5vw;
   }
+
   .hints h3 {
     font-size: 6vw;
   }
+
   .hints p {
     font-size: 4vw;
   }
@@ -355,10 +389,21 @@ main::before {
     max-height: 80vh;
     overflow-y: auto;
   }
+
   .data p {
     font-size: 3vw;
   }
+
   .data h3 {
     font-size: 5vw;
+  }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+  .hints h2,
+  .hints h3,
+  .hints p {
+    animation: none;
   }
 }
