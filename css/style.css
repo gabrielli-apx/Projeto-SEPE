@@ -7,6 +7,7 @@
   padding: 12px 32px;
   position: relative;
   font-family: "Inria Serif", serif;
+  z-index: 9999;
 
   animation: headerSlideDown 0.7s ease both;
 }
@@ -61,6 +62,8 @@
 }
 
 #mainNav {
+  z-index: 9998;
+
   animation: fadeInRight 0.8s ease 0.15s both;
 }
 
@@ -128,7 +131,8 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1000;
+  position: relative;
+  z-index: 10000;
 }
 
 .menu-toggle span {
@@ -389,7 +393,7 @@ footer .footer-logo:hover {
     right: 0;
     width: 240px;
     background-color: #7a1f24;
-    z-index: 999;
+    z-index: 9998;
   }
 
   #mainNav ul {

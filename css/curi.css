@@ -1,31 +1,32 @@
 .curiosidades ul {
-    padding: 18px;
+    padding: 12px;
 }
 
 .curiosidades ul li {
-    margin: 18px;
+    margin: 14px 8px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
     will-change: transform;
 }
 
 .curiosidades ul li img {
-    width: 50%;
+    width: 60%;
     height: auto;
-    margin: 20px;
+    margin: 14px auto;
+    display: block;
     transition: transform 0.4s ease;
 }
 
 .curiosidades .cvermelho {
     text-align: center;
     background-color: #F5E9D2;
-    border: 7px solid #841919;
-    border-radius: 40px;
-    padding: 10px;
+    border: 5px solid #841919;
+    border-radius: 28px;
+    padding: 12px;
 }
 
 .curiosidades .cvermelho h2 {
-    font-size: 1.18rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 8px;
 }
@@ -33,18 +34,20 @@
 .curiosidades .cvermelho p {
     color: rgb(92, 91, 91);
     margin: 8px;
+    font-size: 0.85rem;
+    line-height: 1.45;
 }
 
 .curiosidades .cmarrom {
     text-align: center;
     background-color: #F5E9D2;
-    border: 7px solid #714A3E;
-    border-radius: 40px;
-    padding: 10px;
+    border: 5px solid #714A3E;
+    border-radius: 28px;
+    padding: 12px;
 }
 
 .curiosidades .cmarrom h2 {
-    font-size: 1.18rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 8px;
 }
@@ -52,6 +55,13 @@
 .curiosidades .cmarrom p {
     color: rgb(92, 91, 91);
     margin: 8px;
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+.curiosidades h1 {
+    font-size: 1.15rem;
+    padding: 16px;
 }
 
 /* Caixa sobe ao passar o mouse */
@@ -64,7 +74,12 @@
     transform: scale(1.06) rotate(-1.5deg);
 }
 
+/* ===== Desktop (igual ao original) ===== */
 @media only screen and (min-width: 600px) {
+    .curiosidades ul {
+        padding: 18px;
+    }
+
     .curiosidades ul li {
         display: flex;
         align-items: center;
@@ -74,6 +89,27 @@
 
     .curiosidades ul li img {
         width: 70%;
+        margin: 20px;
+        display: initial;
+    }
+
+    .curiosidades .cvermelho,
+    .curiosidades .cmarrom {
+        border-width: 7px;
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+    .curiosidades .cvermelho h2,
+    .curiosidades .cmarrom h2 {
+        font-size: 1.18rem;
+        margin: 8px;
+    }
+
+    .curiosidades .cvermelho p,
+    .curiosidades .cmarrom p {
+        font-size: 1rem;
+        margin: 8px;
     }
 
     .curiosidades h1 {
