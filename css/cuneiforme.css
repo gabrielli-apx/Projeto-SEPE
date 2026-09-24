@@ -1,0 +1,205 @@
+/* === main === */
+
+main{
+    padding: 3vw 3vw 3vw 3vw;
+}
+
+/* === section === */
+
+.cuneiforme{
+    background-color: #F5E9D5;
+    border-radius: 50px;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+    border: 10px solid #841919
+}
+.cuneiforme img{
+    width: 50%;
+    height: 50%;
+}
+.cuneiforme h3{
+    color: #841919;
+    font-size: 1.3rem;
+}
+.cuneiforme h4{
+    color: #713434;
+    font-size: 1.2rem;
+}
+.cuneiforme p{
+    color: gray;
+    font-size: 1.2rem;
+}
+
+/* === Título === */
+
+.titulo{
+    width: fit-content;
+    background-color: #841919;
+    padding: 8px 15px 8px 15px;
+    border-radius: 360px;
+    justify-content: first baseline;
+    margin: 15px 0px 15px 0px;
+}
+.titulo img{
+    height: 50px;
+    width: 50px;
+    background-color: #FFF5E2;
+    align-items: center;
+    padding: 1vw 1vw 1vw 1vw;
+    border-radius: 360px;
+}
+.escrita{
+    text-align: center;
+}
+.escrita h2{
+    font-size: 1.5rem;
+    color: white;
+}
+.escrita p{
+    font-size: 1.3rem;
+    color: rgb(201, 201, 201);
+}
+
+/* === PrimeiraDiv === */
+
+.primeiraDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+.espacoPrimeira{
+    padding: 0vw 0vw 3vw 0vw;
+}
+
+/* === SegundaDiv === */
+
+.segundaDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+.segundaDiv img{
+    height: 100%;
+    width: 100%;
+}
+
+/* === terceiraDiv === */
+
+.terceiraDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+.terceiraDiv img{
+    height: 120%;
+    width: 120%;
+}
+
+/* === terceiraDiv === */
+
+.quartaDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+.quartaDiv img{
+    height: 120%;
+    width: 120%;
+}
+
+/* === quintaDiv === */
+
+.quintaDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+.quintaDiv img{
+    height: 120%;
+    width: 120%;
+}
+
+/* === sextaDiv === */
+
+.sextaDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+.sextaDiv img{
+    height: 120%;
+    width: 120%;
+}
+
+/* === setimaDiv === */
+
+.setimaDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+/* === oitavaDiv === */
+
+.oitavaDiv{
+    text-align: center;
+    padding: 5vw 0vw 5vw 0vw;
+}
+.oitavaDiv strong{
+    color: #841919;
+    font-size: 1.3rem;
+}
+
+@media screen {
+
+    /* === Título === */
+
+    .titulo{
+        display: flex;
+        align-items: center;
+    }
+
+    /* === PrimeiraDiv === */
+
+    .espacoPrimeira{
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === SegundaDiv === */
+
+    .segundaDiv{
+       align-items: center;
+        display: flex;
+        gap: 20px; 
+    }
+
+    /* === terceiraDiv === */
+
+    .terceiraDiv{
+        align-items: center;
+        display: flex;
+        gap: 20px; 
+    }
+
+    /* === quartaDiv === */
+
+    .quartaDiv{
+        align-items: center;
+        display: flex;
+        gap: 20px; 
+    }
+
+    /* === quintaDiv === */
+
+    .quintaDiv{
+        align-items: center;
+        display: flex;
+        gap: 20px; 
+    }
+
+    /* === sextaDiv === */
+
+    .sextaDiv{
+        align-items: center;
+        display: flex;
+        gap: 20px; 
+    }
+}
