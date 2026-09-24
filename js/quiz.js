@@ -1,12 +1,12 @@
 // ========================================
-// CONFIGURAÇÃO
+// configuração
 // ========================================
 
 const LIMITE_PERGUNTAS = 15;
 
 
 // ========================================
-// ARRAYS DE PERGUNTAS
+// arrays de perguntas
 // ========================================
 
 const hieroglifos = [
@@ -380,7 +380,7 @@ const atualidade = [
 
 
 // ========================================
-// CATEGORIAS
+// categorias
 // ========================================
 
 const categorias = {
@@ -420,19 +420,18 @@ const categorias = {
 
 
 // ========================================
-// PEGAR CATEGORIAS SELECIONADAS
+// pegar categorias selecionadas
 // ========================================
 
 const categoriasSalvas =
   localStorage.getItem("categoriasSelecionadas");
 
-
-// Se não existir seleção, volta para a página de seleção
-// e para a execução do script (evita erro ao dar JSON.parse em null)
+console.log("valor lido do localStorage:", categoriasSalvas);
 
 if (!categoriasSalvas) {
 
-  window.location.href = "index.html";
+  console.log("não achou nada — por isso ia redirecionar pro index");
+  // window.location.href = "index.html"; // comentado só pra debug
 
 } else {
 
@@ -442,13 +441,13 @@ if (!categoriasSalvas) {
 
 
 // ========================================
-// FUNÇÃO PRINCIPAL DO QUIZ
+// função principal do quiz
 // ========================================
 
 function iniciarQuiz(categoriasSelecionadas) {
 
   // ========================================
-  // CRIAR LISTA DE PERGUNTAS
+  // criar lista de perguntas
   // ========================================
 
   let perguntasDisponiveis = [];
@@ -463,7 +462,8 @@ function iniciarQuiz(categoriasSelecionadas) {
           pergunta: pergunta.pergunta,
           alternativas: pergunta.alternativas,
           resposta: pergunta.resposta,
-          categoria: categorias[categoria].nome
+          categoria: categorias[categoria].nome,
+          categoriaChave: categoria
         });
 
       });
@@ -474,19 +474,19 @@ function iniciarQuiz(categoriasSelecionadas) {
 
 
   // ========================================
-  // EMBARALHAR PERGUNTAS
+  // embaralhar perguntas
   // ========================================
 
   perguntasDisponiveis.sort(() => Math.random() - 0.5);
 
-  // Pegar no máximo o limite definido
+  // pegar no máximo o limite definido
 
   perguntasDisponiveis =
     perguntasDisponiveis.slice(0, LIMITE_PERGUNTAS);
 
 
   // ========================================
-  // ELEMENTOS DO HTML
+  // elementos do html
   // ========================================
 
   const numeroPergunta =
@@ -506,16 +506,39 @@ function iniciarQuiz(categoriasSelecionadas) {
 
 
   // ========================================
-  // CONTROLE
+  // controle
   // ========================================
 
   let numeroAtual = 0;
 
   let perguntaAtual;
 
+  let acertos = 0;
+
+  // contagem de acertos e total de perguntas por categoria
+  // (só das categorias que realmente caíram no quiz)
+
+  let acertosPorCategoria = {};
+
+  perguntasDisponiveis.forEach((p) => {
+
+    if (!acertosPorCategoria[p.categoriaChave]) {
+
+      acertosPorCategoria[p.categoriaChave] = {
+        nome: p.categoria,
+        acertos: 0,
+        total: 0
+      };
+
+    }
+
+    acertosPorCategoria[p.categoriaChave].total++;
+
+  });
+
 
   // ========================================
-  // MOSTRAR PERGUNTA
+  // mostrar pergunta
   // ========================================
 
   function mostrarPergunta() {
@@ -557,7 +580,7 @@ function iniciarQuiz(categoriasSelecionadas) {
 
 
   // ========================================
-  // BOTÕES DE RESPOSTA
+  // botões de resposta
   // ========================================
 
   botoes.forEach((botao) => {
@@ -571,6 +594,10 @@ function iniciarQuiz(categoriasSelecionadas) {
 
         mensagem.textContent =
           "✓ Você acertou!";
+
+        acertos++;
+
+        acertosPorCategoria[perguntaAtual.categoriaChave].acertos++;
 
       } else {
 
@@ -605,31 +632,57 @@ function iniciarQuiz(categoriasSelecionadas) {
 
 
   // ========================================
-  // FINALIZAR
+  // finalizar
   // ========================================
 
   function finalizarQuiz() {
 
-    pergunta.textContent =
-      "Quiz finalizado!";
+    const total = perguntasDisponiveis.length;
 
-    categoriaPergunta.textContent =
-      "";
+    const porcentagem =
+      total > 0
+        ? Math.round((acertos / total) * 100)
+        : 0;
 
-    mensagem.textContent =
-      "Você respondeu às " +
-      numeroAtual +
-      " perguntas.";
+    // monta a lista de resultados por categoria, já com a porcentagem calculada
 
-    botoes.forEach((botao) => {
-      botao.style.display = "none";
+    const porCategoria = Object.keys(acertosPorCategoria).map((chave) => {
+
+      const dados = acertosPorCategoria[chave];
+
+      return {
+        chave: chave,
+        nome: dados.nome,
+        acertos: dados.acertos,
+        total: dados.total,
+        porcentagem:
+          dados.total > 0
+            ? Math.round((dados.acertos / dados.total) * 100)
+            : 0
+      };
+
     });
+
+    const resultado = {
+      acertos: acertos,
+      total: total,
+      porcentagem: porcentagem,
+      categorias: categoriasSelecionadas,
+      porCategoria: porCategoria
+    };
+
+    localStorage.setItem(
+      "resultadoQuiz",
+      JSON.stringify(resultado)
+    );
+
+    window.location.href = "resultado.html";
 
   }
 
 
   // ========================================
-  // INICIAR
+  // iniciar
   // ========================================
 
   mostrarPergunta();
