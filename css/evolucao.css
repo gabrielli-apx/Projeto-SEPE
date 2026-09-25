@@ -135,11 +135,11 @@
 /* DATA */
 .timeline li::after {
   content: attr(data-date);
-  top: -2.5rem;
+  top: -4rem;
 }
 
 .timeline li:nth-child(odd)::after {
-  top: 2.5rem;
+  top: 4rem;
   font-size: 1.4vw;
   text-align: center;
 }
@@ -349,9 +349,9 @@ main::before {
   }
 
   .timeline li:nth-child(odd)::after {
-    left: 2.5rem;
+    left: 2.3rem;
     right: auto;
-    transform: translateY(0.4rem);
+    transform: translateY(-1rem);
     text-align: left;
     font-size: 2.5vw;
   }

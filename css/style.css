@@ -1,4 +1,8 @@
 /* ===== Header / Barra superior ===== */
+body{
+  background-color: #7a1f24;
+}
+
 .header-top {
   display: flex;
   align-items: center;
@@ -229,7 +233,7 @@ footer {
   background-color: #7a1f24;
   color: #f2e9d8;
   font-family: "Inria Serif", serif;
-  padding: 24px 5vw;
+  padding: 40px 5vw;
   margin-top: -10;
   overflow-x: hidden;
   width: 100%;

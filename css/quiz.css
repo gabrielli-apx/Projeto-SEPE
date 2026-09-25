@@ -26,7 +26,7 @@
  .caixa{
    background-color: antiquewhite;
    margin: 12rem;
-   padding: 2vw;
+   padding: 6vw;
    border: 30px solid var(--primary-color);
    border-radius: 30px;
    text-align: center;
