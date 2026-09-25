@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bloons.css" />
+  <link rel="stylesheet" href="css/quiz.css" />
+  <link rel="stylesheet" href="css/resultado.css" />
+  <link rel="stylesheet" href="css/final.css" />
+
+  <script src="js/script.js" defer></script>
+  <script src="js/resultado.js" defer></script>
+  <script src="js/roteiro.js" defer></script>
+
+  <title>Projeto SEPE</title>
+</head>
+
+<body>
+  <header>
+    <!-- Barra superior -->
+    <div class="header-top">
+      <div class="header-brand">
+        <a href="index.html"><img src="imagens/logo.png" alt="Logo"></a>
+        <h1>S&L</h1>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="mainNav">
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="comeco.html">Começo</a></li>
+          <li><a href="evolucao.html">Evolução</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="roteiro.html">Roteiro</a></li>
+          <li><a href="nos.html">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Banner -->
+    <div class="header-banner">
+      <div class="banner-text">
+        <h1>
+          Entre símbolos <br />
+          e letras
+        </h1>
+        <h2>- A invenção da escrita -</h2>
+      </div>
+
+      <img src="imagens/imagem-header.png" alt="Imagem do banner" class="banner-img" />
+    </div>
+  </header>
+
+  <main>
+    <section class="resultado" id="resultado">
+      <h3>Seu resultado</h3>
+
+      <div class="caixa-resultado">
+        <p class="assuntos" id="assuntosEscolhidos"></p>
+
+        <div class="circulo-porcentagem">
+          <span id="porcentagemTexto">0%</span>
+        </div>
+
+        <p class="detalhe" id="detalheAcertos"></p>
+
+        <p class="mensagem-nivel" id="mensagemNivel"></p>
+
+        <div class="por-categoria" id="porCategoria">
+          <h4>Por assunto</h4>
+          <div class="lista-categorias" id="listaCategorias"></div>
+        </div>
+
+        <div class="botoes-resultado">
+          <button id="refazerQuiz">Refazer o quiz</button>
+          <a href="index.html"><button id="voltarHome">Voltar para o início</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="roteiro-personalizado" id="roteiroPersonalizado">
+      <h4>O seu roteiro personalizado</h4>
+
+      <div class="roteiro-grid" id="roteiroGrid"></div>
+    </section>
+
+    <h6>.</h6>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h1>
+          Entre símbolos <br />
+          e letras
+        </h1>
+        <h2>Inventando a escrita</h2>
+      </div>
+
+      <span class="footer-divider" aria-hidden="true"></span>
+
+      <img src="imagens/logo-completa.png" alt="Logo completa" class="footer-logo" />
+
+      <div class="footer-info">
+        <nav>
+          <ul>
+            <li><a href="nos.html">Sobre nós</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://wa.me/5547997479884?text=Ola!%20Gostaria%20de%20mais%20informacoes%20sobre%20o%20site."
+                target="_blank">Dúvidas</a></li>
+          </ul>
+        </nav>
+
+        <h4>© 2026 Todos os direitos reservados.</h4>
+      </div>
+
+      <div class="footer-social">
+        <nav>
+          <ul>
+            <li><a href="mailto:entre.simbolos.e.letras@gmail.com"><img src="imagem/email.png" alt="Email"></a></li>
+            <li><a href="https://www.instagram.com/simbolos.e.letras?stkn=dHdtbjd3YTh4ODB0"><img
+                  src="imagens/instagram-logo.png" alt="Instagram"></a></li>
+            <li><a href="https://maps.app.goo.gl/yZ2cpf5EEPenz7bT7"><img src="imagens/localizacao-logo.png"
+                  alt="Localização"></a></li>
+            <li><a href="https://wa.me/5547997479884?text=Ola!%20Gostaria%20de%20mais%20informacoes%20sobre%20o%20site."
+                target="_blank"><img src="imagens/whats.png" alt="WhatsApp"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
