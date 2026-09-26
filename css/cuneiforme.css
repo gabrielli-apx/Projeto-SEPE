@@ -21,10 +21,12 @@ main{
 .cuneiforme h3{
     color: #841919;
     font-size: 1.3rem;
+    margin: 15px;
 }
 .cuneiforme h4{
     color: #713434;
     font-size: 1.2rem;
+    margin: 12px;
 }
 .cuneiforme p{
     color: gray;
@@ -93,11 +95,11 @@ main{
     padding: 2vw 0vw 2vw 0vw;
 }
 .terceiraDiv img{
-    height: 120%;
-    width: 120%;
+    height: 100%;
+    width: 100%;
 }
 
-/* === terceiraDiv === */
+/* === quartaDiv === */
 
 .quartaDiv{
     text-align: center;
@@ -105,8 +107,8 @@ main{
 }
 
 .quartaDiv img{
-    height: 120%;
-    width: 120%;
+    height: 100%;
+    width: 100%;
 }
 
 /* === quintaDiv === */
@@ -116,8 +118,8 @@ main{
     padding: 2vw 0vw 2vw 0vw;
 }
 .quintaDiv img{
-    height: 120%;
-    width: 120%;
+    height: 100%;
+    width: 100%;
 }
 
 /* === sextaDiv === */
@@ -127,8 +129,12 @@ main{
     padding: 2vw 0vw 2vw 0vw;
 }
 .sextaDiv img{
-    height: 120%;
-    width: 120%;
+    height: 100%;
+    width: 100%;
+}
+h4.behistun{
+    color: #693f3f;
+    font-size: 1rem;
 }
 
 /* === setimaDiv === */
@@ -204,5 +210,39 @@ main{
         align-items: center;
         display: flex;
         gap: 20px; 
+    }
+}
+@media (min-width: 768px) {
+    
+    /* === main === */
+
+    .cuneiforme p{
+        font-size: 1.8rem;
+        margin: 0px 30px 0px 30px;
+    }
+    .cuneiforme h3{
+        font-size: 2.5rem;
+    }
+    .cuneiforme h4{
+        font-size: 2rem;
+    }
+    .oitavaDiv strong{
+        font-size: 2rem;
+    }
+    h4.behistun{
+        font-size: 1.4rem;
+    }
+    .titulo{
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        p{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+        padding: 1.5vw 2vw 1.5vw 2vw;
     }
 }
