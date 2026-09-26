@@ -1,0 +1,145 @@
+/* === main === */
+
+main{
+    padding: 3vw 3vw 3vw 3vw;
+}
+
+/* === section === */
+
+.atualidade{
+    background-color: #F5E9D5;
+    border-radius: 50px;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+    border: 10px solid #841919
+}
+.atualidade img{
+    width: 50%;
+    height: 50%;
+}
+.atualidade h3{
+    color: #841919;
+    font-size: 1.3rem;
+    margin: 15px;
+}
+.atualidade h4{
+    color: #713434;
+    font-size: 1.2rem;
+    margin: 12px;
+}
+.atualidade p{
+    color: gray;
+    font-size: 1.2rem;
+}
+
+/* === Título === */
+
+.titulo{
+    width: fit-content;
+    background-color: #841919;
+    padding: 10px 15px 10px 15px;
+    border-radius: 360px;
+    justify-content: first baseline;
+    margin: 15px 0px 15px 0px;
+}
+.titulo img{
+    height: 50px;
+    width: 50px;
+    background-color: #FFF5E2;
+    align-items: center;
+    padding: 0.8vw 0.8vw 0.8vw 0.8vw;
+    border-radius: 360px;
+}
+.escrita{
+    text-align: center;
+}
+.escrita h2{
+    font-size: 1.5rem;
+    color: white;
+}
+.escrita p{
+    font-size: 1.3rem;
+    color: rgb(201, 201, 201);
+}
+h3.descubra{
+    color: #986912;
+}
+
+/* === PrimeiraDiv === */
+
+.primeiraDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+.primeiraDiv img{
+    height: 100%;
+    width: 100%;
+}
+
+/* === segundaDiv === */
+
+.segundaDiv{
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+.segundaDiv img{
+    height: 100%;
+    width: 100%;
+}
+
+@media screen {
+
+    /* === Título === */
+
+    .titulo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* === primeiraDiv === */
+
+    .primeiraDiv{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* === segundaDiv === */
+
+    .segundaDiv{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    /* === main === */
+
+    .atualidade p{
+        font-size: 1.8rem;
+        margin: 0px 30px 0px 30px;
+    }
+    .atualidade h3{
+        font-size: 2.5rem;
+    }
+    .atualidade h4{
+        font-size: 2rem;
+    }
+    .titulo{
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        p{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+        padding: 1.5vw 2vw 1.5vw 2vw;
+    }
+}
