@@ -1,14 +1,14 @@
 // ========================================
 // configuração
 // ========================================
-
+ 
 const LIMITE_PERGUNTAS = 15;
-
-
+ 
+ 
 // ========================================
 // arrays de perguntas
 // ========================================
-
+ 
 const hieroglifos = [
   {
     pergunta: "Onde surgiram os hieróglifos?",
@@ -54,9 +54,84 @@ const hieroglifos = [
       "Traços abstratos sem significado"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "Quem foi o responsável por decifrar os hieróglifos egípcios?",
+    alternativas: [
+      "Jean-François Champollion",
+      "Howard Carter",
+      "Heinrich Schliemann",
+      "Flinders Petrie"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual achado arqueológico foi fundamental para decifrar os hieróglifos?",
+    alternativas: [
+      "A Pedra de Roseta",
+      "O Papiro de Ebers",
+      "A Máscara de Tutancâmon",
+      "O Obelisco de Luxor"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "A Pedra de Roseta trazia o mesmo texto em quantos sistemas de escrita?",
+    alternativas: ["Um", "Dois", "Três", "Quatro"],
+    resposta: 2
+  },
+  {
+    pergunta: "Como eram chamados os profissionais responsáveis por escrever hieróglifos no Egito?",
+    alternativas: ["Sacerdotes apenas", "Escribas", "Faraós", "Mercadores"],
+    resposta: 1
+  },
+  {
+    pergunta: "Em que material os egípcios costumavam escrever no dia a dia?",
+    alternativas: ["Papiro", "Placas de argila", "Pergaminho", "Tecido"],
+    resposta: 0
+  },
+  {
+    pergunta: "Os hieróglifos podiam ser escritos em quais direções?",
+    alternativas: [
+      "Apenas da esquerda para a direita",
+      "Apenas de cima para baixo",
+      "Em várias direções, dependendo da composição",
+      "Apenas em círculo"
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "O que significa a palavra \"hieróglifo\" em sua origem grega?",
+    alternativas: [
+      "Escrita sagrada",
+      "Escrita secreta",
+      "Escrita dos deuses",
+      "Escrita do povo"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Além dos hieróglifos formais, que escrita simplificada os egípcios usavam no cotidiano?",
+    alternativas: ["Demótica", "Hierática", "Cuneiforme", "Fenícia"],
+    resposta: 1
+  },
+  {
+    pergunta: "Os nomes de faraós eram frequentemente destacados dentro de qual elemento?",
+    alternativas: ["Um cartucho oval", "Um triângulo", "Uma coroa desenhada", "Um círculo vazado"],
+    resposta: 0
+  },
+  {
+    pergunta: "Por quanto tempo, aproximadamente, os hieróglifos foram utilizados no Egito?",
+    alternativas: [
+      "Algumas décadas",
+      "Cerca de 100 anos",
+      "Milhares de anos",
+      "Apenas durante uma dinastia"
+    ],
+    resposta: 2
   }
 ];
-
+ 
 const cuneiforme = [
   {
     pergunta: "Qual povo criou a escrita cuneiforme?",
@@ -87,9 +162,94 @@ const cuneiforme = [
       "Somente para cartas pessoais"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "O que significa literalmente a palavra \"cuneiforme\"?",
+    alternativas: [
+      "Em forma de cunha",
+      "Em forma de círculo",
+      "Escrita dos reis",
+      "Escrita secreta"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Além dos sumérios, quais outros povos usaram a escrita cuneiforme?",
+    alternativas: [
+      "Maias e astecas",
+      "Acádios, babilônios e assírios",
+      "Gregos e romanos",
+      "Fenícios e hebreus"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual é considerado um dos primeiros grandes textos literários da humanidade, escrito em cuneiforme?",
+    alternativas: [
+      "A Ilíada",
+      "O Livro dos Mortos",
+      "A Epopeia de Gilgamesh",
+      "O Popol Vuh"
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "Como as placas de argila com cuneiforme eram preservadas?",
+    alternativas: [
+      "Pintadas com tinta especial",
+      "Secas ao sol ou cozidas em forno",
+      "Envolvidas em papiro",
+      "Cobertas com cera"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "A escrita cuneiforme evoluiu a partir de qual sistema mais antigo?",
+    alternativas: ["Pictogramas", "Alfabeto fenício", "Hieróglifos", "Ideogramas chineses"],
+    resposta: 0
+  },
+  {
+    pergunta: "Os sinais cuneiformes podiam representar sons de que tipo?",
+    alternativas: ["Apenas vogais isoladas", "Sílabas", "Apenas números", "Apenas nomes próprios"],
+    resposta: 1
+  },
+  {
+    pergunta: "Onde ficavam armazenadas grandes coleções de tábuas cuneiformes na Antiguidade?",
+    alternativas: [
+      "Em templos apenas",
+      "Em bibliotecas e arquivos reais",
+      "Em túmulos",
+      "Em mercados"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "O Código de Hamurábi, um dos primeiros grandes conjuntos de leis escritas, foi registrado em qual sistema?",
+    alternativas: ["Cuneiforme", "Hieroglífico", "Fenício", "Grego"],
+    resposta: 0
+  },
+  {
+    pergunta: "Por aproximadamente quanto tempo a escrita cuneiforme foi utilizada?",
+    alternativas: [
+      "Algumas décadas",
+      "Cerca de 300 anos",
+      "Cerca de 3.000 anos",
+      "Menos de 100 anos"
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "O que levou ao desuso gradual da escrita cuneiforme?",
+    alternativas: [
+      "A proibição por um imperador",
+      "A substituição por alfabetos mais simples, como o aramaico",
+      "A destruição de todas as placas",
+      "A falta de argila na região"
+    ],
+    resposta: 1
   }
 ];
-
+ 
 const fenicio = [
   {
     pergunta: "Quem desenvolveu o alfabeto fenício?",
@@ -135,9 +295,94 @@ const fenicio = [
       "Criar o calendário solar"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "Os fenícios eram conhecidos principalmente por qual atividade?",
+    alternativas: ["Agricultura", "Comércio marítimo", "Mineração", "Guerra terrestre"],
+    resposta: 1
+  },
+  {
+    pergunta: "Aproximadamente quantas letras tinha o alfabeto fenício?",
+    alternativas: ["10", "22", "40", "60"],
+    resposta: 1
+  },
+  {
+    pergunta: "O alfabeto fenício representava principalmente sons de quê?",
+    alternativas: ["Consoantes", "Vogais", "Números", "Ideias abstratas"],
+    resposta: 0
+  },
+  {
+    pergunta: "Em que direção o alfabeto fenício costumava ser escrito?",
+    alternativas: [
+      "Da esquerda para a direita",
+      "Da direita para a esquerda",
+      "De cima para baixo",
+      "Em espiral"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Como os fenícios ajudaram a espalhar seu alfabeto pelo Mediterrâneo?",
+    alternativas: [
+      "Através de conquistas militares",
+      "Através do comércio marítimo",
+      "Através de missões religiosas",
+      "Através de casamentos reais"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Além do grego, o alfabeto fenício também deu origem, indiretamente, a quais outros alfabetos usados até hoje?",
+    alternativas: [
+      "Hebraico e árabe",
+      "Cirílico e coreano",
+      "Chinês e japonês",
+      "Maia e asteca"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Por que o alfabeto fenício era considerado revolucionário para a época?",
+    alternativas: [
+      "Porque tinha milhares de símbolos",
+      "Porque era simples e fácil de aprender",
+      "Porque só podia ser usado por sacerdotes",
+      "Porque era escrito em pedra"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Quais eram algumas das principais cidades fenícias ligadas ao comércio?",
+    alternativas: [
+      "Biblos, Tiro e Sidon",
+      "Atenas e Esparta",
+      "Roma e Cartago",
+      "Babilônia e Nínive"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Em que materiais os fenícios costumavam registrar informações comerciais?",
+    alternativas: [
+      "Placas de argila apenas",
+      "Papiro e cerâmica",
+      "Folhas de metal apenas",
+      "Tecido apenas"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Por que o alfabeto fenício é considerado a base dos alfabetos ocidentais modernos?",
+    alternativas: [
+      "Porque foi usado sem alterações até hoje",
+      "Porque deu origem ao alfabeto grego, que depois originou o latino",
+      "Porque era idêntico ao alfabeto latino",
+      "Porque foi criado pelos romanos"
+    ],
+    resposta: 1
   }
 ];
-
+ 
 const grego = [
   {
     pergunta: "De qual alfabeto os gregos se inspiraram?",
@@ -183,9 +428,84 @@ const grego = [
       "Foi usada só em textos religiosos"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "Quantas letras tem o alfabeto grego moderno?",
+    alternativas: ["20", "22", "24", "30"],
+    resposta: 2
+  },
+  {
+    pergunta: "O alfabeto grego é usado até hoje para escrever qual língua?",
+    alternativas: ["Grego moderno", "Turco", "Búlgaro", "Armênio"],
+    resposta: 0
+  },
+  {
+    pergunta: "Além da escrita do idioma, em que outra área letras gregas são usadas até hoje?",
+    alternativas: [
+      "Culinária",
+      "Matemática e ciência",
+      "Moda",
+      "Arquitetura apenas"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Quais são obras literárias gregas antigas famosas, escritas com esse alfabeto?",
+    alternativas: [
+      "Ilíada e Odisseia",
+      "Epopeia de Gilgamesh",
+      "Popol Vuh",
+      "Livro dos Mortos"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Em que direção o alfabeto grego é escrito atualmente?",
+    alternativas: [
+      "Da direita para a esquerda",
+      "Da esquerda para a direita",
+      "De baixo para cima",
+      "Em espiral"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Como era chamado o estilo antigo de escrita grega que alternava a direção a cada linha?",
+    alternativas: ["Bustrofédon", "Hierático", "Demótico", "Cuneiforme"],
+    resposta: 0
+  },
+  {
+    pergunta: "As letras gregas alfa e beta deram origem a quais letras do alfabeto latino?",
+    alternativas: ["A e B", "C e D", "X e Y", "M e N"],
+    resposta: 0
+  },
+  {
+    pergunta: "Além do latino, o alfabeto grego influenciou diretamente qual outro alfabeto usado hoje?",
+    alternativas: ["Cirílico", "Árabe", "Hebraico", "Coreano"],
+    resposta: 0
+  },
+  {
+    pergunta: "Quais filósofos famosos da Antiguidade escreveram em grego?",
+    alternativas: [
+      "Sócrates, Platão e Aristóteles",
+      "Confúcio e Lao Tsé",
+      "Cícero e Sêneca",
+      "Zaratustra e Buda"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "A distinção entre letras maiúsculas e minúsculas no alfabeto grego se consolidou em qual período?",
+    alternativas: [
+      "Na Grécia Clássica",
+      "Na Idade Média/período bizantino",
+      "No século XX",
+      "Na Pré-História"
+    ],
+    resposta: 1
   }
 ];
-
+ 
 const latim = [
   {
     pergunta: "Onde surgiu o alfabeto latino?",
@@ -231,9 +551,89 @@ const latim = [
       "Apenas na Itália"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "Quantas letras tinha originalmente o alfabeto latino clássico?",
+    alternativas: ["21", "23", "26", "30"],
+    resposta: 1
+  },
+  {
+    pergunta: "O latim era a língua oficial de qual grande império da Antiguidade?",
+    alternativas: ["Império Persa", "Império Romano", "Império Egípcio", "Império Grego"],
+    resposta: 1
+  },
+  {
+    pergunta: "Quais línguas atuais são chamadas de línguas românicas por derivarem do latim?",
+    alternativas: [
+      "Português, espanhol, francês, italiano e romeno",
+      "Inglês, alemão e holandês",
+      "Russo, polonês e tcheco",
+      "Árabe, hebraico e persa"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "O alfabeto latino clássico não distinguia originalmente entre quais pares de letras?",
+    alternativas: [
+      "I/J e U/V",
+      "A/E e O/U",
+      "B/D e P/Q",
+      "F/S e C/G"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Como era chamada a escrita formal usada em inscrições romanas oficiais?",
+    alternativas: [
+      "Capital romana (letras maiúsculas)",
+      "Cursiva medieval",
+      "Escrita gótica",
+      "Escrita carolíngia"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Em que período foram incorporadas ao alfabeto latino as letras J, U e W?",
+    alternativas: [
+      "Na Roma Antiga",
+      "Na Idade Média e período moderno",
+      "No século XX",
+      "Antes do latim existir"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Em qual escala o alfabeto latino é hoje o sistema de escrita mais usado?",
+    alternativas: ["Apenas na Europa", "Apenas na América", "No mundo", "Apenas em ex-colônias romanas"],
+    resposta: 2
+  },
+  {
+    pergunta: "Em que materiais os romanos costumavam escrever documentos oficiais?",
+    alternativas: [
+      "Pergaminho, papiro e tábuas de cera",
+      "Placas de argila apenas",
+      "Folhas de bananeira",
+      "Tecido apenas"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Mesmo após deixar de ser falado no cotidiano, em que contextos o latim continuou sendo usado?",
+    alternativas: [
+      "Igreja, ciência e direito",
+      "Apenas em jogos",
+      "Apenas em culinária",
+      "Não continuou sendo usado em nenhum contexto"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Como é chamada a variante popular do latim, falada pelo povo comum, que deu origem às línguas românicas?",
+    alternativas: ["Latim clássico", "Latim vulgar", "Latim eclesiástico", "Latim arcaico"],
+    resposta: 1
   }
 ];
-
+ 
 const maias = [
   {
     pergunta: "Onde os povos maias desenvolveram sua escrita?",
@@ -279,9 +679,99 @@ const maias = [
       "Por símbolos cuneiformes"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "O sistema de escrita maia combinava quais tipos de sinais?",
+    alternativas: [
+      "Logogramas e sinais silábicos",
+      "Apenas letras isoladas",
+      "Apenas ideogramas chineses",
+      "Apenas números romanos"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Além de códices, onde a escrita maia era frequentemente registrada?",
+    alternativas: [
+      "Estelas de pedra e monumentos",
+      "Placas de metal apenas",
+      "Tecidos apenas",
+      "Folhas de papiro"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Aproximadamente quantos códices maias sobreviveram até hoje?",
+    alternativas: ["Apenas quatro", "Cerca de cem", "Mais de mil", "Nenhum"],
+    resposta: 0
+  },
+  {
+    pergunta: "Por que muitos códices maias foram destruídos?",
+    alternativas: [
+      "Foram queimados por colonizadores espanhóis",
+      "Foram perdidos no mar",
+      "Foram roubados por outros povos maias",
+      "Se desintegraram naturalmente em poucos anos"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Quem ajudou a decifrar boa parte da escrita maia no século XX?",
+    alternativas: [
+      "Jean-François Champollion",
+      "Yuri Knórozov e outros linguistas",
+      "Heinrich Schliemann",
+      "Howard Carter"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Como eram chamados os blocos que organizavam a escrita maia?",
+    alternativas: ["Cartuchos", "Glifos", "Cunhas", "Silabários"],
+    resposta: 1
+  },
+  {
+    pergunta: "A escrita maia era usada para registrar rituais relacionados a quê?",
+    alternativas: [
+      "Religião e astronomia",
+      "Apenas comércio",
+      "Apenas guerra",
+      "Apenas culinária"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Em que material os maias costumavam escrever seus códices?",
+    alternativas: [
+      "Papel feito de casca de árvore (amate)",
+      "Placas de argila",
+      "Pergaminho de couro",
+      "Folhas metálicas"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "A escrita maia é considerada, na América pré-colombiana, um dos poucos sistemas com qual característica?",
+    alternativas: [
+      "Escrita plenamente desenvolvida antes da chegada europeia",
+      "Uso exclusivo de números",
+      "Ausência total de registros históricos",
+      "Escrita idêntica à egípcia"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Além de textos históricos, o que mais os glifos maias podiam registrar sobre governantes?",
+    alternativas: [
+      "Apenas o nome do reino vizinho",
+      "Nomes, títulos e feitos de governantes",
+      "Somente listas de impostos",
+      "Somente receitas culinárias"
+    ],
+    resposta: 1
   }
 ];
-
+ 
 const avestico = [
   {
     pergunta: "Para que a escrita avéstica era utilizada?",
@@ -322,9 +812,89 @@ const avestico = [
       "Foi usada só para arte decorativa"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "O alfabeto avéstico foi criado com base em qual outro sistema de escrita?",
+    alternativas: ["Alfabeto pahlavi", "Alfabeto grego", "Alfabeto latino", "Hieróglifos egípcios"],
+    resposta: 0
+  },
+  {
+    pergunta: "O Avesta é o livro sagrado associado a qual figura religiosa?",
+    alternativas: ["Zoroastro", "Buda", "Confúcio", "Maomé"],
+    resposta: 0
+  },
+  {
+    pergunta: "Uma das características do alfabeto avéstico é que ele conseguia representar com precisão o quê?",
+    alternativas: [
+      "Apenas números",
+      "Um grande número de sons e nuances fonéticas",
+      "Apenas símbolos religiosos",
+      "Apenas nomes próprios"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Em que região histórica a escrita avéstica foi desenvolvida?",
+    alternativas: ["Pérsia / Ásia Central", "Península Itálica", "Mesoamérica", "Ilhas Gregas"],
+    resposta: 0
+  },
+  {
+    pergunta: "Em que direção o alfabeto avéstico costuma ser escrito?",
+    alternativas: [
+      "Da esquerda para a direita",
+      "Da direita para a esquerda",
+      "De cima para baixo",
+      "Em espiral"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Por que a escrita avéstica foi criada especificamente com tanta precisão fonética?",
+    alternativas: [
+      "Para registrar com exatidão os textos sagrados que antes eram só orais",
+      "Para facilitar o comércio",
+      "Para uso exclusivo em mapas",
+      "Para substituir o cuneiforme"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "O zoroastrismo é apontado por estudiosos como uma influência para conceitos presentes em quais religiões posteriores?",
+    alternativas: [
+      "Judaísmo, cristianismo e islamismo",
+      "Budismo e hinduísmo apenas",
+      "Religião maia e asteca",
+      "Nenhuma religião posterior"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Antes da criação da escrita avéstica, como os textos religiosos zoroastristas eram transmitidos?",
+    alternativas: ["Oralmente", "Em placas de argila", "Em papiro", "Em pergaminho"],
+    resposta: 0
+  },
+  {
+    pergunta: "A escrita avéstica é amplamente usada no dia a dia atualmente?",
+    alternativas: [
+      "Sim, é uma das mais usadas no mundo",
+      "Não, é praticamente uma escrita histórica e litúrgica",
+      "Sim, mas só em jornais",
+      "Sim, substituiu o alfabeto latino em vários países"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Além de orações, que outros tipos de textos o Avesta reúne?",
+    alternativas: [
+      "Hinos, leis e textos cosmológicos",
+      "Apenas receitas culinárias",
+      "Apenas registros comerciais",
+      "Apenas mapas geográficos"
+    ],
+    resposta: 0
   }
 ];
-
+ 
 const atualidade = [
   {
     pergunta: "Onde a escrita está presente atualmente?",
@@ -375,294 +945,404 @@ const atualidade = [
       "Não tiveram nenhuma influência"
     ],
     resposta: 1
+  },
+  {
+    pergunta: "O que são memes, no contexto da comunicação escrita atual?",
+    alternativas: [
+      "Documentos oficiais do governo",
+      "Imagens ou textos humorísticos compartilhados online",
+      "Um tipo de alfabeto antigo",
+      "Um sistema de escrita cuneiforme moderno"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Como os aplicativos de mensagens mudaram a forma de escrever no dia a dia?",
+    alternativas: [
+      "Tornaram a escrita mais lenta e formal",
+      "Tornaram a escrita mais rápida e informal",
+      "Eliminaram totalmente o uso de texto",
+      "Voltaram a exigir escrita em placas de argila"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual é a função de um corretor automático (autocorretor)?",
+    alternativas: [
+      "Traduzir textos para outros idiomas",
+      "Corrigir erros de digitação e ortografia",
+      "Criar novos emojis",
+      "Bloquear mensagens indevidas"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "O que são hashtags?",
+    alternativas: [
+      "Palavras-chave usadas para categorizar conteúdo em redes sociais",
+      "Um tipo de emoji",
+      "Um sistema de escrita antigo",
+      "Um aplicativo de mensagens"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Como a inteligência artificial tem influenciado a escrita atual?",
+    alternativas: [
+      "Não tem nenhuma relação com escrita",
+      "Ajudando a gerar, corrigir e revisar textos",
+      "Substituindo totalmente a necessidade de ler",
+      "Apenas criando desenhos, sem relação com texto"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "O que caracteriza a linguagem usada em muitas mensagens de texto do dia a dia?",
+    alternativas: [
+      "Formalidade extrema",
+      "Abreviações e informalidade",
+      "Uso exclusivo de latim",
+      "Uso obrigatório de hieróglifos"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Como a escrita digital tem afetado a ortografia tradicional?",
+    alternativas: [
+      "Não trouxe nenhuma mudança",
+      "Trouxe simplificações e novas formas de escrever",
+      "Tornou a ortografia mais rígida do que antes",
+      "Eliminou completamente as regras gramaticais oficiais"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "O que é considerado \"internetês\"?",
+    alternativas: [
+      "Um idioma oficial reconhecido pela ONU",
+      "Uma forma de escrita informal usada na internet",
+      "Um sistema de escrita da Antiguidade",
+      "Um tipo de teclado"
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Além de textos, que outros formatos a comunicação escrita digital costuma incorporar?",
+    alternativas: [
+      "Áudios, vídeos e gifs",
+      "Apenas desenhos em pedra",
+      "Apenas placas de argila digitalizadas",
+      "Nenhum outro formato"
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "Por que a escrita continua importante mesmo com o avanço de áudios e vídeos?",
+    alternativas: [
+      "Porque permite registro, precisão e acessibilidade",
+      "Porque é a única forma de comunicação que existe",
+      "Porque substitui totalmente a fala",
+      "Porque não pode ser usada em meios digitais"
+    ],
+    resposta: 0
   }
 ];
-
-
+ 
+ 
 // ========================================
 // categorias
 // ========================================
-
+ 
 const categorias = {
-  hieroglifos: {
-    nome: "Hieróglifos",
-    perguntas: hieroglifos
-  },
-  cuneiforme: {
-    nome: "Cuneiforme",
-    perguntas: cuneiforme
-  },
-  fenicio: {
-    nome: "Fenício",
-    perguntas: fenicio
-  },
-  grego: {
-    nome: "Grego",
-    perguntas: grego
-  },
-  latim: {
-    nome: "Latim",
-    perguntas: latim
-  },
-  maias: {
-    nome: "Glifos Maias",
-    perguntas: maias
-  },
-  avestico: {
-    nome: "Avéstico",
-    perguntas: avestico
-  },
-  atualidade: {
-    nome: "Atualidade",
-    perguntas: atualidade
-  }
+  hieroglifos: { nome: "Hieróglifos", perguntas: hieroglifos },
+  cuneiforme: { nome: "Cuneiforme", perguntas: cuneiforme },
+  fenicio: { nome: "Fenício", perguntas: fenicio },
+  grego: { nome: "Grego", perguntas: grego },
+  latim: { nome: "Latim", perguntas: latim },
+  maias: { nome: "Glifos Maias", perguntas: maias },
+  avestico: { nome: "Avéstico", perguntas: avestico },
+  atualidade: { nome: "Atualidade", perguntas: atualidade }
 };
-
-
+ 
+ 
 // ========================================
 // pegar categorias selecionadas
 // ========================================
-
-const categoriasSalvas =
-  localStorage.getItem("categoriasSelecionadas");
-
+ 
+const categoriasSalvas = localStorage.getItem("categoriasSelecionadas");
+ 
 console.log("valor lido do localStorage:", categoriasSalvas);
-
+ 
 if (!categoriasSalvas) {
-
+ 
   console.log("não achou nada — por isso ia redirecionar pro index");
   // window.location.href = "index.html"; // comentado só pra debug
-
+ 
 } else {
-
+ 
   iniciarQuiz(JSON.parse(categoriasSalvas));
-
+ 
 }
-
-
+ 
+ 
 // ========================================
 // função principal do quiz
 // ========================================
-
+ 
 function iniciarQuiz(categoriasSelecionadas) {
-
+ 
   // ========================================
-  // criar lista de perguntas
+  // criar lista de perguntas (com while)
+  // apenas com as escritas que foram selecionadas
   // ========================================
-
+ 
   let perguntasDisponiveis = [];
-
-  categoriasSelecionadas.forEach((categoria) => {
-
-    if (categorias[categoria]) {
-
-      categorias[categoria].perguntas.forEach((pergunta) => {
-
+ 
+  let i = 0;
+  while (i < categoriasSelecionadas.length) {
+ 
+    const chaveCategoria = categoriasSelecionadas[i];
+ 
+    if (categorias[chaveCategoria]) {
+ 
+      const listaDaCategoria = categorias[chaveCategoria].perguntas;
+      const nomeDaCategoria = categorias[chaveCategoria].nome;
+ 
+      let j = 0;
+      while (j < listaDaCategoria.length) {
+ 
+        const p = listaDaCategoria[j];
+ 
         perguntasDisponiveis.push({
-          pergunta: pergunta.pergunta,
-          alternativas: pergunta.alternativas,
-          resposta: pergunta.resposta,
-          categoria: categorias[categoria].nome,
-          categoriaChave: categoria
+          pergunta: p.pergunta,
+          alternativas: p.alternativas,
+          resposta: p.resposta,
+          categoria: nomeDaCategoria,
+          categoriaChave: chaveCategoria
         });
-
-      });
-
+ 
+        j++;
+      }
     }
-
-  });
-
-
+ 
+    i++;
+  }
+ 
+ 
   // ========================================
-  // embaralhar perguntas
+  // embaralhar perguntas (fisher-yates, com while)
   // ========================================
-
-  perguntasDisponiveis.sort(() => Math.random() - 0.5);
-
+ 
+  let k = perguntasDisponiveis.length - 1;
+  while (k > 0) {
+ 
+    const sorteado = Math.floor(Math.random() * (k + 1));
+ 
+    const temp = perguntasDisponiveis[k];
+    perguntasDisponiveis[k] = perguntasDisponiveis[sorteado];
+    perguntasDisponiveis[sorteado] = temp;
+ 
+    k--;
+  }
+ 
   // pegar no máximo o limite definido
-
-  perguntasDisponiveis =
-    perguntasDisponiveis.slice(0, LIMITE_PERGUNTAS);
-
-
+ 
+  if (perguntasDisponiveis.length > LIMITE_PERGUNTAS) {
+    perguntasDisponiveis = perguntasDisponiveis.slice(0, LIMITE_PERGUNTAS);
+  }
+ 
+ 
   // ========================================
   // elementos do html
   // ========================================
-
-  const numeroPergunta =
-    document.getElementById("numeroPergunta");
-
-  const categoriaPergunta =
-    document.getElementById("categoriaPergunta");
-
-  const pergunta =
-    document.getElementById("pergunta");
-
-  const botoes =
-    document.querySelectorAll(".alternativa");
-
-  const mensagem =
-    document.getElementById("mensagem");
-
-
+ 
+  const numeroPergunta = document.getElementById("numeroPergunta");
+  const categoriaPergunta = document.getElementById("categoriaPergunta");
+  const pergunta = document.getElementById("pergunta");
+  const botoes = document.querySelectorAll(".alternativa");
+  const mensagem = document.getElementById("mensagem");
+ 
+ 
   // ========================================
   // controle
   // ========================================
-
+ 
   let numeroAtual = 0;
-
   let perguntaAtual;
-
   let acertos = 0;
-
-  // contagem de acertos e total de perguntas por categoria
-  // (só das categorias que realmente caíram no quiz)
-
-  let acertosPorCategoria = {};
-
-  perguntasDisponiveis.forEach((p) => {
-
-    if (!acertosPorCategoria[p.categoriaChave]) {
-
-      acertosPorCategoria[p.categoriaChave] = {
+ 
+  // lista (array) de acertos por categoria — só das categorias que caíram no quiz
+ 
+  let listaCategorias = [];
+ 
+  function buscarCategoriaNaLista(chave) {
+ 
+    let n = 0;
+    while (n < listaCategorias.length) {
+ 
+      if (listaCategorias[n].chave === chave) {
+        return listaCategorias[n];
+      }
+ 
+      n++;
+    }
+ 
+    return null;
+  }
+ 
+  let m = 0;
+  while (m < perguntasDisponiveis.length) {
+ 
+    const p = perguntasDisponiveis[m];
+ 
+    let item = buscarCategoriaNaLista(p.categoriaChave);
+ 
+    if (!item) {
+ 
+      item = {
+        chave: p.categoriaChave,
         nome: p.categoria,
         acertos: 0,
         total: 0
       };
-
+ 
+      listaCategorias.push(item);
     }
-
-    acertosPorCategoria[p.categoriaChave].total++;
-
-  });
-
-
+ 
+    item.total++;
+ 
+    m++;
+  }
+ 
+ 
   // ========================================
   // mostrar pergunta
   // ========================================
-
+ 
   function mostrarPergunta() {
-
-    perguntaAtual =
-      perguntasDisponiveis[numeroAtual];
-
+ 
+    perguntaAtual = perguntasDisponiveis[numeroAtual];
+ 
     if (!perguntaAtual) {
       finalizarQuiz();
       return;
     }
-
-    numeroPergunta.textContent =
-      numeroAtual + 1;
-
-    categoriaPergunta.textContent =
-      perguntaAtual.categoria;
-
-    pergunta.textContent =
-      perguntaAtual.pergunta;
-
-    botoes.forEach((botao, index) => {
-
-      botao.textContent =
-        perguntaAtual.alternativas[index];
-
-      botao.dataset.resposta =
-        index;
-
+ 
+    numeroPergunta.textContent = numeroAtual + 1;
+    categoriaPergunta.textContent = perguntaAtual.categoria;
+    pergunta.textContent = perguntaAtual.pergunta;
+ 
+    let b = 0;
+    while (b < botoes.length) {
+ 
+      const botao = botoes[b];
+ 
+      botao.textContent = perguntaAtual.alternativas[b];
+      botao.dataset.resposta = b;
       botao.disabled = false;
-
       botao.style.display = "block";
-
-    });
-
+ 
+      b++;
+    }
+ 
     mensagem.textContent = "";
-
   }
-
-
+ 
+ 
   // ========================================
   // botões de resposta
   // ========================================
-
-  botoes.forEach((botao) => {
-
-    botao.addEventListener("click", () => {
-
-      const resposta =
-        Number(botao.dataset.resposta);
-
-      if (resposta === perguntaAtual.resposta) {
-
-        mensagem.textContent =
-          "✓ Você acertou!";
-
-        acertos++;
-
-        acertosPorCategoria[perguntaAtual.categoriaChave].acertos++;
-
+ 
+  function desabilitarBotoes() {
+ 
+    let b = 0;
+    while (b < botoes.length) {
+      botoes[b].disabled = true;
+      b++;
+    }
+  }
+ 
+  function responder(botaoClicado) {
+ 
+    const resposta = Number(botaoClicado.dataset.resposta);
+ 
+    if (resposta === perguntaAtual.resposta) {
+ 
+      mensagem.textContent = "✓ Você acertou!";
+      acertos++;
+ 
+      const categoriaDaPergunta = buscarCategoriaNaLista(perguntaAtual.categoriaChave);
+      categoriaDaPergunta.acertos++;
+ 
+    } else {
+ 
+      mensagem.textContent = "✗ Você errou!";
+    }
+ 
+    desabilitarBotoes();
+ 
+    numeroAtual++;
+ 
+    setTimeout(() => {
+ 
+      if (numeroAtual >= perguntasDisponiveis.length) {
+        finalizarQuiz();
       } else {
-
-        mensagem.textContent =
-          "✗ Você errou!";
-
+        mostrarPergunta();
       }
-
-      botoes.forEach((botao) => {
-        botao.disabled = true;
-      });
-
-      numeroAtual++;
-
-      setTimeout(() => {
-
-        if (numeroAtual >= perguntasDisponiveis.length) {
-
-          finalizarQuiz();
-
-        } else {
-
-          mostrarPergunta();
-
-        }
-
-      }, 700);
-
+ 
+    }, 700);
+  }
+ 
+  let c = 0;
+  while (c < botoes.length) {
+ 
+    botoes[c].addEventListener("click", function () {
+      responder(this);
     });
-
-  });
-
-
+ 
+    c++;
+  }
+ 
+ 
   // ========================================
   // finalizar
   // ========================================
-
+ 
   function finalizarQuiz() {
-
+ 
     const total = perguntasDisponiveis.length;
-
-    const porcentagem =
-      total > 0
-        ? Math.round((acertos / total) * 100)
-        : 0;
-
+ 
+    let porcentagem = 0;
+    if (total > 0) {
+      porcentagem = Math.round((acertos / total) * 100);
+    }
+ 
     // monta a lista de resultados por categoria, já com a porcentagem calculada
-
-    const porCategoria = Object.keys(acertosPorCategoria).map((chave) => {
-
-      const dados = acertosPorCategoria[chave];
-
-      return {
-        chave: chave,
-        nome: dados.nome,
-        acertos: dados.acertos,
-        total: dados.total,
-        porcentagem:
-          dados.total > 0
-            ? Math.round((dados.acertos / dados.total) * 100)
-            : 0
-      };
-
-    });
-
+ 
+    let porCategoria = [];
+ 
+    let d = 0;
+    while (d < listaCategorias.length) {
+ 
+      const item = listaCategorias[d];
+ 
+      let percCategoria = 0;
+      if (item.total > 0) {
+        percCategoria = Math.round((item.acertos / item.total) * 100);
+      }
+ 
+      porCategoria.push({
+        chave: item.chave,
+        nome: item.nome,
+        acertos: item.acertos,
+        total: item.total,
+        porcentagem: percCategoria
+      });
+ 
+      d++;
+    }
+ 
     const resultado = {
       acertos: acertos,
       total: total,
@@ -670,21 +1350,17 @@ function iniciarQuiz(categoriasSelecionadas) {
       categorias: categoriasSelecionadas,
       porCategoria: porCategoria
     };
-
-    localStorage.setItem(
-      "resultadoQuiz",
-      JSON.stringify(resultado)
-    );
-
+ 
+    localStorage.setItem("resultadoQuiz", JSON.stringify(resultado));
+ 
     window.location.href = "resultado.html";
-
   }
-
-
+ 
+ 
   // ========================================
   // iniciar
   // ========================================
-
+ 
   mostrarPergunta();
-
 }
+ 
