@@ -78,6 +78,7 @@
 }
 .opcoes ul li .avestico img {
     width: 65%;
+    opacity: 75%;
 }
 /* ===== Nome da escrita (antigo <p>, agora <button>) ===== */
 .opcoes p,

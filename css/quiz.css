@@ -3,7 +3,7 @@
 }
 .resumo h3{
     background-color: var(--primary-color);
-    font-size: 2vw;
+    font-size: clamp(1.1rem, 2vw, 2rem);
     padding: 2vw;
     color: white;
     text-align: center;
@@ -13,7 +13,7 @@
     background-color:antiquewhite;
     margin: 4vw;
     padding: 2vw;
-    font-size: 1.8vw;
+    font-size: clamp(0.95rem, 1.8vw, 1.6rem);
     color: rgba(0, 0, 0, 0.399);
     border-radius: 20px;
     
@@ -26,7 +26,7 @@
  .caixa{
    background-color: antiquewhite;
    margin: 12rem;
-   padding: 2vw;
+   padding: 6vw;
    border: 30px solid var(--primary-color);
    border-radius: 30px;
    text-align: center;
@@ -48,7 +48,7 @@
  .caixa h4{
    color: #8e1919;
    font-weight: 200;
-   font-size: 3vw;
+   font-size: clamp(1.2rem, 3vw, 2.4rem);
    padding: 3vw;
  }
  .caixa h3{
@@ -57,7 +57,7 @@
     border-radius: 50%;
     background-color: var(--primary-color);
     color: white;
-    font-size: 2vw;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@
  }
 .alternativas{
   display: flex;
-  font-size: 2vw;
+  font-size: clamp(1rem, 2vw, 1.6rem);
 }
 
 /* === Hover nas alternativas: entorno muda de cor === */
@@ -103,7 +103,7 @@
 
 .categoria{
   margin: 1vw;
-  font-size: 2vw;
+  font-size: clamp(1rem, 2vw, 1.6rem);
 }
 
 /* Respeita quem prefere menos animação */
@@ -114,4 +114,39 @@
     .alternativas > * {
         transition: none !important;
     }
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .resumo p {
+    margin: 4vw 3vw;
+  }
+
+  .caixa {
+    margin: 2rem 1rem;
+    padding: 6vw 4vw;
+    border-width: 10px;
+    border-radius: 20px;
+  }
+
+  .caixa h4 {
+    padding: 4vw 0;
+  }
+
+  /* Alternativas empilham em coluna no celular */
+  .alternativas {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .alternativas li,
+  .alternativas > * {
+    padding: 3vw 4vw;
+  }
+
+  button {
+    border-width: 5px;
+    padding: 3vw 5vw;
+    width: 100%;
+  }
 }

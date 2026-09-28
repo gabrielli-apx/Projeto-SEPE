@@ -6,7 +6,7 @@ h4{
     color: white;
     text-align: center;
     padding:2vw 0vw;
-    font-size: 2vw;
+    font-size: clamp(1rem, 2vw, 1.8rem);
     margin: 2vw 0;
     border-radius: 20px;
 }
@@ -61,7 +61,7 @@ h4{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9vw;
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
   font-weight: bold;
   margin-bottom: 0.4vw;
   transition: transform 0.3s ease;
@@ -84,14 +84,14 @@ h4{
 
 .roteiro-icone-texto {
   font-weight: bold;
-  font-size: 0.9vw;
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
   border: 2px solid var(--primary-color);
   border-radius: 6px;
   padding: 4px 6px;
 }
 
 .roteiro-legenda {
-  font-size: 0.85vw;
+  font-size: clamp(0.65rem, 0.85vw, 0.8rem);
   line-height: 1.2;
 }
 
@@ -153,21 +153,21 @@ h4{
 
 .roteiro-cabecalho h3 {
   color: var(--primary-color);
-  font-size: 1.2vw;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   margin: 0;
 }
 
 .roteiro-tempo {
   background-color: var(--primary-color);
   color: white;
-  font-size: 0.75vw;
+  font-size: clamp(0.65rem, 0.75vw, 0.75rem);
   padding: 0.3vw 0.8vw;
   border-radius: 20px;
   white-space: nowrap;
 }
 
 .roteiro-info p {
-  font-size: 0.9vw;
+  font-size: clamp(0.8rem, 0.9vw, 0.9rem);
   color: rgba(0, 0, 0, 0.65);
   margin: 0;
 }
@@ -180,7 +180,7 @@ h4{
   color: #f2e9d8;
   padding: 0.4vw 1vw;
   border-radius: 20px;
-  font-size: 0.85vw;
+  font-size: clamp(0.75rem, 0.85vw, 0.85rem);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -218,4 +218,79 @@ h4{
     .roteiro-icone {
         transition: none !important;
     }
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .roteiro-personalizado {
+    margin: 6vw 1rem;
+  }
+
+  .roteiro-grid {
+    padding: 5vw 4vw;
+    gap: 6vw;
+  }
+
+  /* A linha vira coluna: ícone em cima, card embaixo */
+  .roteiro-linha {
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .roteiro-icone-coluna {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: none;
+    gap: 2vw;
+  }
+
+  /* A linha pontilhada some no mobile (não faz sentido na horizontal) */
+  .roteiro-linha:not(.roteiro-linha-final) .roteiro-icone-coluna::after {
+    display: none;
+  }
+
+  .roteiro-numero,
+  .roteiro-icone {
+    margin-bottom: 0;
+  }
+
+  .roteiro-legenda {
+    display: none; /* opcional: some com a legenda repetida em cada linha */
+  }
+
+  .roteiro-card {
+    flex-direction: column;
+    padding: 4vw;
+    gap: 3vw;
+  }
+
+  .roteiro-miniatura {
+    flex: none;
+    width: 100%;
+    height: 40vw;
+    max-height: 180px;
+  }
+
+  .roteiro-cabecalho {
+    flex-wrap: wrap;
+    gap: 2vw;
+  }
+
+  .roteiro-cabecalho h3 {
+    font-size: 1.05rem;
+  }
+
+  .roteiro-tempo {
+    font-size: 0.75rem;
+    padding: 1vw 3vw;
+  }
+
+  .roteiro-info p {
+    font-size: 0.9rem;
+  }
+
+  .roteiro-botao {
+    font-size: 0.85rem;
+    padding: 2vw 4vw;
+  }
 }

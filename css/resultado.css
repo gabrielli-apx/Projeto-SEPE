@@ -4,7 +4,7 @@
 
 .resultado h3 {
   background-color: var(--primary-color);
-  font-size: 2vw;
+  font-size: clamp(1.1rem, 2vw, 2rem);
   padding: 2vw;
   color: white;
   text-align: center;
@@ -33,7 +33,7 @@
 }
 
 .assuntos {
-  font-size: 1.4vw;
+  font-size: clamp(0.9rem, 1.4vw, 1.3rem);
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 1vw;
 }
@@ -68,7 +68,7 @@
 .circulo-porcentagem #porcentagemTexto {
   position: relative;
   z-index: 1;
-  font-size: 2.2vw;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
   font-weight: bold;
   color: var(--primary-color);
 }
@@ -79,13 +79,13 @@
 }
 
 .detalhe {
-  font-size: 1.6vw;
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
   color: #8e1919;
   margin-top: 1vw;
 }
 
 .mensagem-nivel {
-  font-size: 1.4vw;
+  font-size: clamp(0.9rem, 1.4vw, 1.3rem);
   color: rgba(0, 0, 0, 0.6);
   max-width: 40vw;
 }
@@ -98,7 +98,7 @@
 
 .por-categoria h4 {
   color: var(--primary-color);
-  font-size: 1.4vw;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
   text-align: center;
   margin-bottom: 1vw;
 }
@@ -117,13 +117,14 @@
 
 .item-categoria .nome-categoria {
   width: 12vw;
-  font-size: 1.1vw;
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
   color: #8e1919;
 }
 
 .item-categoria .barra-fundo {
   flex: 1;
   height: 1.2vw;
+  min-height: 8px;
   background-color: rgba(122, 31, 36, 0.15);
   border-radius: 20px;
   overflow: hidden;
@@ -138,7 +139,7 @@
 
 .item-categoria .valor-categoria {
   width: 4vw;
-  font-size: 1.1vw;
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
   color: #8e1919;
   text-align: right;
 }
@@ -147,15 +148,17 @@
   display: flex;
   gap: 1vw;
   margin-top: 2vw;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .botoes-resultado button {
   border: 8px solid var(--primary-color);
   padding: 1vw 2vw;
   border-radius: 30px;
-  background:rgb(247, 227, 201);
+  background: rgb(247, 227, 201);
   cursor: pointer;
-  font-size: 1.2vw;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
@@ -167,9 +170,61 @@
 
 /* Respeita quem prefere menos animação */
 @media (prefers-reduced-motion: reduce) {
-    .caixa-resultado,
-    .circulo-porcentagem,
-    .botoes-resultado button {
-        transition: none !important;
-    }
+  .caixa-resultado,
+  .circulo-porcentagem,
+  .botoes-resultado button {
+    transition: none !important;
+  }
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .caixa-resultado {
+    margin: 2rem 1rem;
+    padding: 6vw 5vw;
+    border-width: 10px;
+    border-radius: 20px;
+  }
+
+  .circulo-porcentagem {
+    width: 130px;
+    height: 130px;
+  }
+
+  .circulo-porcentagem::before {
+    width: 105px;
+    height: 105px;
+  }
+
+  .mensagem-nivel {
+    max-width: 90vw;
+  }
+
+  .item-categoria {
+    flex-wrap: wrap;
+  }
+
+  .item-categoria .nome-categoria {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .item-categoria .barra-fundo {
+    height: 10px;
+  }
+
+  .item-categoria .valor-categoria {
+    width: auto;
+    font-size: 0.9rem;
+  }
+
+  .botoes-resultado {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .botoes-resultado button {
+    width: 100%;
+    border-width: 4px;
+  }
 }
