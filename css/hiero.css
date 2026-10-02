@@ -1,0 +1,384 @@
+/* === main === */
+
+main {
+    padding: 3vw 3vw 3vw 3vw;
+}
+
+/* === section === */
+
+.hieroglifo {
+    background-color: #F5E9D5;
+    border-radius: 50px;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+    border: 10px solid #841919
+}
+
+.hieroglifo img {
+    width: 25%;
+    height: 25%;
+}
+
+.hieroglifo h3 {
+    color: #841919;
+    font-size: 1.3rem;
+    margin: 15px;
+}
+
+.hieroglifo h4 {
+    color: #713434;
+    font-size: 1.2rem;
+    margin: 12px;
+}
+
+.hieroglifo p {
+    color: gray;
+    font-size: 1.2rem;
+}
+
+/* === Título === */
+
+.titulo {
+    width: fit-content;
+    background-color: #841919;
+    padding: 10px 15px 10px 15px;
+    border-radius: 360px;
+    justify-content: first baseline;
+    margin: 15px 0px 15px 0px;
+}
+
+.titulo img {
+    height: 50px;
+    width: 50px;
+    background-color: #FFF5E2;
+    align-items: center;
+    padding: 0.8vw 0.8vw 0.8vw 0.8vw;
+    border-radius: 360px;
+}
+
+.escrita {
+    text-align: center;
+}
+
+.escrita h2 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.escrita p {
+    font-size: 1.3rem;
+    color: rgb(201, 201, 201);
+}
+
+.descubra h3 {
+    color: #986912;
+}
+
+/* === PrimeiraDiv === */
+
+.primeiraDiv {
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+.espacoPrimeira {
+    padding: 0vw 0vw 3vw 0vw;
+}
+
+.primeiraDiv img {
+    height: 100%;
+    width: 100%;
+}
+
+/* === SegundaDiv === */
+
+.segundaDiv {
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+.segundaDiv img {
+    height: 100%;
+    width: 100%;
+}
+
+/* === terceiraDiv === */
+
+.terceiraDiv {
+    text-align: center;
+
+}
+
+.terceiraDiv p {
+    padding: 1vw 0vw 1vw 0vw;
+}
+
+/* === quartaDiv === */
+
+.quartaDiv {
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+.quartaDiv img {
+    height: 150%;
+    width: 150%;
+}
+
+/* === quintaDiv === */
+
+.quintaDiv {
+    text-align: center
+}
+.quintaDiv img {
+    height: 100%;
+    width: 100%;
+}
+/* === sextaDiv === */
+.sextaDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.sextaDiv img {
+    height: 100%;
+    width: 100%;
+}
+
+/* === setimaDiv === */
+.setimaDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.setimaDiv img {
+    height: 50%;
+    width: 50%;
+}
+
+/* === oitavaDiv === */
+.oitavaDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.oitavaDiv img {
+    height: 50%;
+    width: 50%;
+}
+
+
+/* === nonaDiv === */
+.nonaDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.nonaDiv img {
+    height: 50%;
+    width: 50%;
+}
+
+/*=== decimaDiv ===*/
+.decimaDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.decimaDiv img {
+    height: 100%;
+    width: 100%;
+}
+
+/*=== decimapriDiv ===*/
+.decimapriDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.decimapriDiv img {
+    height: 100%;
+    width: 100%;
+}
+
+/*=== decimasegDiv ===*/
+.decimasegDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.decimasegDiv img {
+    height: 100%;
+    width: 100%;
+}
+
+/*=== decimaterDiv ===*/
+.decimaterDiv {
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.decimaterDiv img {
+    height: 100%;
+    width: 100%;
+}
+/*=== decimaquaDiv ===*/
+
+.decimaquaDiv{
+    padding: 3vw 0vw 3vw 0vw;
+    text-align: center;
+}
+.decimaquaDiv img{
+    padding: 3vw 0vw 3vw 0vw;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+@media screen {
+    /* === Título === */
+
+    .titulo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* === PrimeiraDiv === */
+
+    .primeiraDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === SegundaDiv === */
+
+    .segundaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === terceiraDiv === */
+
+    .terceiraDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === quartaDiv === */
+
+    .quartaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === quintaDiv === */
+
+    .quintaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === sextaDiv === */
+
+    .sextaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === setimaDiv === */
+    .setimaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === oitavaDiv === */
+    .oitavaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* === nonaDiv === */
+    .nonaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /*=== decimaDiv ===*/
+    .decimaDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /*=== decimapriDiv ===*/
+    .decimapriDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /*=== decimasegDiv ===*/
+    .decimasegDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /*=== decimaterDiv ===*/
+    .decimaterDiv {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    /*=== decima Div ===*/
+    .decima Div {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    /* === main === */
+
+    .hieroglifo p {
+        font-size: 1.8rem;
+        margin: 0px 30px 0px 30px;
+    }
+
+    .hieroglifo {
+        font-size: 2.5rem;
+    }
+
+    .hieroglifo h4 {
+        font-size: 2rem;
+    }
+
+    .hieroglifo h3 {
+        font-size: 2rem;
+    }
+
+    .titulo {
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        padding: 1.5vw 2vw 1.5vw 2vw;
+    }
+}
