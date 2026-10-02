@@ -1,176 +1,344 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/bloons.css" />
-    <link rel="stylesheet" href="css/main.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
 
-    <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bloons.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="hiero.css">
+  <script src="js/script.js" defer></script>
 
-    <title>Projeto SEPE</title>
-  </head>
+  <title>Projeto SEPE</title>
+</head>
 
-  <body>
-    <header>
-      <!-- Barra superior -->
-      <div class="header-top">
-        <div class="header-brand">
-          <img src="imagem/logo.png" alt="Logo" />
-          <h1>S&L</h1>
+<body>
+  <header>
+    <!-- Barra superior -->
+    <div class="header-top">
+      <div class="header-brand">
+        <img src="imagens/logo.png" alt="Logo" />
+        <h1>S&L</h1>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="mainNav">
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="comeco.html">Começo</a></li>
+          <li><a href="evolucao.html">Evolução</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="roteiro.html">Roteiro</a></li>
+          <li><a href="nos.html">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Banner -->
+    <div class="header-banner">
+      <div class="banner-text">
+        <h1>
+          Entre símbolos <br />
+          e letras
+        </h1>
+        <h2>- A invenção da escrita -</h2>
+      </div>
+
+      <img src="imagens/imagem-header.png" alt="Imagem do banner" class="banner-img" />
+    </div>
+  </header>
+  <main>
+    <section class="hieroglifo">
+      <div class="descubra">
+        <h3>
+          Descubra a Escrita:
+        </h3>
+      </div>
+      <div class="titulo">
+        <div>
+          <img src="imagemHiero/hieroglifo-removebg-preview.png" alt="hieroglifo">
+        </div>
+        <div class="escrita">
+          <h2>
+            Hieróglifica
+          </h2>
+          <p>
+            - Egito, 3200 a.C
+          </p>
+        </div>
+      </div>
+      <div class="primeiraDiv">
+        <div>
+          <p>Hieróglifos é o nome dado aos caracteres de um tipo de escrita usado no Egito Antigo. Nesse sistema de
+            escrita, cada desenho (ou hieróglifo) representa uma coisa, uma pessoa, um som ou uma ideia. Sua origem
+            remonta a cerca de 2700 a.C., tendo se desenvolvido a partir da escrita pictográfica que existia
+            anteriormente no Egito.
+          </p>
+        </div>
+        <div>
+          <img src="imagemHiero/image 20.png" alt="imagem-20">
+        </div>
+      </div>
+      <div class="segundaDiv">
+        <div>
+          <img src="imagemHiero/image 21.png" alt="imagem-21">
+        </div>
+        <div>
+          <h3>Qual a importância?</h3>
+          <p>A importância dos hieróglifos está em revelar aspectos históricos e culturais do Egito Antigo. A beleza
+            de seus símbolos e a complexidade de sua escrita mostram a sofisticação do povo egípcio, bem como a
+            habilidade de seus escribas.
+            Além da escrita hieroglífica, mais usada em cerimônias religiosas e monumentos, os egípcios também
+            desenvolveram outros tipos de escrita: a hierática, a demótica e a cóptica. O nome "hieróglifo" vem do
+            grego e significa “escrita sagrada”.</p>
+        </div>
+      </div>
+      <div class="terceiraDiv">
+        <div>
+          <h3>
+            Quais os tipos de hieróglifos?
+          </h3>
+          <ul>
+            <li>
+              <p>
+                Os hieróglifos podiam representar um objeto, uma ação ou até mesmo um som. Por isso, costumam ser
+                divididos em três tipos: fonogramas, ideogramas e determinativos.
+              </p>
+            </li>
+            <li>
+              <p>
+                Os <strong> fonogramas</strong> são hieróglifos que representam sons da fala. Alguns representam apenas
+                um som, enquanto outros podem representar dois ou até três. Quando são mais complexos, costumam vir
+                acompanhados de outros sinais para ajudar na leitura correta.
+              </p>
+            </li>
+            <li>
+              <p>
+                Os <strong>ideogramas</strong> representam o significado de uma palavra por meio da imagem. Por exemplo,
+                o desenho de um sol podia representar o próprio sol ou a ideia de luz e calor. Nesses casos, o desenho
+                mostra a ideia principal da palavra.
+              </p>
+            </li>
+            <li>
+              <p>
+                Já os <strong>determinativos</strong> são hieróglifos que não eram lidos em voz alta. Eles serviam para
+                mostrar o tipo de palavra usada. Um determinativo podia indicar, por exemplo, se a palavra era sobre uma
+                pessoa, um lugar ou uma ação.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="quartaDiv">
+        <div>
+          <img src="imagemHiero/image 22.png" alt="pedra-roseta">
+        </div>
+        <div>
+          <h3>Como os hieróglifos foram decifrados?</h3>
+          <p>Os hieróglifos permaneceram um mistério para a humanidade por muitos séculos. Os pesquisadores apenas
+            conseguiram decifrar seu significado no século XIX, com a descoberta da <strong>Pedra da Roseta </strong>,
+            encontrada por oficiais franceses sob comando de Napoleão em 1799.</p>
+          <p>
+            A Pedra da Roseta é uma estela de basalto (tipo de rocha) com catorze linhas na escrita hieroglífica, 32 na
+            demótica e 54 na grega. Como o grego já era conhecido, foi possível traduzir sua escrita, e os pesquisadores
+            compreenderam que esse documento era um decreto traduzido em três línguas dos sacerdotes da cidade de Mênfis
+            para assinalar a coroação de Ptolomeu V, em 196 d.C.
+            Dessa forma, os pesquisadores conseguiram tanto decifrar os sinais e as características da escrita demótica
+            como as primeiras pistas da escrita hieroglífica ainda no século XIX.
+          </p>
+        </div>
+      </div>
+      <div class="quintaDiv">
+        <p>
+          Entre os mais importantes pesquisadores, destaca-se Jean-François Champollion, que transliterou centenas de
+          trechos de hieróglifos. Atualmente, a Pedra da Roseta se encontra em exposição no British Museum, em
+          Londres.
+        </p>
+      </div>
+
+      <h3>Curiosidades sobre os hieróglifos:</h3>
+      <div class="sextaDiv">
+        <div>
+          <img src="imagemHiero/image 90.png" alt="tumba">
+        </div>
+        <div>
+          <p>O Brasil é o país da América Latina com o maior acervo de itens do Egito Antigo, inclusive peças com
+            escritos em hieróglifos. Esses itens foram adquiridos pelos imperadores Dom Pedro I e Dom Pedro II, que
+            eram grandes interessados em história e Egiptologia.</p>
+        </div>
+      </div>
+      <div class="setimaDiv">
+        <p>
+          Os hieróglifos fonéticos não apresentavam vogais. Apenas as consoantes eram escritas, e as vogais eram
+          adicionadas na hora da leitura, de acordo com o som esperado da palavra.
+        </p>
+        <img src="imagemHiero/image 91.png" alt="parede">
+      </div>
+      <div class="oitavaDiv">
+        <img src="imagemHiero/image 92.png" alt="hieroglifos-diaadia">
+        <p>A escrita em hieróglifos podia ser lida tanto da esquerda para a direita quanto da direita para a
+          esquerda. Para saber o sentido correto, basta observar a direção para onde as figuras humanas ou animais
+          estão olhando.</p>
+      </div>
+      <div class="nonaDiv">
+        <p>Os hieróglifos não eram usados no dia a dia da população. Eram reservados para ocasiões importantes, como
+          monumentos e cerimônias religiosas. No cotidiano, os egípcios usavam formas mais simples de escrita, como a
+          demótica.</p>
+        <img src="imagemHiero/image 94.png" alt="hieroglifo">
+      </div>
+
+
+
+      <div class="decimaDiv">
+        <div><img src="imagemHiero/image 98.png" alt="Thoth"></div>
+        <div>
+          <h3>Qual a origem dos hieróglifos?</h3>
+          <p>
+            Os antigos egípcios acreditavam em uma origem mitológica para a origem dos hieróglifos. Para eles, foi
+            Thoth, o deus egípcio da sabedoria, que teria ensinado em tempos remotos os hieróglifos aos seres
+            humanos.<br>
+            Existe um debate entre os historiadores, egiptólogos, linguistas e arqueólogos sobre a origem da primeira
+            forma de escrita, o título de inventor da escrita é disputado entre egípcios, com seus hieróglifos, e
+            mesopotâmicos, com a escrita cuneiforme.
+          </p>
+        </div>
+      </div>
+      <div class="decimapriDiv">
+        <div>
+          <p>
+            No Egito, os registros mais antigos de hieróglifos estão relacionados ao Rei Escorpião. Ele recebeu esse
+            nome justamente pelo fato de o único artefato representando-o possuir uma figura de escorpião ao seu lado
+            assim como uma figura de flor. Esses símbolos são considerados os mais antigos hieróglifos descobertos,
+            embora não mostrassem um sistema de escrita complexo. Vale lembrar que o Rei Escorpião governou o Egito por
+            volta do ano 3200 a.C.
+          </p>
+        </div>
+        <div>
+          <img src="imagemHiero/image 101.png" alt="Egito">
+        </div>
+      </div>
+
+      <h3>
+        Quais as características dos hieróglifos?
+      </h3>
+      <div class="decimasegDiv">
+        <div>
+          <p>
+            A primeira característica dos hieróglifos é a representação com figuras facilmente identificáveis, como
+            partes do corpo humano, animais, objetos, plantas, entre diversas outras. Vale lembrar que se representassem
+            figuras identificáveis, muitas vezes eles eram fonogramas, e não a imagem representada.
+          </p>
+        </div>
+        <div><img src="imagemHiero/image 103.png" alt="primeiro"></div>
+      </div>
+
+      <div class="decimaterDiv">
+        <div>
+          <img src="imagemHiero/image 104.png" alt="caracteristicas">
+        </div>
+        <div>
+          <p>Outra característica da escrita hieroglífica é a grande quantidade de caracteres utilizados. No início do
+            sistema de escrita eram cerca de 800 caracteres, mas com a evolução e a introdução de hieróglifos que
+            representam fonogramas e determinantes, esse número aumentou muito, chegando a milhares de caracteres. Essa
+            complexidade tornava difícil o aprendizado desse tipo de escrita, sendo dominada por poucas pessoas.</p>
         </div>
 
-        <button
-          class="menu-toggle"
-          id="menuToggle"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      </div>
+      <h3>
+        Como ler os hieróglifos?
+      </h3>
+      <div class="decimaquaDiv">
+        <p>
+          Poucas pessoas no mundo sabem ler os hieróglifos. Para dominar esse sistema são necessários anos de estudos,
+          mas podemos ter algumas noções sobre como eles funcionavam. <br>A primeira coisa que devemos identificar é a
+          direção de leitura dos hieróglifos. Ao contrário da nossa escrita, que é lida da esquerda para direita e de
+          cima para baixo, o sentido de leitura dos hieróglifos podia variar. <br>
+          Para a saber a direção correta de leitura devemos observar os hieróglifos e para onde eles estão “olhando”. Na
+          imagem abaixo, por exemplo, os hieróglifos devem ser lidos da direita para a esquerda, uma vez que os
+          hieróglifos estão virados para a direita, onde se inicia o texto. Quando os hieróglifos são registrados em
+          linhas horizontais, a leitura ocorre de cima para baixo.
+        </p>
+        <img src="imagemHiero/image 105.png" alt="lerhieroglifo">
+        <p>
+          Os hieróglifos que estão circulados na imagem acima registram o <strong>nome de faraós ou de suas
+            esposas</strong>, eles sempre eram escritos dentro de um cartucho, maneira pela qual são chamadas as elipses
+          que circundam os nomes reais. 
+        </p>
+        <div>
+          <p>
+            Existiam <strong>milhares</strong> de hieróglifos, muitos deles representando <strong>fonemas, palavras e
+              alguns até mesmo frases inteiras.</strong> Alguns hieróglifos, quando pronunciados, possuíam sons
+            semelhantes aos das nossas letras do alfabeto, como na tabela ao lado. Dessa forma podemos utilizar alguns
+            hieróglifos como se eles fossem letras do nosso sistema de escrita. 
+          </p>
+        </div>
+        <div >
+          <img src="imagemHiero/image 106.png" alt="milhares">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
 
-        <nav id="mainNav">
-          <ul id="navList">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="comeco.html">Começo</a></li>
-            <li><a href="evolucao.html">Evolução</a></li>
-            <li><a href="curiosidades.html">Curiosidades</a></li>
-            <li><a href="roteiro.html">Roteiro</a></li>
+      <div class="footer-brand">
+        <h1>Entre símbolos <br> e letras</h1>
+        <h2>Inventando a escrita</h2>
+      </div>
+
+      <div class="footer-img">
+        <img src="imagens/logo-completa.png" alt="Logo completa" class="footer-logo">
+      </div>
+      <div class="footer-info">
+
+        <nav>
+          <ul>
             <li><a href="nos.html">Sobre nós</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://wa.me/5547997479884?text=Ola!%20Gostaria%20de%20mais%20informacoes%20sobre%20o%20site."
+                target="_blank">Dúvidas</a></li>
+          </ul>
+        </nav>
+
+        <h4>
+          © 2026 Todos os direitos reservados.
+        </h4>
+
+      </div>
+
+      <div class="footer-social">
+        <nav>
+          <ul>
+            <li><a href="mailto:entre.simbolos.e.letras@gmail.com"><img src="imagem/email.png" alt="Email"></a></li>
+            <li><a href="https://www.instagram.com/simbolos.e.letras?stkn=dHdtbjd3YTh4ODB0"><img
+                  src="imagens/instagram-logo.png" alt="Instagram"></a></li>
+            <li><a href="https://maps.app.goo.gl/yZ2cpf5EEPenz7bT7"><img src="imagens/localizacao-logo.png"
+                  alt="Localização"></a></li>
+            <li><a href="https://wa.me/5547997479884?text=Ola!%20Gostaria%20de%20mais%20informacoes%20sobre%20o%20site."
+                target="_blank"></a><img src="imagens/whats.png" alt="WhatsApp"></a></li>
           </ul>
         </nav>
       </div>
 
-      <!-- Banner -->
-      <div class="header-banner">
-        <div class="banner-text">
-          <h1>
-            Entre símbolos <br />
-            e letras
-          </h1>
-          <h2>- A invenção da escrita -</h2>
-        </div>
+    </div>
 
-        <img
-          src="imagem/imagem-header.png"
-          alt="Imagem do banner"
-          class="banner-img"
-        />
-      </div>
-    </header>
-    <main>
-        <section class="hieroglifo-pt1">
-            <h3>
-                Descubra a Escrita:
-            </h3>
-            <div>
-                <h2>
-                    Hieróglifica
-                </h2>
-                <p>
-                    - Egito, 3200 a.C
-                </p>
-            </div>
-            <div>
-                <p>Hieróglifos é o nome dado aos caracteres de um tipo de escrita usado no Egito Antigo. Nesse sistema de escrita, cada desenho (ou hieróglifo) representa uma coisa, uma pessoa, um som ou uma ideia. Sua origem remonta a cerca de 2700 a.C., tendo se desenvolvido a partir da escrita pictográfica que existia anteriormente no Egito. 
-                </p>
-                <img src="imagem/image 20.png" alt="imagem-20">
-            </div>
-            <div>
-                <img src="imagem/image 21.png" alt="imagem-21">
-                <h3>Qual a importância?</h3>
-                <p>A importância dos hieróglifos está em revelar aspectos históricos e culturais do Egito Antigo. A beleza de seus símbolos e a complexidade de sua escrita mostram a sofisticação do povo egípcio, bem como a habilidade de seus escribas.
-                Além da escrita hieroglífica, mais usada em cerimônias religiosas e monumentos, os egípcios também desenvolveram outros tipos de escrita: a hierática, a demótica e a cóptica. O nome "hieróglifo" vem do grego e significa “escrita sagrada”.</p>
-            </div>
-            <h3>
-                Quais os tipos de hieróglifos?
-            </h3>
-            <p>
-                Os hieróglifos podiam representar um objeto, uma ação ou até mesmo um som. Por isso, costumam ser divididos em três tipos: fonogramas, ideogramas e determinativos.
-            </p>
-            <p>
-                Os <strong> fonogramas</strong> são hieróglifos que representam sons da fala. Alguns representam apenas um som, enquanto outros podem representar dois ou até três. Quando são mais complexos, costumam vir acompanhados de outros sinais para ajudar na leitura correta.
-            </p>
-            <p>
-                Os <strong>ideogramas</strong> representam o significado de uma palavra por meio da imagem. Por exemplo, o desenho de um sol podia representar o próprio sol ou a ideia de luz e calor. Nesses casos, o desenho mostra a ideia principal da palavra.
-            </p>
-            <p>
-                Já os <strong>determinativos</strong> são hieróglifos que não eram lidos em voz alta. Eles serviam para mostrar o tipo de palavra usada. Um determinativo podia indicar, por exemplo, se a palavra era sobre uma pessoa, um lugar ou uma ação.
-            </p>
-            <div>
-                <img src="imagem/image 22.png" alt="imagem-22">
-            </div>
-        </section>
-    </main>
+  </footer>
 
+</body>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h1>
-            Entre símbolos <br />
-            e letras
-          </h1>
-          <h2>Inventando a escrita</h2>
-        </div>
-
-        <span class="footer-divider" aria-hidden="true"></span>
-
-        <img
-          src="imagem/logo-completa.png"
-          alt="Logo completa"
-          class="footer-logo"
-        />
-
-        <div class="footer-info">
-          <nav>
-            <ul>
-              <li><a href="nos.html">Sobre nós</a></li>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">Dúvidas</a></li>
-            </ul>
-          </nav>
-
-          <h4>© 2026 Todos os direitos reservados.</h4>
-        </div>
-
-        <div class="footer-social">
-          <nav>
-            <ul>
-              <li>
-                <a href="#"><img src="imagem/email.png" alt="Email" /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="imagem/instagram-logo.png" alt="Instagram"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="imagem/localizacao-logo.png" alt="Localização"
-                /></a>
-              </li>
-              <li>
-                <a href="#"><img src="imagem/whats.png" alt="WhatsApp" /></a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </footer>
-
-  </body>
 </html>
