@@ -41,6 +41,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -166,7 +167,7 @@
   opacity: 0;
 }
 
-.timeline li:nth-child(odd) > .title {
+.timeline li:nth-child(odd)>.title {
   top: -2.4rem;
 }
 
@@ -207,6 +208,8 @@
 
 .data h3 {
   text-transform: capitalize;
+  font-size: 0.5;
+
 }
 
 .data p {
@@ -215,7 +218,7 @@
   border-radius: 1rem;
   text-align: center;
   margin-left: 0.7rem;
-  font-size: 1vw;
+  font-size: 0.7vw;
 }
 
 .data.show p {
@@ -243,12 +246,12 @@
   color: #fff;
 }
 
-.data > * {
+.data>* {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.data.show > * {
+.data.show>* {
   opacity: 1;
 }
 
@@ -401,6 +404,7 @@ main::before {
 
 /* Respeita quem prefere menos animação */
 @media (prefers-reduced-motion: reduce) {
+
   .hints h2,
   .hints h3,
   .hints p {
