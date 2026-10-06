@@ -1,0 +1,405 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: "Inria Serif", serif;
+}
+
+
+/* =========================
+   TRADUTOR
+========================= */
+
+.tradutor {
+    background-color: #fff4df;
+    padding-bottom: 35px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo-tradutor {
+    background-color: #7a1f24;
+    color: #fff4df;
+
+    padding: 12px 20px;
+}
+
+.titulo-tradutor h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* =========================
+   FRASE DIGITADA
+========================= */
+
+.frase-area {
+    width: 90%;
+    max-width: 850px;
+
+    min-height: 65px;
+
+    margin: 25px auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px 15px;
+
+    border-bottom: 2px solid #a12a2a;
+}
+
+#fraseDigitada {
+    color: #754c43;
+
+    font-family: "Inria Serif", serif;
+
+    font-size: 25px;
+    text-align: center;
+
+    margin: 0;
+
+    min-height: 35px;
+
+    word-break: break-word;
+}
+
+#fraseDigitada.inicial {
+    color: #b49a86;
+
+    font-size: 19px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   TECLADO
+========================= */
+
+.teclado {
+    width: 90%;
+    max-width: 850px;
+
+    margin: 15px auto 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 10px;
+}
+
+
+/* =========================
+   TECLAS
+========================= */
+
+.tecla {
+    height: 80px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background-color: #f5e8ce;
+
+    color: #754c43;
+
+    font-family: "Inria Serif", serif;
+
+    font-size: 48px;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+
+/* PASSAR O MOUSE */
+
+.tecla:hover {
+    background-color: #ead9b9;
+
+    transform: translateY(-3px);
+}
+
+
+/* CLICAR */
+
+.tecla:active {
+    transform: scale(0.93);
+
+    background-color: #ddc8a5;
+}
+
+
+/* TECLA DO COMPUTADOR PRESSIONADA */
+
+.tecla.pressionada {
+    background-color: #ddc8a5;
+
+    transform: scale(0.93);
+}
+
+
+/* =========================
+   CONTROLES
+========================= */
+
+.controles {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 15px auto 30px;
+}
+
+
+.tecla-especial {
+    border: none;
+
+    background-color: #f5e8ce;
+
+    color: #754c43;
+
+    border-radius: 20px;
+
+    padding: 9px 22px;
+
+    font-family: "Inria Serif", serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* HOVER DOS BOTÕES */
+
+.tecla-especial:hover {
+    background-color: #ead9b9;
+
+    transform: translateY(-2px);
+}
+
+
+/* CLIQUE */
+
+.tecla-especial:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================
+   TÍTULO "TRADUÇÃO"
+========================= */
+
+.titulo-resultado {
+    text-align: center;
+
+    margin-top: 5px;
+}
+
+.titulo-resultado h2 {
+    display: inline-block;
+
+    color: #a12a2a;
+
+    font-family: "Inria Serif", serif;
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+    padding-bottom: 4px;
+
+    border-bottom: 2px solid #a12a2a;
+
+    min-width: 155px;
+}
+
+
+/* =========================
+   RESULTADO DOS HIEROGLIFOS
+========================= */
+
+.resultado {
+    width: 85%;
+    max-width: 800px;
+
+    min-height: 90px;
+
+    margin: 20px auto;
+
+    padding: 15px;
+
+    background-color: #f5e8ce;
+
+    border: 3px solid #a12a2a;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow-x: auto;
+}
+
+
+#resultadoHieroglifo {
+    margin: 0;
+
+    color: #59483e;
+
+    font-family: "Noto Sans Egyptian Hieroglyphs", serif;
+
+    font-size: 40px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    .titulo-tradutor h1 {
+        font-size: 16px;
+    }
+
+
+    /* FRASE */
+
+    .frase-area {
+        width: 92%;
+
+        min-height: 55px;
+    }
+
+    #fraseDigitada {
+        font-size: 21px;
+    }
+
+
+    /* TECLADO */
+
+    .teclado {
+        width: 92%;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .tecla {
+        height: 65px;
+
+        font-size: 38px;
+
+        border-radius: 17px;
+    }
+
+
+    /* CONTROLES */
+
+    .controles {
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+    .tecla-especial {
+        padding: 8px 17px;
+
+        font-size: 15px;
+    }
+
+
+    /* RESULTADO */
+
+    .resultado {
+        width: 90%;
+    }
+
+    #resultadoHieroglifo {
+        font-size: 30px;
+    }
+
+
+    .titulo-resultado h2 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 450px) {
+
+    .teclado {
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 6px;
+    }
+
+    .tecla {
+        height: 58px;
+
+        font-size: 32px;
+
+        border-radius: 14px;
+    }
+
+
+    .frase-area {
+        margin-top: 18px;
+    }
+
+
+    #fraseDigitada {
+        font-size: 19px;
+    }
+
+
+    #fraseDigitada.inicial {
+        font-size: 16px;
+    }
+
+
+    #resultadoHieroglifo {
+        font-size: 25px;
+    }
+
+}
