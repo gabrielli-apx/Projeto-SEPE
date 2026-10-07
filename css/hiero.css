@@ -1,0 +1,609 @@
+/* ==================================================
+   HIERÓGLIFOS
+   Layout baseado no Figma
+================================================== */
+
+:root {
+    --vermelho: #841919;
+    --vermelho-claro: #713434;
+    --bege: #F5E9D5;
+    --branco: #FFF5E2;
+    --dourado: #986912;
+    --cinza: gray;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    padding: clamp(10px, 3vw, 35px);
+}
+
+/* ================= SEÇÃO ================= */
+
+.hieroglifo {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: var(--bege);
+
+    border: clamp(5px, 1vw, 10px) solid var(--vermelho);
+    border-radius: clamp(25px, 5vw, 50px);
+
+    padding: clamp(15px, 3vw, 35px);
+
+    overflow: hidden;
+}
+
+/* ================= TEXTOS GERAIS ================= */
+
+.hieroglifo p {
+    color: var(--cinza);
+
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    line-height: 1.35;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+.hieroglifo h3 {
+    color: var(--vermelho);
+
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
+
+    margin:
+        clamp(15px, 3vw, 30px)
+        0
+        clamp(12px, 2vw, 25px);
+
+    text-align: center;
+}
+
+.hieroglifo h4 {
+    color: var(--vermelho-claro);
+}
+
+/* evita imagens estourando */
+
+.hieroglifo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= DESCUBRA ================= */
+
+.descubra h3 {
+    color: var(--dourado);
+
+    text-align: left;
+
+    margin: 0 0 clamp(8px, 2vw, 15px);
+
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* ================= TÍTULO ================= */
+
+.titulo {
+    width: fit-content;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: clamp(7px, 2vw, 15px);
+
+    background-color: var(--vermelho);
+
+    padding:
+        clamp(7px, 1.5vw, 15px)
+        clamp(12px, 2vw, 25px);
+
+    border-radius: 999px;
+
+    margin-bottom: clamp(20px, 4vw, 45px);
+
+    box-sizing: border-box;
+}
+
+.titulo > div:first-child {
+    flex-shrink: 0;
+}
+
+.titulo img {
+    width: clamp(50px, 8vw, 100px);
+    height: clamp(50px, 8vw, 100px);
+
+    object-fit: contain;
+
+    background-color: var(--branco);
+
+    padding: clamp(5px, 1vw, 12px);
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+.escrita {
+    text-align: center;
+}
+
+.escrita h2 {
+    color: white;
+
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+
+    margin: 0;
+}
+
+.escrita p {
+    color: rgb(201, 201, 201);
+
+    font-size: clamp(1rem, 2.2vw, 2rem);
+
+    margin: 0;
+}
+
+/* ==================================================
+   BLOCOS EM DUAS COLUNAS
+================================================== */
+
+.primeiraDiv,
+.segundaDiv,
+.quartaDiv,
+.sextaDiv,
+.setimaDiv,
+.oitavaDiv,
+.nonaDiv,
+.decimaDiv,
+.decimapriDiv,
+.decimasegDiv,
+.decimaterDiv {
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(20px, 4vw, 55px);
+
+    padding: clamp(15px, 3vw, 35px) 0;
+}
+
+/* faz cada lado ocupar metade */
+
+.primeiraDiv > *,
+.segundaDiv > *,
+.quartaDiv > *,
+.sextaDiv > *,
+.decimaDiv > *,
+.decimapriDiv > *,
+.decimasegDiv > *,
+.decimaterDiv > * {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ==================================================
+   PRIMEIRO BLOCO
+================================================== */
+
+.primeiraDiv img {
+    width: 100%;
+    max-height: 430px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+/* ==================================================
+   SEGUNDO BLOCO
+================================================== */
+
+.segundaDiv img {
+    width: 100%;
+    max-height: 430px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+.segundaDiv h3 {
+    margin-top: 0;
+}
+
+/* ==================================================
+   TIPOS DE HIEROGLIFOS
+================================================== */
+
+.terceiraDiv {
+    width: 100%;
+
+    padding: clamp(20px, 4vw, 45px) 0;
+}
+
+.terceiraDiv ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.terceiraDiv li {
+    margin-bottom: clamp(8px, 1.5vw, 18px);
+}
+
+/* ==================================================
+   PEDRA DA ROSETA
+================================================== */
+
+.quartaDiv img {
+    width: 100%;
+
+    max-height: 480px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+.quartaDiv h3 {
+    margin-top: 0;
+}
+
+/* texto Champollion */
+
+.quintaDiv {
+    padding: clamp(15px, 3vw, 35px) 4%;
+}
+
+.quintaDiv p {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+/* ==================================================
+   CURIOSIDADES
+================================================== */
+
+.sextaDiv img {
+    width: 100%;
+
+    max-height: 380px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+/*
+   Esses blocos não possuem div interna nos dois lados,
+   então imagem e p funcionam como as duas colunas.
+*/
+
+.setimaDiv > *,
+.oitavaDiv > *,
+.nonaDiv > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.setimaDiv img,
+.oitavaDiv img,
+.nonaDiv img {
+    width: 100%;
+
+    max-height: 360px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+/* ==================================================
+   ORIGEM DOS HIEROGLIFOS
+================================================== */
+
+.decimaDiv img,
+.decimapriDiv img {
+    width: 100%;
+
+    max-height: 480px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+.decimaDiv h3 {
+    margin-top: 0;
+}
+
+/* ==================================================
+   CARACTERÍSTICAS
+================================================== */
+
+.decimasegDiv img,
+.decimaterDiv img {
+    width: 100%;
+
+    max-height: 430px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+/* ==================================================
+   COMO LER OS HIEROGLIFOS
+================================================== */
+
+.decimaquaDiv {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: clamp(20px, 3vw, 40px);
+
+    align-items: center;
+
+    padding: clamp(15px, 3vw, 35px) 0;
+}
+
+/*
+Primeiro texto ocupa largura inteira
+*/
+
+.decimaquaDiv > p:first-child {
+    grid-column: 1 / -1;
+}
+
+/*
+Imagem 105 ocupa largura inteira
+*/
+
+.decimaquaDiv > img {
+    grid-column: 1 / -1;
+
+    width: min(100%, 950px);
+
+    margin: 0 auto;
+
+    max-height: 500px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+/*
+Texto abaixo da imagem ocupa largura inteira
+*/
+
+.decimaquaDiv > img + p {
+    grid-column: 1 / -1;
+}
+
+/*
+Último texto = coluna esquerda
+Última imagem = coluna direita
+*/
+
+.decimaquaDiv > div {
+    min-width: 0;
+}
+
+.decimaquaDiv > div img {
+    width: 100%;
+
+    max-height: 420px;
+
+    object-fit: contain;
+}
+
+/* ==================================================
+   DESKTOP
+================================================== */
+
+@media (min-width: 769px) {
+
+    .hieroglifo {
+        padding:
+            clamp(25px, 4vw, 55px)
+            clamp(30px, 5vw, 70px);
+    }
+
+    .titulo {
+        margin-left: 0;
+    }
+
+    /*
+    Mantém proporção das duas colunas
+    semelhante ao Figma
+    */
+
+    .primeiraDiv > div,
+    .segundaDiv > div,
+    .quartaDiv > div,
+    .sextaDiv > div,
+    .decimaDiv > div,
+    .decimapriDiv > div,
+    .decimasegDiv > div,
+    .decimaterDiv > div {
+        width: 50%;
+    }
+}
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 8px;
+    }
+
+    .hieroglifo {
+        border-width: 5px;
+
+        border-radius: 28px;
+
+        padding: 15px 12px;
+    }
+
+    /* -------- TÍTULO -------- */
+
+    .descubra h3 {
+        text-align: center;
+    }
+
+    .titulo {
+        margin-left: auto;
+        margin-right: auto;
+
+        gap: 8px;
+    }
+
+    .titulo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .escrita h2 {
+        font-size: 1.4rem;
+    }
+
+    .escrita p {
+        font-size: 1rem;
+    }
+
+    /* -------- TEXTOS -------- */
+
+    .hieroglifo p {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+
+        line-height: 1.4;
+    }
+
+    .hieroglifo h3 {
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+    }
+
+    /*
+    No celular os blocos viram uma coluna,
+    mas preservamos a ordem do HTML.
+    */
+
+    .primeiraDiv,
+    .segundaDiv,
+    .quartaDiv,
+    .sextaDiv,
+    .setimaDiv,
+    .oitavaDiv,
+    .nonaDiv,
+    .decimaDiv,
+    .decimapriDiv,
+    .decimasegDiv,
+    .decimaterDiv {
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 18px 0;
+    }
+
+    /* imagens */
+
+    .primeiraDiv img,
+    .segundaDiv img,
+    .quartaDiv img,
+    .sextaDiv img,
+    .setimaDiv img,
+    .oitavaDiv img,
+    .nonaDiv img,
+    .decimaDiv img,
+    .decimapriDiv img,
+    .decimasegDiv img,
+    .decimaterDiv img {
+        width: min(100%, 420px);
+
+        margin: 0 auto;
+
+        max-height: none;
+    }
+
+    /* tipos */
+
+    .terceiraDiv {
+        padding: 15px 0;
+    }
+
+    /* -------- COMO LER -------- */
+
+    .decimaquaDiv {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 15px 0;
+    }
+
+    .decimaquaDiv > * {
+        width: 100%;
+    }
+
+    .decimaquaDiv > img {
+        width: min(100%, 500px);
+
+        margin: 0 auto;
+    }
+
+    .decimaquaDiv > div img {
+        width: min(100%, 420px);
+
+        margin: 0 auto;
+    }
+}
+
+/* ==================================================
+   CELULARES PEQUENOS
+================================================== */
+
+@media (max-width: 400px) {
+
+    .hieroglifo {
+        padding: 12px 9px;
+    }
+
+    .titulo {
+        padding: 7px 11px;
+    }
+
+    .titulo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .escrita h2 {
+        font-size: 1.25rem;
+    }
+
+    .escrita p {
+        font-size: 0.9rem;
+    }
+
+    .hieroglifo p {
+        font-size: 1rem;
+    }
+
+    .hieroglifo h3 {
+        font-size: 1.25rem;
+    }
+}
