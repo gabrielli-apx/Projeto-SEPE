@@ -1,0 +1,25 @@
+:root{--sea:#d6c196;--land:#fdf8ec;--edge:#3a1a12;--hov:#e9b9a0;--sel:#7a1a1a;--ink:#2a1a14;--mut:#6b4f43;--card:#fbf5e8;--band:#7a1a1a;--bandink:#f6ecd9;--top:#f3e6cf;--chip:#efe0c4;}
+.band small{display:block;font-size:.85rem;opacity:.85}
+.band{background:var(--band);color:var(--bandink);padding:12px 28px;font-size:1.3rem}
+#stage{position:relative;flex:1;min-height:0}
+#map{width:100%;height:100%;display:block;touch-action:none;cursor:grab;background:var(--sea);-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+#map.mv *{shape-rendering:optimizeSpeed}
+#map #ocean,#map .oceanxx{fill:var(--sea)!important}
+#map .landxx{fill:var(--land)!important;stroke:var(--edge)!important;stroke-width:var(--sw,2)!important;cursor:pointer}
+#map .hov{fill:var(--hov)!important}
+#map .sel{fill:var(--sel)!important}
+#tip{position:fixed;z-index:3;pointer-events:none;background:var(--sel);color:var(--bandink);padding:3px 10px;border-radius:8px;font-size:.95rem}
+#zoom{position:absolute;right:14px;top:12px;display:flex;gap:8px}
+#zoom button{min-width:46px;height:46px;border:2px solid var(--sel);border-radius:10px;background:var(--card);color:var(--ink);font:600 1.4rem Newsreader,Georgia,serif;cursor:pointer}
+#pop{position:absolute;left:24px;bottom:24px;width:340px;max-height:70%;overflow:auto;background:var(--card);border:2px solid var(--sel);border-radius:18px;padding:16px 20px;box-shadow:0 4px 18px rgba(60,20,10,.22)}
+#pop[hidden],#tip[hidden]{display:none}
+#pop h2{font:400 1.7rem/1.15 Newsreader,Georgia,serif;margin:0 30px 8px 0}
+#pop h3{font-size:.95rem;font-weight:600;color:var(--sel);margin:12px 0 4px}
+#pop p{margin:0}
+#pop ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+#pop li{background:var(--chip);border:1px solid var(--sel);border-radius:999px;padding:2px 11px;font-size:.95rem}
+#pop small{display:block;margin-top:14px;color:var(--mut);font-size:.8rem}
+#x{position:absolute;right:10px;top:8px;width:34px;height:34px;border:0;background:none;color:var(--ink);font-size:1.6rem;cursor:pointer}
+button:focus-visible{outline:3px solid var(--sel);outline-offset:2px}
+@media (max-width:600px){#pop{left:0;right:0;bottom:0;width:auto;max-height:42%;border-radius:18px 18px 0 0}.band{padding-left:18px;padding-right:18px}.band{font-size:1.1rem}}
+ 

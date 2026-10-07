@@ -41,7 +41,6 @@
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -136,11 +135,11 @@
 /* DATA */
 .timeline li::after {
   content: attr(data-date);
-  top: -4rem;
+  top: -2.5rem;
 }
 
 .timeline li:nth-child(odd)::after {
-  top: 4rem;
+  top: 2.5rem;
   font-size: 1.4vw;
   text-align: center;
 }
@@ -167,7 +166,7 @@
   opacity: 0;
 }
 
-.timeline li:nth-child(odd)>.title {
+.timeline li:nth-child(odd) > .title {
   top: -2.4rem;
 }
 
@@ -208,8 +207,6 @@
 
 .data h3 {
   text-transform: capitalize;
-  font-size: 0.5;
-
 }
 
 .data p {
@@ -218,7 +215,7 @@
   border-radius: 1rem;
   text-align: center;
   margin-left: 0.7rem;
-  font-size: 0.7vw;
+  font-size: 1vw;
 }
 
 .data.show p {
@@ -246,12 +243,12 @@
   color: #fff;
 }
 
-.data>* {
+.data > * {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.data.show>* {
+.data.show > * {
   opacity: 1;
 }
 
@@ -352,9 +349,9 @@ main::before {
   }
 
   .timeline li:nth-child(odd)::after {
-    left: 2.3rem;
+    left: 2.5rem;
     right: auto;
-    transform: translateY(-1rem);
+    transform: translateY(0.4rem);
     text-align: left;
     font-size: 2.5vw;
   }
@@ -404,7 +401,6 @@ main::before {
 
 /* Respeita quem prefere menos animação */
 @media (prefers-reduced-motion: reduce) {
-
   .hints h2,
   .hints h3,
   .hints p {
