@@ -1,163 +1,449 @@
-/* === main === */
+/* === VARIÁVEIS === */
+
+:root {
+    --vermelho: #841919;
+    --vermelho-claro: #713434;
+    --bege: #F5E9D5;
+    --branco: #FFF5E2;
+    --dourado: #986912;
+
+    --espaco: clamp(10px, 3vw, 40px);
+    --texto: clamp(1rem, 3.8vw, 1.8rem);
+    --titulo: clamp(1.2rem, 5vw, 2.5rem);
+}
+
+
+/* === MAIN === */
 
 main {
-    padding: 3vw 3vw 3vw 3vw;
+    padding: clamp(10px, 3vw, 30px);
 }
 
-/* === section === */
+
+/* === SEÇÃO MAIA === */
 
 .maia {
-    background-color: #F5E9D5;
-    border-radius: 50px;
-    gap: 40px;
-    justify-content: center;
-    padding: 20px;
-    border: 10px solid #841919
+    background-color: var(--bege);
+
+    border: clamp(5px, 1vw, 10px) solid var(--vermelho);
+    border-radius: clamp(25px, 5vw, 50px);
+
+    padding: clamp(12px, 3vw, 30px);
+
+    width: 100%;
+
+    box-sizing: border-box;
 }
 
-.maia img {
-    width: 50%;
-    height: 50%;
-}
+
+/* === TEXTOS GERAIS === */
 
 .maia h3 {
-    color: #841919;
-    font-size: 1.3rem;
-    margin: 15px;
+    color: var(--vermelho);
+
+    font-size: clamp(1.3rem, 4vw, 2.5rem);
+
+    margin: clamp(10px, 2vw, 15px);
+
+    text-align: center;
 }
 
 .maia h4 {
-    color: #713434;
-    font-size: 1.2rem;
-    margin: 12px;
+    color: var(--vermelho-claro);
+
+    font-size: clamp(1.1rem, 3.5vw, 2rem);
+
+    margin: clamp(8px, 2vw, 12px);
+
+    text-align: center;
 }
 
 .maia p {
     color: gray;
-    font-size: 1.2rem;
+
+    font-size: var(--texto);
+
+    line-height: 1.4;
+
+    text-align: center;
 }
 
-/* === Título === */
+
+/* === DESCUBRA === */
+
+h3.descubra {
+    color: var(--dourado);
+
+    font-size: clamp(1.1rem, 4.5vw, 2rem);
+
+    text-align: center;
+
+    margin: 0 0 clamp(10px, 3vw, 20px);
+}
+
+
+/* ================================================= */
+/* === TÍTULO === */
+/* ================================================= */
 
 .titulo {
     width: fit-content;
-    background-color: #841919;
-    padding: 10px 15px 10px 15px;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: clamp(6px, 2vw, 15px);
+
+    background-color: var(--vermelho);
+
+    padding: clamp(7px, 2vw, 15px)
+             clamp(10px, 3vw, 20px);
+
     border-radius: 360px;
-    justify-content: first baseline;
-    margin: 15px 0px 15px 0px;
+
+    margin: 0 auto clamp(20px, 4vw, 35px);
+
+    box-sizing: border-box;
 }
+
+
+/* círculo da imagem */
 
 .titulo img {
-    height: 50px;
-    width: 50px;
-    background-color: #FFF5E2;
-    align-items: center;
-    padding: 0.8vw 0.8vw 0.8vw 0.8vw;
-    border-radius: 360px;
+    width: clamp(45px, 15vw, 100px);
+    height: clamp(45px, 15vw, 100px);
+
+    padding: clamp(5px, 1.5vw, 12px);
+
+    background-color: var(--branco);
+
+    border-radius: 50%;
+
+    object-fit: contain;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
 }
 
+
+/* escrita do título */
 
 .escrita {
     text-align: center;
 }
 
 .escrita h2 {
-    font-size: 1.5rem;
     color: white;
+
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+
+    margin: 0;
 }
 
 .escrita p {
-    font-size: 1.3rem;
     color: rgb(201, 201, 201);
+
+    font-size: clamp(0.9rem, 3.5vw, 2rem);
+
+    margin: 0;
 }
 
-h3.descubra {
-    color: #986912;
-}
 
-/* === PrimeiraDiv === */
+/* ================================================= */
+/* === PRIMEIRA DIV === */
+/* ================================================= */
 
 .primeiraDiv {
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(15px, 4vw, 40px);
+
+    padding: clamp(10px, 2vw, 30px) 0;
+
     text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
 }
+
+
+/* elementos internos */
+
+.primeiraDiv > div {
+    flex: 1;
+}
+
+
+/* texto */
+
+.primeiraDiv p {
+    color: gray;
+
+    font-size: var(--texto);
+
+    line-height: 1.4;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+
+/* imagem */
 
 .primeiraDiv img {
-    height: 100%;
+    display: block;
+
     width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0 auto;
 }
 
-/* === segundaDiv === */
+
+/* ================================================= */
+/* === SEGUNDA DIV === */
+/* ================================================= */
 
 .segundaDiv {
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(15px, 4vw, 40px);
+
+    padding: clamp(10px, 2vw, 30px) 0;
+
     text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
 }
+
+
+/* elementos internos */
+
+.segundaDiv > div {
+    flex: 1;
+}
+
+
+/* texto */
+
+.segundaDiv p {
+    color: gray;
+
+    font-size: var(--texto);
+
+    line-height: 1.4;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+
+/* imagem */
 
 .segundaDiv img {
-    height: 100%;
+    display: block;
+
     width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0 auto;
 }
 
-@media screen {
 
-    /* === Título === */
+/* ================================================= */
+/* === CELULAR === */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 8px;
+    }
+
+
+    /* seção */
+
+    .maia {
+        border-width: 5px;
+
+        padding: 12px 10px;
+    }
+
+
+    /* título */
 
     .titulo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        gap: 7px;
     }
 
-    /* === primeiraDiv === */
+
+    /* PRIMEIRO BLOCO */
 
     .primeiraDiv {
-        display: flex;
-        align-items: center;
+        flex-direction: column;
+
         gap: 20px;
+
+        padding: 10px 5px;
     }
 
-    /* === segundaDiv === */
+    .primeiraDiv > div {
+        width: 100%;
+    }
 
-    .segundaDiv{
-        display: flex;
-        align-items: center;
+    .primeiraDiv p {
+        font-size: clamp(1rem, 4.5vw, 1.3rem);
+
+        line-height: 1.35;
+
+        text-align: center;
+    }
+
+    .primeiraDiv img {
+        width: min(100%, 280px);
+
+        height: auto;
+
+        margin: 0 auto;
+    }
+
+
+    /* SEGUNDO BLOCO */
+
+    .segundaDiv {
+        flex-direction: column;
+
         gap: 20px;
+
+        padding: 10px 5px;
+    }
+
+    .segundaDiv > div {
+        width: 100%;
+    }
+
+    .segundaDiv p {
+        font-size: clamp(1rem, 4.5vw, 1.3rem);
+
+        line-height: 1.35;
+
+        text-align: center;
+    }
+
+    .segundaDiv img {
+        width: min(100%, 280px);
+
+        height: auto;
+
+        margin: 0 auto;
     }
 }
 
-@media (min-width: 768px) {
 
-    /* === main === */
+/* ================================================= */
+/* === CELULARES MUITO PEQUENOS === */
+/* ================================================= */
+
+@media (max-width: 350px) {
+
+    .maia {
+        padding: 10px 7px;
+    }
+
+
+    /* descubra */
+
+    h3.descubra {
+        font-size: 1.1rem;
+    }
+
+
+    /* título */
+
+    .titulo {
+        padding: 6px 10px;
+    }
+
+    .titulo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .escrita h2 {
+        font-size: 1.25rem;
+    }
+
+    .escrita p {
+        font-size: 0.9rem;
+    }
+
+
+    /* textos */
 
     .maia p {
-        font-size: 1.8rem;
-        margin: 0px 30px 0px 30px;
+        font-size: 1rem;
     }
 
     .maia h3 {
-        font-size: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .maia h4 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ================================================= */
+/* === COMPUTADOR / TABLET === */
+/* ================================================= */
+
+@media (min-width: 768px) {
+
+    .maia p {
+        font-size: clamp(1.3rem, 2vw, 1.8rem);
+
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .maia h3 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
     }
 
     .maia h4 {
         font-size: 2rem;
     }
 
+
+    /* título */
+
     .titulo {
-        img {
-            height: 100px;
-            width: 100px;
-        }
+        margin-left: 0;
+    }
 
-        p {
-            font-size: 2rem;
-        }
+    .titulo img {
+        width: 100px;
+        height: 100px;
+    }
 
-        h2 {
-            font-size: 2.5rem;
-        }
+    .escrita h2 {
+        font-size: 2.5rem;
+    }
 
-        padding: 1.5vw 2vw 1.5vw 2vw;
+    .escrita p {
+        font-size: 2rem;
+
+        margin: 0;
     }
 }
