@@ -15,6 +15,22 @@ const IMAGENS_CATEGORIA = {
  
  
 // ========================================
+// páginas de cada categoria
+// ========================================
+ 
+const PAGINAS_CATEGORIA = {
+  hieroglifos: "hieroglifo.html",
+  cuneiforme:  "cuneiforme.html",
+  fenicio:     "fenicio.html",
+  grego:       "grego.html",
+  latim:       "latina.html",
+  maias:       "maia.html",
+  avestico:    "avestica.html",
+  atualidade:  "atualidade.html"
+};
+ 
+ 
+// ========================================
 // ícone genérico (usado em todos os cards)
 // ========================================
  
@@ -161,6 +177,10 @@ function montarRoteiro(porCategoria) {
       miniatura.style.backgroundImage = `url("${imagemUrl}")`;
     }
  
+    // página de destino do botão "Começar"
+    // (se a chave não estiver no mapa, volta pro index.html)
+    const paginaUrl = PAGINAS_CATEGORIA[item.chave] || "index.html";
+ 
     const info = document.createElement("div");
     info.className = "roteiro-info";
  
@@ -169,7 +189,7 @@ function montarRoteiro(porCategoria) {
         <h3>${numero}. ${item.nome}</h3>
       </div>
       <p>${obterDescricaoCategoria(item.porcentagem)}</p>
-      <a href="${item.chave}.html" class="roteiro-botao">
+      <a href="${paginaUrl}" class="roteiro-botao">
         Começar <span class="seta">→</span>
       </a>
     `;
