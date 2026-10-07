@@ -1,145 +1,401 @@
-/* === main === */
+/* === VARIÁVEIS === */
 
-main{
-    padding: 3vw 3vw 3vw 3vw;
+:root {
+    --vermelho: #841919;
+    --vermelho-claro: #713434;
+    --bege: #F5E9D5;
+    --branco: #FFF5E2;
+    --dourado: #986912;
+
+    --espaco: clamp(10px, 3vw, 40px);
+    --texto: clamp(1rem, 3.8vw, 1.8rem);
+    --titulo: clamp(1.2rem, 5vw, 2.5rem);
 }
 
-/* === section === */
 
-.avestica{
-    background-color: #F5E9D5;
-    border-radius: 50px;
-    gap: 40px;
-    justify-content: center;
-    padding: 20px;
-    border: 10px solid #841919
+/* === MAIN === */
+
+main {
+    padding: clamp(10px, 3vw, 30px);
 }
-.avestica img{
-    width: 50%;
-    height: 50%;
+
+
+/* === SEÇÃO AVESTICA === */
+
+.avestica {
+    background-color: var(--bege);
+
+    border: clamp(5px, 1vw, 10px) solid var(--vermelho);
+    border-radius: clamp(25px, 5vw, 50px);
+
+    padding: clamp(12px, 3vw, 30px);
+
+    width: 100%;
+    box-sizing: border-box;
 }
-.avestica h3{
-    color: #841919;
-    font-size: 1.3rem;
-    margin: 15px;
+
+
+/* === TÍTULOS E TEXTOS === */
+
+.avestica h3 {
+    color: var(--vermelho);
+
+    font-size: clamp(1.3rem, 4vw, 2.5rem);
+
+    margin: clamp(10px, 2vw, 15px);
+
+    text-align: center;
 }
-.avestica h4{
-    color: #713434;
-    font-size: 1.2rem;
-    margin: 12px;
+
+.avestica h4 {
+    color: var(--vermelho-claro);
+
+    font-size: clamp(1.1rem, 3.5vw, 2rem);
+
+    margin: clamp(8px, 2vw, 12px);
+
+    text-align: center;
 }
-.avestica p{
+
+.avestica p {
     color: gray;
-    font-size: 1.2rem;
+
+    font-size: var(--texto);
+
+    line-height: 1.4;
+
+    text-align: center;
 }
 
-/* === Título === */
 
-.titulo{
+/* === "DESCUBRA A ESCRITA DA" === */
+
+.avestica h3.descubra {
+    color: var(--dourado);
+
+    font-size: clamp(1.1rem, 4.5vw, 2rem);
+
+    text-align: center;
+
+    margin: 0 0 clamp(10px, 3vw, 20px);
+}
+
+
+/* === TÍTULO === */
+
+.titulo {
     width: fit-content;
-    background-color: #841919;
-    padding: 10px 15px 10px 15px;
-    border-radius: 360px;
-    justify-content: first baseline;
-    margin: 15px 0px 15px 0px;
-}
-.titulo img{
-    height: 50px;
-    width: 50px;
-    background-color: #FFF5E2;
+    max-width: 100%;
+
+    display: flex;
     align-items: center;
-    padding: 0.8vw 0.8vw 0.8vw 0.8vw;
+
+    gap: clamp(6px, 2vw, 15px);
+
+    background-color: var(--vermelho);
+
+    padding: clamp(7px, 2vw, 15px)
+             clamp(10px, 3vw, 20px);
+
     border-radius: 360px;
+
+    margin: 0 auto clamp(20px, 4vw, 35px);
+
+    box-sizing: border-box;
 }
-.escrita{
+
+
+/* círculo da imagem */
+
+.titulo img {
+    width: clamp(45px, 15vw, 100px);
+    height: clamp(45px, 15vw, 100px);
+
+    padding: clamp(5px, 1.5vw, 12px);
+
+    background-color: var(--branco);
+
+    border-radius: 50%;
+
+    object-fit: contain;
+
+    box-sizing: border-box;
+}
+
+
+/* escrita do título */
+
+.escrita {
     text-align: center;
 }
-.escrita h2{
-    font-size: 1.5rem;
+
+.escrita h2 {
     color: white;
+
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+
+    margin: 0;
 }
-.escrita p{
-    font-size: 1.3rem;
+
+.escrita p {
     color: rgb(201, 201, 201);
-}
-h3.descubra{
-    color: #986912;
+
+    font-size: clamp(0.9rem, 3.5vw, 2rem);
+
+    margin: 0;
 }
 
-/* === PrimeiraDiv === */
 
-.primeiraDiv{
+/* === PRIMEIRA DIV === */
+
+.primeiraDiv {
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(15px, 4vw, 40px);
+
+    padding: clamp(10px, 2vw, 30px) 0;
+
     text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
-}
-.primeiraDiv img{
-    height: 100%;
-    width: 100%;
 }
 
-/* === segundaDiv === */
 
-.segundaDiv{
+/* elementos da primeira div */
+
+.primeiraDiv > div {
+    flex: 1;
+}
+
+.primeiraDiv p {
+    color: gray;
+
+    font-size: var(--texto);
+
+    line-height: 1.4;
+
+    margin: 0;
+
     text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
 }
-.segundaDiv img{
-    height: 100%;
+
+
+/* imagem */
+
+.primeiraDiv img {
+    display: block;
+
     width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0 auto;
 }
 
-@media screen {
 
-    /* === Título === */
+/* === SEGUNDA DIV === */
 
-    .titulo{
-        display: flex;
-        align-items: center;
-        gap: 10px;
+.segundaDiv {
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(15px, 4vw, 40px);
+
+    padding: clamp(10px, 2vw, 30px) 0;
+
+    text-align: center;
+}
+
+
+/* elementos da segunda div */
+
+.segundaDiv > div {
+    flex: 1;
+}
+
+.segundaDiv p {
+    color: gray;
+
+    font-size: var(--texto);
+
+    line-height: 1.4;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+
+/* imagem */
+
+.segundaDiv img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* === CELULAR === */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 8px;
     }
 
-    /* === primeiraDiv === */
+    .avestica {
+        border-width: 5px;
 
-    .primeiraDiv{
-        display: flex;
-        align-items: center;
-        gap: 20px;
+        padding: 12px 10px;
     }
 
-    /* === segundaDiv === */
 
-    .segundaDiv{
-        display: flex;
-        align-items: center;
+    /* título */
+
+    .titulo {
+        margin-left: auto;
+        margin-right: auto;
+
+        gap: 7px;
+    }
+
+
+    /* PRIMEIRO BLOCO */
+
+    .primeiraDiv {
+        flex-direction: column;
+
         gap: 20px;
+
+        padding: 10px 5px;
+    }
+
+    .primeiraDiv > div {
+        width: 100%;
+    }
+
+    .primeiraDiv p {
+        font-size: clamp(1rem, 4.5vw, 1.3rem);
+
+        line-height: 1.35;
+
+        text-align: center;
+    }
+
+    .primeiraDiv img {
+        width: min(100%, 280px);
+
+        height: auto;
+
+        margin: 0 auto;
+    }
+
+
+    /* SEGUNDO BLOCO */
+
+    .segundaDiv {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 10px 5px;
+    }
+
+    .segundaDiv > div {
+        width: 100%;
+    }
+
+    .segundaDiv p {
+        font-size: clamp(1rem, 4.5vw, 1.3rem);
+
+        line-height: 1.35;
+
+        text-align: center;
+    }
+
+    .segundaDiv img {
+        width: min(100%, 280px);
+
+        height: auto;
+
+        margin: 0 auto;
     }
 }
+
+
+/* === CELULARES MUITO PEQUENOS === */
+
+@media (max-width: 350px) {
+
+    .avestica {
+        padding: 10px 7px;
+    }
+
+    .avestica h3.descubra {
+        font-size: 1.1rem;
+    }
+
+    .titulo {
+        padding: 6px 10px;
+    }
+
+    .titulo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .escrita h2 {
+        font-size: 1.25rem;
+    }
+
+    .escrita p {
+        font-size: 0.9rem;
+    }
+
+    .primeiraDiv p,
+    .segundaDiv p {
+        font-size: 1rem;
+    }
+}
+
+
+/* === COMPUTADOR / TABLET === */
 
 @media (min-width: 768px) {
-    
-    /* === main === */
 
-    .avestica p{
-        font-size: 1.8rem;
-        margin: 0px 30px 0px 30px;
+    .avestica p {
+        font-size: clamp(1.3rem, 2vw, 1.8rem);
     }
-    .avestica h3{
-        font-size: 2.5rem;
+
+    .avestica h3 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
     }
-    .avestica h4{
+
+    .avestica h4 {
         font-size: 2rem;
     }
-    .titulo{
-        img{
-            height: 100px;
-            width: 100px;
-        }
-        p{
-            font-size: 2rem;
-        }
-        h2{
-            font-size: 2.5rem;
-        }
-        padding: 1.5vw 2vw 1.5vw 2vw;
+
+    .titulo {
+        margin-left: 0;
+    }
+
+    .titulo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .escrita h2 {
+        font-size: 2.5rem;
+    }
+
+    .escrita p {
+        font-size: 2rem;
     }
 }
