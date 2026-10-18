@@ -3,79 +3,75 @@
 }
 
 .curiosidades ul li {
-    margin: 14px 8px;
+    margin: 16px 8px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
     will-change: transform;
 }
 
 .curiosidades ul li img {
-    width: 60%;
-    height: auto;
-    margin: 14px auto;
     display: block;
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    margin: 16px auto;
+    border-radius: 12px;
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-.curiosidades .cvermelho {
-    text-align: center;
-    background-color: #F5E9D2;
-    border: 5px solid #841919;
-    border-radius: 28px;
-    padding: 12px;
-}
-
-.curiosidades .cvermelho h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 8px;
-}
-
-.curiosidades .cvermelho p {
-    color: rgb(92, 91, 91);
-    margin: 8px;
-    font-size: 0.85rem;
-    line-height: 1.45;
-}
-
+.curiosidades .cvermelho,
 .curiosidades .cmarrom {
+    box-sizing: border-box;
+    width: 100%;
     text-align: center;
     background-color: #F5E9D2;
-    border: 5px solid #714A3E;
-    border-radius: 28px;
-    padding: 12px;
-}
-
-.curiosidades .cmarrom h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 8px;
-}
-
-.curiosidades .cmarrom p {
-    color: rgb(92, 91, 91);
-    margin: 8px;
-    font-size: 0.85rem;
-    line-height: 1.45;
-}
-
-.curiosidades h1 {
-    font-size: 1.15rem;
+    border: 4px solid;
+    border-radius: 24px;
     padding: 16px;
 }
 
-/* Caixa sobe ao passar o mouse */
+.curiosidades .cvermelho {
+    border-color: #841919;
+}
+
+.curiosidades .cmarrom {
+    border-color: #714A3E;
+}
+
+.curiosidades .cvermelho h2,
+.curiosidades .cmarrom h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.curiosidades .cvermelho p,
+.curiosidades .cmarrom p {
+    color: rgb(92, 91, 91);
+    margin: 10px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.curiosidades h1 {
+    font-size: 1.3rem;
+    padding: 18px 12px;
+    text-align: center;
+}
+
 .curiosidades ul li:hover {
-    transform: translateY(-20px);
+    transform: translateY(-6px);
 }
 
-/* Imagem dá um leve zoom */
 .curiosidades ul li:hover img {
-    transform: scale(1.06) rotate(-1.5deg);
+    transform: scale(1.03);
 }
 
-/* ===== Desktop (igual ao original) ===== */
-@media only screen and (min-width: 600px) {
+/* Tablets e computadores */
+@media (min-width: 600px) {
     .curiosidades ul {
         padding: 18px;
     }
@@ -83,38 +79,78 @@
     .curiosidades ul li {
         display: flex;
         align-items: center;
-        margin: 40px 280px;
-        padding: 30px;
+        gap: 24px;
+        margin: 40px auto;
+        padding: 24px;
+        max-width: 1100px;
     }
 
     .curiosidades ul li img {
-        width: 70%;
-        margin: 20px;
-        display: initial;
+        flex: 0 1 45%;
+        width: 45%;
+        max-width: 450px;
+        margin: 10px;
     }
 
     .curiosidades .cvermelho,
     .curiosidades .cmarrom {
         border-width: 7px;
-        border-radius: 40px;
-        padding: 10px;
+        border-radius: 32px;
+        padding: 20px;
     }
 
     .curiosidades .cvermelho h2,
     .curiosidades .cmarrom h2 {
-        font-size: 1.18rem;
-        margin: 8px;
+        font-size: 1.3rem;
     }
 
     .curiosidades .cvermelho p,
     .curiosidades .cmarrom p {
-        font-size: 1rem;
-        margin: 8px;
+        font-size: 1.05rem;
     }
 
     .curiosidades h1 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding: 30px;
+    }
+
+    .curiosidades ul li:hover {
+        transform: translateY(-10px);
+    }
+
+    .curiosidades ul li:hover img {
+        transform: scale(1.04) rotate(-1deg);
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 400px) {
+    .curiosidades ul {
+        padding: 8px;
+    }
+
+    .curiosidades ul li {
+        margin: 14px 4px;
+    }
+
+    .curiosidades .cvermelho,
+    .curiosidades .cmarrom {
+        padding: 12px;
+        border-radius: 20px;
+    }
+
+    .curiosidades .cvermelho h2,
+    .curiosidades .cmarrom h2 {
+        font-size: 1rem;
+    }
+
+    .curiosidades .cvermelho p,
+    .curiosidades .cmarrom p {
+        font-size: 0.9rem;
+    }
+
+    .curiosidades ul li img {
+        width: 100%;
     }
 }
 

@@ -1,43 +1,37 @@
-/* ===== Main ===== */
 main {
-    background-image: url(fundo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("fundo.png") center / cover no-repeat;
     margin: 0;
     padding-bottom: 0;
 }
 
 main h1 {
-    color: white;
     background-color: #714A3E;
-    padding: 3vw 3vw;
+    color: white;
+    padding: 3vw;
+    margin: 0 0 1rem;
     font-size: 2vw;
-    margin: 0 0 1rem 0;
     animation: entrada 0.7s ease-out;
 }
 
 .cards {
     display: flex;
-    gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 40px;
     padding: 20px;
 }
 
-/* ===== Card ===== */
 .card {
-    width: 420px;
-    background: #F5E9D5;
-    border-radius: 40px;
-    padding: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     column-gap: 18px;
+    width: 420px;
+    padding: 30px;
+    background: #F5E9D5;
+    border-radius: 40px;
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform;
 }
 
 .vermelho {
@@ -48,22 +42,22 @@ main h1 {
     border: 10px solid #714A3E;
 }
 
-.card>img {
+.card > img {
+    flex-shrink: 0;
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    border: 4px solid #841919;
     padding: 10px;
+    border: 4px solid #841919;
+    border-radius: 50%;
     object-fit: contain;
-    flex-shrink: 0;
 }
 
-.vermelho>img {
-    border: 4px solid #8E1919;
+.vermelho > img {
+    border-color: #8E1919;
 }
 
-.marrom>img {
-    border: 4px solid #714A3E;
+.marrom > img {
+    border-color: #714A3E;
 }
 
 .card h2 {
@@ -75,28 +69,28 @@ main h1 {
 
 .card p {
     flex-basis: 100%;
-    margin: 18px 0 0 0;
-    font-size: 1rem;
+    margin: 18px 0 0;
     color: #6d6c6c;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
 .botao {
     display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
     flex-basis: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
     width: fit-content;
     box-sizing: border-box;
     margin-top: 24px;
     padding: 8px 8px 8px 22px;
     border: 4px solid #8E1919;
     border-radius: 30px;
-    text-decoration: none;
     color: #000;
+    font-family: "Inria Serif", serif;
     font-size: 1.2rem;
-    font-family: 'Inria Serif', serif;
+    text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -112,25 +106,26 @@ main h1 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    color: white;
     font-size: 20px;
     line-height: 1;
-    color: #fff;
     transition: transform 0.3s ease;
+}
+
+.vermelho .seta,
+.marrom .seta {
+    padding: 10px;
+    border-radius: 50%;
 }
 
 .vermelho .seta {
     background: #8E1919;
-    border-radius: 50%;
-    padding: 10px;
 }
 
 .marrom .seta {
     background: #7A5546;
-    border-radius: 50%;
-    padding: 10px;
 }
 
-/* ===== Seção em destaque (showcase) ===== */
 .showcase {
     max-width: 900px;
     margin: 40px auto;
@@ -142,13 +137,12 @@ main h1 {
 }
 
 .showcase-card {
+    overflow: hidden;
     background: #F5E9D5;
     border: 25px solid #4a2f28;
     border-radius: 36px;
-    overflow: hidden;
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform;
 }
 
 .showcase-top {
@@ -163,27 +157,27 @@ main h1 {
 }
 
 .showcase-text h2 {
-    font-family: 'Inria Serif', serif;
+    margin: 0 0 14px;
+    color: #1a1a1a;
+    font-family: "Inria Serif", serif;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #1a1a1a;
     line-height: 1.3;
-    margin: 0 0 14px 0;
 }
 
 .showcase-text p {
-    font-size: 1rem;
-    color: #6d6c6c;
-    line-height: 1.7;
     margin: 0;
+    color: #6d6c6c;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .showcase-img {
+    flex-shrink: 0;
     width: 300px;
     height: 220px;
-    object-fit: cover;
     border-radius: 18px;
-    flex-shrink: 0;
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
@@ -192,13 +186,13 @@ main h1 {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    background: #EFE1C6;
-    border-top: 4px solid #4a2f28;
     padding: 16px 16px 16px 28px;
-    text-decoration: none;
+    border-top: 4px solid #4a2f28;
+    background: #EFE1C6;
     color: #1a1a1a;
-    font-family: 'Inria Serif', serif;
+    font-family: "Inria Serif", serif;
     font-size: 1.1rem;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -206,35 +200,34 @@ main h1 {
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    background: #4a2f28;
-    color: #F5E9D5;
     padding: 10px 12px 10px 22px;
     border-radius: 30px;
+    background: #4a2f28;
+    color: #F5E9D5;
     font-size: 1.1rem;
     white-space: nowrap;
     transition: background-color 0.3s ease;
 }
 
 .showcase-btn .seta {
-    background: #F5E9D5;
-    color: #4a2f28;
     width: 30px;
     height: 30px;
-    border-radius: 30px;
+    border-radius: 50%;
+    background: #F5E9D5;
+    color: #4a2f28;
 }
 
-/* ===== Faixa vermelha ===== */
 .banner-vermelho {
-    background-color: #7a1f24;
     padding: 22px 8vw;
+    background-color: #7a1f24;
 }
 
 .banner-vermelho h2 {
-    font-family: 'Inria Serif', serif;
-    font-weight: 400;
-    font-size: 1.7rem;
-    color: #f2e9d8;
     margin: 0;
+    color: #f2e9d8;
+    font-family: "Inria Serif", serif;
+    font-size: 1.7rem;
+    font-weight: 400;
 }
 
 h6 {
@@ -242,7 +235,6 @@ h6 {
     font-size: 5vw;
 }
 
-/* ===== Efeitos ao passar o mouse (só transform, para não pesar) ===== */
 .card:hover {
     transform: translateY(-20px);
     box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
@@ -276,19 +268,18 @@ h6 {
     background-color: #7a1f24;
 }
 
-/* ===== Entrada suave e aparecer ao rolar ===== */
 @keyframes entrada {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* A classe .reveal é adicionada pelo JS */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -300,13 +291,11 @@ h6 {
     transform: translateY(0);
 }
 
-/* Depois de aparecer, o hover volta a ser rápido */
 .card.reveal.visivel,
 .showcase-card.reveal.visivel {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Precisa vir depois de .reveal.visivel, senão ele anula o hover */
 .card.reveal.visivel:hover {
     transform: translateY(-20px);
     box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
@@ -317,60 +306,73 @@ h6 {
     box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
 }
 
-/* ===== Responsivo ===== */
 @media (max-width: 768px) {
     main h1 {
-        font-size: 1.4rem;
         padding: 24px 20px;
+        font-size: 1.4rem;
     }
 
     .cards {
         flex-direction: column;
         align-items: center;
-        padding: 20px 10px;
+        gap: 24px;
+        padding: 20px 12px;
     }
 
     .card {
-        width: 90%;
-        max-width: 420px;
+        box-sizing: border-box;
         flex-direction: column;
+        width: 100%;
+        max-width: 420px;
+        padding: 24px 20px;
+        border-width: 6px;
+        border-radius: 28px;
         text-align: center;
     }
 
     .card h2 {
+        flex: auto;
+        margin: 16px 0 0;
         font-size: 1.4rem;
-        margin: 16px 0 0 0;
     }
 
     .card p {
+        margin-top: 16px;
         font-size: 1rem;
-        margin: 16px 0 0 0;
     }
 
     .botao {
-        margin: 20px auto 0;
         justify-content: center;
+        align-self: center;
+        margin: 20px auto 0;
+        max-width: 100%;
+        font-size: 1rem;
     }
 
-    /* Showcase centralizado no celular */
     .showcase {
-        padding: 0 14px;
         margin: 6vw 0;
+        padding: 0 14px;
     }
 
-    .showcase:last-of-type {
-        margin-bottom: 0;
+    .showcase-card {
+        border-width: 8px;
+        border-radius: 24px;
     }
 
     .showcase-top {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        padding: 22px 18px;
         text-align: center;
-        padding: 24px;
     }
 
     .showcase-text h2 {
         font-size: 1.3rem;
+    }
+
+    .showcase-text p {
+        font-size: 0.95rem;
     }
 
     .showcase-img {
@@ -381,21 +383,70 @@ h6 {
 
     .showcase-bar {
         flex-direction: column;
+        gap: 14px;
+        padding: 20px 14px;
         text-align: center;
-        padding: 22px;
+        font-size: 1rem;
     }
 
     .showcase-btn {
         justify-content: center;
+        box-sizing: border-box;
+        max-width: 100%;
+        font-size: 1rem;
     }
 
     .banner-vermelho {
-        text-align: center;
         padding: 20px 24px;
+        text-align: center;
+    }
+
+    .banner-vermelho h2 {
+        font-size: 1.4rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    .card:hover,
+    .card.reveal.visivel:hover {
+        transform: translateY(-6px);
+    }
+
+    .showcase-card:hover,
+    .showcase-card.reveal.visivel:hover {
+        transform: translateY(-6px);
     }
 }
 
-/* Respeita quem prefere menos animação */
+@media (max-width: 400px) {
+    .card {
+        padding: 20px 14px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card p,
+    .showcase-text p {
+        font-size: 0.9rem;
+    }
+
+    .showcase-top {
+        padding: 18px 12px;
+    }
+
+    .showcase-img {
+        height: 160px;
+    }
+
+    .showcase-bar {
+        font-size: 0.9rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
