@@ -1,5 +1,10 @@
-const A={P:'Português',E:'Espanhol',I:'Inglês',F:'Francês',A:'Árabe',R:'Russo',Z:'Mandarim',D:'Alemão',T:'Italiano',N:'Neerlandês',H:'Hindi',S:'Suaíli',G:'Grego'};
-const RAW=`ad|Catalão (românica)|Catalão,E,F
+const A = {
+    P: 'Português', E: 'Espanhol', I: 'Inglês', F: 'Francês',
+    A: 'Árabe', R: 'Russo', Z: 'Mandarim', D: 'Alemão',
+    T: 'Italiano', N: 'Neerlandês', H: 'Hindi', S: 'Suaíli', G: 'Grego'
+};
+
+const RAW = `ad|Catalão (românica)|Catalão,E,F
 ae|Árabe|A,I,H
 af|Persa (dari) e pachto|Dari,Pachto,Uzbeque
 ag|Arauaque (extinta)|I
@@ -200,59 +205,406 @@ zm|Línguas bantas|I,Bemba,Nianja
 zw|Línguas bantas (shona)|Shona,Ndebele,I
 eh|Berbere e hassania|A
 hk|Cantonês|Cantonês,I`;
-const D={};RAW.split('\n').forEach(l=>{const[c,o,a]=l.split('|');D[c]={o,a:a.split(',').map(x=>A[x]||x)}});
-function iniciar(svg){
-const pop=document.getElementById('pop'),tip=document.getElementById('tip');
-let rn;try{rn=new Intl.DisplayNames(['pt-BR'],{type:'region'})}catch(e){}
-const nm=c=>{try{return rn.of(c.toUpperCase())}catch(e){return c.toUpperCase()}};
-const by={};
-svg.querySelectorAll('.landxx,.circlexx').forEach(e=>{const c=[...e.classList].find(t=>t.length==2&&t!='eu'&&t!='xx');if(c){e.dataset.c=c;(by[c]=by[c]||[]).push(e)}});
-const mark=(c,k,on)=>by[c]&&by[c].forEach(e=>e.classList.toggle(k,on));
-const cc=t=>{const x=t.closest&&t.closest('[data-c]');return x&&x.dataset.c};
-let hv=null,sl=null,vb=[0,0,2754,1398],dr=false,asp=2,pd=0,raf=0,tm=0,lt=0,lx=0,ly=0,R=svg.getBoundingClientRect();
-const ptr=new Map();
-const draw=()=>{raf=0;svg.setAttribute('viewBox',vb.join(' '))};
-function settle(){svg.classList.remove('mv');R=svg.getBoundingClientRect();svg.style.setProperty('--sw',(vb[2]/R.width).toFixed(2))}
-function set(){svg.classList.add('mv');if(!raf)raf=requestAnimationFrame(draw);clearTimeout(tm);tm=setTimeout(settle,160)}
-function clamp(){vb[2]=Math.min(2754,Math.max(160,vb[2]));vb[3]=vb[2]/asp;vb[0]=Math.min(2754-vb[2]/2,Math.max(-vb[2]/2,vb[0]));vb[1]=Math.min(1398-vb[3]/2,Math.max(-vb[3]/2,vb[1]));set()}
-function zoom(f,px=.5,py=.5){const w=vb[2],h=vb[3];vb[2]=w*f;vb[3]=h*f;vb[0]+=(w-vb[2])*px;vb[1]+=(h-vb[3])*py;clamp()}
-function fit(){R=svg.getBoundingClientRect();asp=R.width/R.height;let w,h;if(asp<1.2){w=1500;h=w/asp}else{h=1260;w=h*asp;if(w>2754){w=2754;h=w/asp}}vb=[(2754-w)/2,Math.min((1260-h)/2,60),w,h];clamp()}
-svg.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(e.deltaY*.0015),(e.clientX-R.left)/R.width,(e.clientY-R.top)/R.height)},{passive:false});
-svg.addEventListener('dblclick',e=>zoom(.55,(e.clientX-R.left)/R.width,(e.clientY-R.top)/R.height));
-svg.addEventListener('pointerdown',e=>{R=svg.getBoundingClientRect();ptr.set(e.pointerId,{x:e.clientX,y:e.clientY,sx:e.clientX,sy:e.clientY});dr=false;pd=0});
-const up=e=>{const p=ptr.get(e.pointerId);ptr.delete(e.pointerId);pd=0;
- if(p&&e.type==='pointerup'&&e.pointerType==='touch'&&!dr&&!ptr.size){const n=Date.now();
-  if(n-lt<320&&Math.hypot(e.clientX-lx,e.clientY-ly)<30){zoom(.5,(e.clientX-R.left)/R.width,(e.clientY-R.top)/R.height);lt=0}else{lt=n;lx=e.clientX;ly=e.clientY}}};
-addEventListener('pointerup',up);addEventListener('pointercancel',up);
-addEventListener('resize',()=>{R=svg.getBoundingClientRect();asp=R.width/R.height;clamp()});
-svg.addEventListener('pointermove',e=>{
- const p=ptr.get(e.pointerId);
- if(p){const dx=e.clientX-p.x,dy=e.clientY-p.y;p.x=e.clientX;p.y=e.clientY;
-  if(ptr.size==2){const[a,b]=[...ptr.values()],d=Math.hypot(a.x-b.x,a.y-b.y);if(pd)zoom(pd/d,((a.x+b.x)/2-R.left)/R.width,((a.y+b.y)/2-R.top)/R.height);pd=d;dr=true}
-  else{if(!dr&&Math.hypot(e.clientX-p.sx,e.clientY-p.sy)>8)dr=true;if(dr){const k=vb[2]/R.width;vb[0]-=dx*k;vb[1]-=dy*k;clamp()}}}
- if(e.pointerType!=='mouse')return;
- const c=cc(e.target);
- if(c!==hv){mark(hv,'hov',0);hv=c;mark(c,'hov',1);tip.hidden=!c;if(c)tip.textContent=nm(c)}
- if(c){tip.style.left=e.clientX+12+'px';tip.style.top=e.clientY+12+'px'}});
-svg.addEventListener('pointerleave',()=>{mark(hv,'hov',0);hv=null;tip.hidden=true});
-svg.addEventListener('click',e=>{if(dr){dr=false;return}const c=cc(e.target);c?show(c):hide()});
-const fl=c=>String.fromCodePoint(...[...c.toUpperCase()].map(x=>127397+x.charCodeAt()));
-function show(c){mark(sl,'sel',0);sl=c;mark(c,'sel',1);const d=D[c];
- pop.innerHTML='<button id="x" aria-label="Fechar">×</button><h2>'+nm(c)+' '+fl(c)+'</h2>'+(d?'<h3>Língua mais antiga</h3><p>'+(d.o==='—'?'Sem população nativa anterior registrada.':d.o)+'</p><h3>Línguas atuais</h3><ul>'+d.a.map(x=>'<li>'+x+'</li>').join('')+'</ul>':'<p>Ainda sem dados para este território.</p>')+'<small>Critério aproximado: língua nativa mais antiga ainda falada ou, se extinta, a última conhecida.</small>';
- pop.hidden=false;document.getElementById('x').onclick=hide}
-function hide(){mark(sl,'sel',0);sl=null;pop.hidden=true}
-addEventListener('keydown',e=>e.key==='Escape'&&hide());
-document.getElementById('zi').onclick=()=>zoom(.6);
-document.getElementById('zo').onclick=()=>zoom(1.6);
-document.getElementById('zr').onclick=fit;
-fit();
+
+const D = {};
+
+RAW.split('\n').forEach(linha => {
+    const [codigo, origem, atuais] = linha.split('|');
+
+    D[codigo] = {
+        o: origem,
+        a: atuais.split(',').map(x => A[x] || x)
+    };
+});
+
+function iniciar(svg) {
+    const pop = document.getElementById('pop');
+    const tip = document.getElementById('tip');
+
+    let regioes;
+
+    try {
+        regioes = new Intl.DisplayNames(['pt-BR'], { type: 'region' });
+    } catch (e) {}
+
+    const nome = codigo => {
+        try {
+            return regioes.of(codigo.toUpperCase());
+        } catch (e) {
+            return codigo.toUpperCase();
+        }
+    };
+
+    const elementos = {};
+
+    svg.querySelectorAll('.landxx, .circlexx').forEach(elemento => {
+        const codigo = [...elemento.classList].find(
+            classe => classe.length === 2 && classe !== 'eu' && classe !== 'xx'
+        );
+
+        if (codigo) {
+            elemento.dataset.c = codigo;
+            (elementos[codigo] = elementos[codigo] || []).push(elemento);
+        }
+    });
+
+    const marcar = (codigo, classe, ativo) => {
+        if (elementos[codigo]) {
+            elementos[codigo].forEach(elemento => {
+                elemento.classList.toggle(classe, Boolean(ativo));
+            });
+        }
+    };
+
+    const codigoDoElemento = elemento => {
+        const alvo = elemento.closest?.('[data-c]');
+        return alvo?.dataset.c;
+    };
+
+    let hover = null;
+    let selecionado = null;
+    let viewBox = [0, 0, 2754, 1398];
+    let arrastando = false;
+    let proporcao = 2;
+    let distanciaPinch = 0;
+    let frame = 0;
+    let temporizador = 0;
+    let ultimoToque = 0;
+    let ultimoX = 0;
+    let ultimoY = 0;
+    let retangulo = svg.getBoundingClientRect();
+
+    const ponteiros = new Map();
+
+    function desenhar() {
+        frame = 0;
+        svg.setAttribute('viewBox', viewBox.join(' '));
+    }
+
+    function finalizarMovimento() {
+        svg.classList.remove('mv');
+        retangulo = svg.getBoundingClientRect();
+        svg.style.setProperty('--sw', (viewBox[2] / retangulo.width).toFixed(2));
+    }
+
+    function atualizar() {
+        svg.classList.add('mv');
+
+        if (!frame) {
+            frame = requestAnimationFrame(desenhar);
+        }
+
+        clearTimeout(temporizador);
+        temporizador = setTimeout(finalizarMovimento, 160);
+    }
+
+    function limitar() {
+        viewBox[2] = Math.min(2754, Math.max(160, viewBox[2]));
+        viewBox[3] = viewBox[2] / proporcao;
+
+        viewBox[0] = Math.min(
+            2754 - viewBox[2] / 2,
+            Math.max(-viewBox[2] / 2, viewBox[0])
+        );
+
+        viewBox[1] = Math.min(
+            1398 - viewBox[3] / 2,
+            Math.max(-viewBox[3] / 2, viewBox[1])
+        );
+
+        atualizar();
+    }
+
+    function zoom(fator, x = 0.5, y = 0.5) {
+        const largura = viewBox[2];
+        const altura = viewBox[3];
+
+        viewBox[2] = largura * fator;
+        viewBox[3] = altura * fator;
+        viewBox[0] += (largura - viewBox[2]) * x;
+        viewBox[1] += (altura - viewBox[3]) * y;
+
+        limitar();
+    }
+
+    function ajustarMapa() {
+        retangulo = svg.getBoundingClientRect();
+        proporcao = retangulo.width / retangulo.height;
+
+        let largura;
+        let altura;
+
+        if (proporcao < 1.2) {
+            largura = 1500;
+            altura = largura / proporcao;
+        } else {
+            altura = 1260;
+            largura = altura * proporcao;
+
+            if (largura > 2754) {
+                largura = 2754;
+                altura = largura / proporcao;
+            }
+        }
+
+        viewBox = [
+            (2754 - largura) / 2,
+            Math.min((1260 - altura) / 2, 60),
+            largura,
+            altura
+        ];
+
+        limitar();
+    }
+
+    svg.addEventListener('wheel', evento => {
+        evento.preventDefault();
+
+        zoom(
+            Math.exp(evento.deltaY * 0.0015),
+            (evento.clientX - retangulo.left) / retangulo.width,
+            (evento.clientY - retangulo.top) / retangulo.height
+        );
+    }, { passive: false });
+
+    svg.addEventListener('dblclick', evento => {
+        zoom(
+            0.55,
+            (evento.clientX - retangulo.left) / retangulo.width,
+            (evento.clientY - retangulo.top) / retangulo.height
+        );
+    });
+
+    svg.addEventListener('pointerdown', evento => {
+        retangulo = svg.getBoundingClientRect();
+
+        ponteiros.set(evento.pointerId, {
+            x: evento.clientX,
+            y: evento.clientY,
+            inicioX: evento.clientX,
+            inicioY: evento.clientY
+        });
+
+        arrastando = false;
+        distanciaPinch = 0;
+    });
+
+    function finalizarPonteiro(evento) {
+        const ponteiro = ponteiros.get(evento.pointerId);
+        ponteiros.delete(evento.pointerId);
+        distanciaPinch = 0;
+
+        if (
+            ponteiro &&
+            evento.type === 'pointerup' &&
+            evento.pointerType === 'touch' &&
+            !arrastando &&
+            !ponteiros.size
+        ) {
+            const agora = Date.now();
+            const distancia = Math.hypot(
+                evento.clientX - ultimoX,
+                evento.clientY - ultimoY
+            );
+
+            if (agora - ultimoToque < 320 && distancia < 30) {
+                zoom(
+                    0.5,
+                    (evento.clientX - retangulo.left) / retangulo.width,
+                    (evento.clientY - retangulo.top) / retangulo.height
+                );
+
+                ultimoToque = 0;
+            } else {
+                ultimoToque = agora;
+                ultimoX = evento.clientX;
+                ultimoY = evento.clientY;
+            }
+        }
+    }
+
+    addEventListener('pointerup', finalizarPonteiro);
+    addEventListener('pointercancel', finalizarPonteiro);
+
+    addEventListener('resize', () => {
+        retangulo = svg.getBoundingClientRect();
+        proporcao = retangulo.width / retangulo.height;
+        limitar();
+    });
+
+    svg.addEventListener('pointermove', evento => {
+        const ponteiro = ponteiros.get(evento.pointerId);
+
+        if (ponteiro) {
+            const dx = evento.clientX - ponteiro.x;
+            const dy = evento.clientY - ponteiro.y;
+
+            ponteiro.x = evento.clientX;
+            ponteiro.y = evento.clientY;
+
+            if (ponteiros.size === 2) {
+                const [a, b] = [...ponteiros.values()];
+                const distancia = Math.hypot(a.x - b.x, a.y - b.y);
+
+                if (distanciaPinch) {
+                    zoom(
+                        distanciaPinch / distancia,
+                        ((a.x + b.x) / 2 - retangulo.left) / retangulo.width,
+                        ((a.y + b.y) / 2 - retangulo.top) / retangulo.height
+                    );
+                }
+
+                distanciaPinch = distancia;
+                arrastando = true;
+            } else {
+                if (
+                    !arrastando &&
+                    Math.hypot(
+                        evento.clientX - ponteiro.inicioX,
+                        evento.clientY - ponteiro.inicioY
+                    ) > 8
+                ) {
+                    arrastando = true;
+                }
+
+                if (arrastando) {
+                    const escala = viewBox[2] / retangulo.width;
+
+                    viewBox[0] -= dx * escala;
+                    viewBox[1] -= dy * escala;
+
+                    limitar();
+                }
+            }
+        }
+
+        if (evento.pointerType !== 'mouse') return;
+
+        const codigo = codigoDoElemento(evento.target);
+
+        if (codigo !== hover) {
+            marcar(hover, 'hov', false);
+            hover = codigo;
+            marcar(codigo, 'hov', true);
+
+            tip.hidden = !codigo;
+
+            if (codigo) {
+                tip.textContent = nome(codigo);
+            }
+        }
+
+        if (codigo) {
+            tip.style.left = `${evento.clientX + 12}px`;
+            tip.style.top = `${evento.clientY + 12}px`;
+        }
+    });
+
+    svg.addEventListener('pointerleave', () => {
+        marcar(hover, 'hov', false);
+        hover = null;
+        tip.hidden = true;
+    });
+
+    svg.addEventListener('click', evento => {
+        if (arrastando) {
+            arrastando = false;
+            return;
+        }
+
+        const codigo = codigoDoElemento(evento.target);
+
+        if (codigo) {
+            mostrar(codigo);
+        } else {
+            esconder();
+        }
+    });
+
+    function bandeira(codigo) {
+        return String.fromCodePoint(
+            ...[...codigo.toUpperCase()].map(letra => 127397 + letra.charCodeAt(0))
+        );
+    }
+
+    function mostrar(codigo) {
+        marcar(selecionado, 'sel', false);
+        selecionado = codigo;
+        marcar(codigo, 'sel', true);
+
+        const dados = D[codigo];
+
+        pop.innerHTML = `
+            <button id="x" aria-label="Fechar">×</button>
+            <h2>${nome(codigo)} ${bandeira(codigo)}</h2>
+            ${
+                dados
+                    ? `
+                        <h3>Língua mais antiga</h3>
+                        <p>${
+                            dados.o === '—'
+                                ? 'Sem população nativa anterior registrada.'
+                                : dados.o
+                        }</p>
+                        <h3>Línguas atuais</h3>
+                        <ul>
+                            ${dados.a.map(l => `<li>${l}</li>`).join('')}
+                        </ul>
+                    `
+                    : '<p>Ainda sem dados para este território.</p>'
+            }
+            <small>
+                Critério aproximado: língua nativa mais antiga ainda falada ou,
+                se extinta, a última conhecida.
+            </small>
+        `;
+
+        pop.hidden = false;
+        document.getElementById('x').onclick = esconder;
+    }
+
+    function esconder() {
+        marcar(selecionado, 'sel', false);
+        selecionado = null;
+        pop.hidden = true;
+    }
+
+    addEventListener('keydown', evento => {
+        if (evento.key === 'Escape') {
+            esconder();
+        }
+    });
+
+    document.getElementById('zi').onclick = () => zoom(0.6);
+    document.getElementById('zo').onclick = () => zoom(1.6);
+    document.getElementById('zr').onclick = ajustarMapa;
+
+    ajustarMapa();
 }
-fetch('imagem.1/BlankMap-World.svg').then(r=>r.text()).then(t=>{
- const s=document.importNode(new DOMParser().parseFromString(t,'image/svg+xml').documentElement,true);
- s.querySelectorAll('title').forEach(x=>x.remove());
- s.removeAttribute('width');s.removeAttribute('height');
- s.setAttribute('id','map');s.setAttribute('viewBox','0 0 2754 1398');
- document.getElementById('stage').prepend(s);
- iniciar(s)
-}).catch(()=>{document.getElementById('stage').textContent='Não consegui carregar o BlankMap-World.svg. Deixe o arquivo na mesma pasta do index.html e abra por um servidor (ex.: GitHub Pages).'});
- 
+
+fetch('imagem.1/BlankMap-World.svg')
+    .then(resposta => {
+        if (!resposta.ok) {
+            throw new Error('Não foi possível carregar o mapa.');
+        }
+
+        return resposta.text();
+    })
+    .then(texto => {
+        const documento = new DOMParser().parseFromString(texto, 'image/svg+xml');
+        const svg = document.importNode(documento.documentElement, true);
+
+        svg.querySelectorAll('title').forEach(elemento => elemento.remove());
+
+        svg.removeAttribute('width');
+        svg.removeAttribute('height');
+        svg.setAttribute('id', 'map');
+        svg.setAttribute('viewBox', '0 0 2754 1398');
+
+        document.getElementById('stage').prepend(svg);
+        iniciar(svg);
+    })
+    .catch(() => {
+        document.getElementById('stage').textContent =
+            'Não consegui carregar o BlankMap-World.svg. Deixe o arquivo na mesma pasta do index.html e abra por um servidor (ex.: GitHub Pages).';
+    });

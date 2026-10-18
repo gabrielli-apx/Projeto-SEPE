@@ -1,14 +1,5 @@
-// ========================================
-// configuração
-// ========================================
- 
 const LIMITE_PERGUNTAS = 15;
- 
- 
-// ========================================
-// arrays de perguntas
-// ========================================
- 
+
 const hieroglifos = [
   {
     pergunta: "Onde surgiram os hieróglifos?",
@@ -117,7 +108,12 @@ const hieroglifos = [
   },
   {
     pergunta: "Os nomes de faraós eram frequentemente destacados dentro de qual elemento?",
-    alternativas: ["Um cartucho oval", "Um triângulo", "Uma coroa desenhada", "Um círculo vazado"],
+    alternativas: [
+      "Um cartucho oval",
+      "Um triângulo",
+      "Uma coroa desenhada",
+      "Um círculo vazado"
+    ],
     resposta: 0
   },
   {
@@ -131,7 +127,7 @@ const hieroglifos = [
     resposta: 2
   }
 ];
- 
+
 const cuneiforme = [
   {
     pergunta: "Qual povo criou a escrita cuneiforme?",
@@ -205,12 +201,22 @@ const cuneiforme = [
   },
   {
     pergunta: "A escrita cuneiforme evoluiu a partir de qual sistema mais antigo?",
-    alternativas: ["Pictogramas", "Alfabeto fenício", "Hieróglifos", "Ideogramas chineses"],
+    alternativas: [
+      "Pictogramas",
+      "Alfabeto fenício",
+      "Hieróglifos",
+      "Ideogramas chineses"
+    ],
     resposta: 0
   },
   {
     pergunta: "Os sinais cuneiformes podiam representar sons de que tipo?",
-    alternativas: ["Apenas vogais isoladas", "Sílabas", "Apenas números", "Apenas nomes próprios"],
+    alternativas: [
+      "Apenas vogais isoladas",
+      "Sílabas",
+      "Apenas números",
+      "Apenas nomes próprios"
+    ],
     resposta: 1
   },
   {
@@ -249,7 +255,7 @@ const cuneiforme = [
     resposta: 1
   }
 ];
- 
+
 const fenicio = [
   {
     pergunta: "Quem desenvolveu o alfabeto fenício?",
@@ -298,7 +304,12 @@ const fenicio = [
   },
   {
     pergunta: "Os fenícios eram conhecidos principalmente por qual atividade?",
-    alternativas: ["Agricultura", "Comércio marítimo", "Mineração", "Guerra terrestre"],
+    alternativas: [
+      "Agricultura",
+      "Comércio marítimo",
+      "Mineração",
+      "Guerra terrestre"
+    ],
     resposta: 1
   },
   {
@@ -382,7 +393,7 @@ const fenicio = [
     resposta: 1
   }
 ];
- 
+
 const grego = [
   {
     pergunta: "De qual alfabeto os gregos se inspiraram?",
@@ -505,7 +516,7 @@ const grego = [
     resposta: 1
   }
 ];
- 
+
 const latim = [
   {
     pergunta: "Onde surgiu o alfabeto latino?",
@@ -559,7 +570,12 @@ const latim = [
   },
   {
     pergunta: "O latim era a língua oficial de qual grande império da Antiguidade?",
-    alternativas: ["Império Persa", "Império Romano", "Império Egípcio", "Império Grego"],
+    alternativas: [
+      "Império Persa",
+      "Império Romano",
+      "Império Egípcio",
+      "Império Grego"
+    ],
     resposta: 1
   },
   {
@@ -604,7 +620,12 @@ const latim = [
   },
   {
     pergunta: "Em qual escala o alfabeto latino é hoje o sistema de escrita mais usado?",
-    alternativas: ["Apenas na Europa", "Apenas na América", "No mundo", "Apenas em ex-colônias romanas"],
+    alternativas: [
+      "Apenas na Europa",
+      "Apenas na América",
+      "No mundo",
+      "Apenas em ex-colônias romanas"
+    ],
     resposta: 2
   },
   {
@@ -629,11 +650,16 @@ const latim = [
   },
   {
     pergunta: "Como é chamada a variante popular do latim, falada pelo povo comum, que deu origem às línguas românicas?",
-    alternativas: ["Latim clássico", "Latim vulgar", "Latim eclesiástico", "Latim arcaico"],
+    alternativas: [
+      "Latim clássico",
+      "Latim vulgar",
+      "Latim eclesiástico",
+      "Latim arcaico"
+    ],
     resposta: 1
   }
 ];
- 
+
 const maias = [
   {
     pergunta: "Onde os povos maias desenvolveram sua escrita?",
@@ -771,7 +797,7 @@ const maias = [
     resposta: 1
   }
 ];
- 
+
 const avestico = [
   {
     pergunta: "Para que a escrita avéstica era utilizada?",
@@ -785,7 +811,12 @@ const avestico = [
   },
   {
     pergunta: "Onde a escrita avéstica foi utilizada?",
-    alternativas: ["Antiga Pérsia", "Antigo Egito", "Grécia Antiga", "Roma Antiga"],
+    alternativas: [
+      "Antiga Pérsia",
+      "Antigo Egito",
+      "Grécia Antiga",
+      "Roma Antiga"
+    ],
     resposta: 0
   },
   {
@@ -800,7 +831,12 @@ const avestico = [
   },
   {
     pergunta: "A escrita avéstica está associada a qual religião?",
-    alternativas: ["Zoroastrismo", "Cristianismo", "Politeísmo grego", "Religião maia"],
+    alternativas: [
+      "Zoroastrismo",
+      "Cristianismo",
+      "Politeísmo grego",
+      "Religião maia"
+    ],
     resposta: 0
   },
   {
@@ -815,7 +851,12 @@ const avestico = [
   },
   {
     pergunta: "O alfabeto avéstico foi criado com base em qual outro sistema de escrita?",
-    alternativas: ["Alfabeto pahlavi", "Alfabeto grego", "Alfabeto latino", "Hieróglifos egípcios"],
+    alternativas: [
+      "Alfabeto pahlavi",
+      "Alfabeto grego",
+      "Alfabeto latino",
+      "Hieróglifos egípcios"
+    ],
     resposta: 0
   },
   {
@@ -835,7 +876,12 @@ const avestico = [
   },
   {
     pergunta: "Em que região histórica a escrita avéstica foi desenvolvida?",
-    alternativas: ["Pérsia / Ásia Central", "Península Itálica", "Mesoamérica", "Ilhas Gregas"],
+    alternativas: [
+      "Pérsia / Ásia Central",
+      "Península Itálica",
+      "Mesoamérica",
+      "Ilhas Gregas"
+    ],
     resposta: 0
   },
   {
@@ -870,7 +916,12 @@ const avestico = [
   },
   {
     pergunta: "Antes da criação da escrita avéstica, como os textos religiosos zoroastristas eram transmitidos?",
-    alternativas: ["Oralmente", "Em placas de argila", "Em papiro", "Em pergaminho"],
+    alternativas: [
+      "Oralmente",
+      "Em placas de argila",
+      "Em papiro",
+      "Em pergaminho"
+    ],
     resposta: 0
   },
   {
@@ -894,7 +945,7 @@ const avestico = [
     resposta: 0
   }
 ];
- 
+
 const atualidade = [
   {
     pergunta: "Onde a escrita está presente atualmente?",
@@ -1047,12 +1098,7 @@ const atualidade = [
     resposta: 0
   }
 ];
- 
- 
-// ========================================
-// categorias
-// ========================================
- 
+
 const categorias = {
   hieroglifos: { nome: "Hieróglifos", perguntas: hieroglifos },
   cuneiforme: { nome: "Cuneiforme", perguntas: cuneiforme },
@@ -1063,56 +1109,36 @@ const categorias = {
   avestico: { nome: "Avéstico", perguntas: avestico },
   atualidade: { nome: "Atualidade", perguntas: atualidade }
 };
- 
- 
-// ========================================
-// pegar categorias selecionadas
-// ========================================
- 
+
 const categoriasSalvas = localStorage.getItem("categoriasSelecionadas");
- 
-console.log("valor lido do localStorage:", categoriasSalvas);
- 
-if (!categoriasSalvas) {
- 
-  console.log("não achou nada — por isso ia redirecionar pro index");
-  // window.location.href = "index.html"; // comentado só pra debug
- 
+
+if (categoriasSalvas) {
+  try {
+    iniciarQuiz(JSON.parse(categoriasSalvas));
+  } catch (erro) {
+    console.error("Erro ao carregar as categorias:", erro);
+    window.location.href = "index.html";
+  }
 } else {
- 
-  iniciarQuiz(JSON.parse(categoriasSalvas));
- 
+  window.location.href = "index.html";
 }
- 
- 
-// ========================================
-// função principal do quiz
-// ========================================
- 
+
 function iniciarQuiz(categoriasSelecionadas) {
- 
-  // ========================================
-  // criar lista de perguntas (com while)
-  // apenas com as escritas que foram selecionadas
-  // ========================================
- 
   let perguntasDisponiveis = [];
- 
   let i = 0;
+
   while (i < categoriasSelecionadas.length) {
- 
     const chaveCategoria = categoriasSelecionadas[i];
- 
+
     if (categorias[chaveCategoria]) {
- 
       const listaDaCategoria = categorias[chaveCategoria].perguntas;
       const nomeDaCategoria = categorias[chaveCategoria].nome;
- 
+
       let j = 0;
+
       while (j < listaDaCategoria.length) {
- 
         const p = listaDaCategoria[j];
- 
+
         perguntasDisponiveis.push({
           pergunta: p.pergunta,
           alternativas: p.alternativas,
@@ -1120,218 +1146,177 @@ function iniciarQuiz(categoriasSelecionadas) {
           categoria: nomeDaCategoria,
           categoriaChave: chaveCategoria
         });
- 
+
         j++;
       }
     }
- 
+
     i++;
   }
- 
- 
-  // ========================================
-  // embaralhar perguntas (fisher-yates, com while)
-  // ========================================
- 
+
   let k = perguntasDisponiveis.length - 1;
+
   while (k > 0) {
- 
     const sorteado = Math.floor(Math.random() * (k + 1));
- 
     const temp = perguntasDisponiveis[k];
+
     perguntasDisponiveis[k] = perguntasDisponiveis[sorteado];
     perguntasDisponiveis[sorteado] = temp;
- 
+
     k--;
   }
- 
-  // pegar no máximo o limite definido
- 
+
   if (perguntasDisponiveis.length > LIMITE_PERGUNTAS) {
     perguntasDisponiveis = perguntasDisponiveis.slice(0, LIMITE_PERGUNTAS);
   }
- 
- 
-  // ========================================
-  // elementos do html
-  // ========================================
- 
+
   const numeroPergunta = document.getElementById("numeroPergunta");
   const categoriaPergunta = document.getElementById("categoriaPergunta");
   const pergunta = document.getElementById("pergunta");
   const botoes = document.querySelectorAll(".alternativa");
   const mensagem = document.getElementById("mensagem");
- 
- 
-  // ========================================
-  // controle
-  // ========================================
- 
+
   let numeroAtual = 0;
   let perguntaAtual;
   let acertos = 0;
- 
-  // lista (array) de acertos por categoria — só das categorias que caíram no quiz
- 
-  let listaCategorias = [];
- 
+  let finalizado = false;
+  const listaCategorias = [];
+
   function buscarCategoriaNaLista(chave) {
- 
     let n = 0;
+
     while (n < listaCategorias.length) {
- 
       if (listaCategorias[n].chave === chave) {
         return listaCategorias[n];
       }
- 
+
       n++;
     }
- 
+
     return null;
   }
- 
+
   let m = 0;
+
   while (m < perguntasDisponiveis.length) {
- 
     const p = perguntasDisponiveis[m];
- 
     let item = buscarCategoriaNaLista(p.categoriaChave);
- 
+
     if (!item) {
- 
       item = {
         chave: p.categoriaChave,
         nome: p.categoria,
         acertos: 0,
         total: 0
       };
- 
+
       listaCategorias.push(item);
     }
- 
+
     item.total++;
- 
     m++;
   }
- 
- 
-  // ========================================
-  // mostrar pergunta
-  // ========================================
- 
+
   function mostrarPergunta() {
- 
     perguntaAtual = perguntasDisponiveis[numeroAtual];
- 
+
     if (!perguntaAtual) {
       finalizarQuiz();
       return;
     }
- 
+
     numeroPergunta.textContent = numeroAtual + 1;
     categoriaPergunta.textContent = perguntaAtual.categoria;
     pergunta.textContent = perguntaAtual.pergunta;
- 
+
     let b = 0;
+
     while (b < botoes.length) {
- 
       const botao = botoes[b];
- 
       botao.textContent = perguntaAtual.alternativas[b];
       botao.dataset.resposta = b;
       botao.disabled = false;
       botao.style.display = "block";
- 
       b++;
     }
- 
+
     mensagem.textContent = "";
   }
- 
- 
-  // ========================================
-  // botões de resposta
-  // ========================================
- 
+
   function desabilitarBotoes() {
- 
     let b = 0;
+
     while (b < botoes.length) {
       botoes[b].disabled = true;
       b++;
     }
   }
- 
+
   function responder(botaoClicado) {
- 
+    if (finalizado || botaoClicado.disabled) {
+      return;
+    }
+
     const resposta = Number(botaoClicado.dataset.resposta);
- 
+
     if (resposta === perguntaAtual.resposta) {
- 
       mensagem.textContent = "✓ Você acertou!";
       acertos++;
- 
-      const categoriaDaPergunta = buscarCategoriaNaLista(perguntaAtual.categoriaChave);
-      categoriaDaPergunta.acertos++;
- 
+
+      const categoriaDaPergunta = buscarCategoriaNaLista(
+        perguntaAtual.categoriaChave
+      );
+
+      if (categoriaDaPergunta) {
+        categoriaDaPergunta.acertos++;
+      }
     } else {
- 
       mensagem.textContent = "✗ Você errou!";
     }
- 
+
     desabilitarBotoes();
- 
     numeroAtual++;
- 
+
     setTimeout(() => {
- 
       if (numeroAtual >= perguntasDisponiveis.length) {
         finalizarQuiz();
       } else {
         mostrarPergunta();
       }
- 
     }, 700);
   }
- 
+
   let c = 0;
+
   while (c < botoes.length) {
- 
     botoes[c].addEventListener("click", function () {
       responder(this);
     });
- 
+
     c++;
   }
- 
- 
-  // ========================================
-  // finalizar
-  // ========================================
- 
+
   function finalizarQuiz() {
- 
-    const total = perguntasDisponiveis.length;
- 
-    let porcentagem = 0;
-    if (total > 0) {
-      porcentagem = Math.round((acertos / total) * 100);
+    if (finalizado) {
+      return;
     }
- 
-    // monta a lista de resultados por categoria, já com a porcentagem calculada
- 
-    let porCategoria = [];
- 
+
+    finalizado = true;
+
+    const total = perguntasDisponiveis.length;
+    const porcentagem = total > 0
+      ? Math.round((acertos / total) * 100)
+      : 0;
+
+    const porCategoria = [];
     let d = 0;
+
     while (d < listaCategorias.length) {
- 
       const item = listaCategorias[d];
- 
-      let percCategoria = 0;
-      if (item.total > 0) {
-        percCategoria = Math.round((item.acertos / item.total) * 100);
-      }
- 
+      const percCategoria = item.total > 0
+        ? Math.round((item.acertos / item.total) * 100)
+        : 0;
+
       porCategoria.push({
         chave: item.chave,
         nome: item.nome,
@@ -1339,28 +1324,30 @@ function iniciarQuiz(categoriasSelecionadas) {
         total: item.total,
         porcentagem: percCategoria
       });
- 
+
       d++;
     }
- 
+
     const resultado = {
-      acertos: acertos,
-      total: total,
-      porcentagem: porcentagem,
+      acertos,
+      total,
+      porcentagem,
       categorias: categoriasSelecionadas,
-      porCategoria: porCategoria
+      porCategoria
     };
- 
+
     localStorage.setItem("resultadoQuiz", JSON.stringify(resultado));
- 
     window.location.href = "resultado.html";
   }
- 
- 
-  // ========================================
-  // iniciar
-  // ========================================
- 
+
+  if (perguntasDisponiveis.length === 0) {
+    mensagem.textContent = "Nenhuma pergunta disponível para as categorias selecionadas.";
+    botoes.forEach(botao => {
+      botao.disabled = true;
+      botao.style.display = "none";
+    });
+    return;
+  }
+
   mostrarPergunta();
 }
- 
