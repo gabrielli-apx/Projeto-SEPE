@@ -449,3 +449,50 @@ A apresentação foi o momento mais significativo da semana, pois pudemos mostra
   - **Agosto:** 3, 24 e 31;
   - **Setembro:** 7, 14, 21 e 28;
   - **Outubro:** 5 e 12.
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# 09 de nov. de 2026 | Projeto integrador
+
+## Participantes:
+- Gabrielli Dias
+- João Vitor
+- Kauany Luiza Nicolai
+- Kézia Galeno
+- Rafaela Cunhago
+- Vitória Bragato Gonçalves
+
+## Presentes:
+- Gabrielli Dias
+- Vitória Bragato Gonçalves
+- João Vitor
+- Kauany Luiza Nicolai
+- Kézia Galeno
+- Rafaela Cunhago
+
+## Anotações:
+- autorização de imagem
+- conversas sobre as apresentações
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# 16 de nov. de 2026 | Projeto integrador
+
+## Participantes:
+- Gabrielli Dias
+- João Vitor
+- Kauany Luiza Nicolai
+- Kézia Galeno
+- Rafaela Cunhago
+- Vitória Bragato Gonçalves
+
+## Presentes:
+- Gabrielli Dias
+- Vitória Bragato Gonçalves
+- João Vitor
+
+## Anotações:
+- autorização de imagem
+- conversas sobre as apresentações
+-decisões sobre as apresentações
+-adicionando formulário ao invés do número de telefone
+
