@@ -1,7 +1,3 @@
-/* ==================================================
-   HIERÓGLIFOS
-   Layout baseado no Figma
-================================================== */
 
 :root {
     --vermelho: #841919;
@@ -12,13 +8,13 @@
     --cinza: gray;
 }
 
-/* ================= MAIN ================= */
+/* MAIN  */
 
 main {
     padding: clamp(10px, 3vw, 35px);
 }
 
-/* ================= SEÇÃO ================= */
+/* SEÇÃO*/
 
 .hieroglifo {
     width: 100%;
@@ -34,7 +30,7 @@ main {
     overflow: hidden;
 }
 
-/* ================= TEXTOS GERAIS ================= */
+/*TEXTOS GERAIS */
 
 .hieroglifo p {
     color: var(--cinza);
@@ -72,7 +68,7 @@ main {
     height: auto;
 }
 
-/* ================= DESCUBRA ================= */
+/* DESCUBRA  */
 
 .descubra h3 {
     color: var(--dourado);
@@ -84,7 +80,7 @@ main {
     font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
-/* ================= TÍTULO ================= */
+/* TÍTULO */
 
 .titulo {
     width: fit-content;
@@ -109,14 +105,14 @@ main {
 }
 
 .titulo > div:first-child {
-    flex-shrink: 0;
+    flex-shrink: 0; /* Não deixa comprimir esse elemento */
 }
 
 .titulo img {
     width: clamp(50px, 8vw, 100px);
     height: clamp(50px, 8vw, 100px);
 
-    object-fit: contain;
+    object-fit: contain;/* Não deixa comprimir esse video ou img */
 
     background-color: var(--branco);
 
@@ -147,9 +143,9 @@ main {
     margin: 0;
 }
 
-/* ==================================================
+/*
    BLOCOS EM DUAS COLUNAS
-================================================== */
+*/
 
 .primeiraDiv,
 .segundaDiv,
@@ -185,9 +181,7 @@ main {
     min-width: 0;
 }
 
-/* ==================================================
-   PRIMEIRO BLOCO
-================================================== */
+/*PRIMEIRO BLOCO*/
 
 .primeiraDiv img {
     width: 100%;
@@ -198,9 +192,7 @@ main {
     border-radius: clamp(15px, 3vw, 35px);
 }
 
-/* ==================================================
-   SEGUNDO BLOCO
-================================================== */
+/* SEGUNDO BLOCO */
 
 .segundaDiv img {
     width: 100%;
@@ -215,9 +207,7 @@ main {
     margin-top: 0;
 }
 
-/* ==================================================
-   TIPOS DE HIEROGLIFOS
-================================================== */
+/* TIPOS DE HIEROGLIFOS*/
 
 .terceiraDiv {
     width: 100%;
@@ -236,9 +226,7 @@ main {
     margin-bottom: clamp(8px, 1.5vw, 18px);
 }
 
-/* ==================================================
-   PEDRA DA ROSETA
-================================================== */
+/*PEDRA DA ROSETA*/
 
 .quartaDiv img {
     width: 100%;
@@ -266,9 +254,7 @@ main {
     margin: 0 auto;
 }
 
-/* ==================================================
-   CURIOSIDADES
-================================================== */
+/* CURIOSIDADES */
 
 .sextaDiv img {
     width: 100%;
@@ -281,7 +267,7 @@ main {
 }
 
 /*
-   Esses blocos não possuem div interna nos dois lados,
+   Esses blocos tem div interna nos dois lados,
    então imagem e p funcionam como as duas colunas.
 */
 
@@ -304,9 +290,7 @@ main {
     border-radius: clamp(15px, 3vw, 35px);
 }
 
-/* ==================================================
-   ORIGEM DOS HIEROGLIFOS
-================================================== */
+/*ORIGEM DOS HIEROGLIFOS */
 
 .decimaDiv img,
 .decimapriDiv img {
@@ -323,9 +307,7 @@ main {
     margin-top: 0;
 }
 
-/* ==================================================
-   CARACTERÍSTICAS
-================================================== */
+/*CARACTERÍSTICAS*/
 
 .decimasegDiv img,
 .decimaterDiv img {
@@ -338,9 +320,7 @@ main {
     border-radius: clamp(15px, 3vw, 35px);
 }
 
-/* ==================================================
-   COMO LER OS HIEROGLIFOS
-================================================== */
+/* COMO LER OS HIEROGLIFOS */
 
 .decimaquaDiv {
     display: grid;
@@ -355,7 +335,7 @@ main {
 }
 
 /*
-Primeiro texto ocupa largura inteira
+Primeiro texto
 */
 
 .decimaquaDiv > p:first-child {
@@ -363,7 +343,7 @@ Primeiro texto ocupa largura inteira
 }
 
 /*
-Imagem 105 ocupa largura inteira
+Imagem 105
 */
 
 .decimaquaDiv > img {
@@ -405,9 +385,7 @@ Texto abaixo da imagem ocupa largura inteira
     object-fit: contain;
 }
 
-/* ==================================================
-   DESKTOP
-================================================== */
+/*DESKTOP*/
 
 @media (min-width: 769px) {
 
@@ -423,7 +401,6 @@ Texto abaixo da imagem ocupa largura inteira
 
     /*
     Mantém proporção das duas colunas
-    semelhante ao Figma
     */
 
     .primeiraDiv > div,
@@ -438,9 +415,7 @@ Texto abaixo da imagem ocupa largura inteira
     }
 }
 
-/* ==================================================
-   CELULAR
-================================================== */
+/* CELULAR */
 
 @media (max-width: 768px) {
 
@@ -495,8 +470,7 @@ Texto abaixo da imagem ocupa largura inteira
     }
 
     /*
-    No celular os blocos viram uma coluna,
-    mas preservamos a ordem do HTML.
+    bloco vira coluna
     */
 
     .primeiraDiv,
@@ -572,9 +546,7 @@ Texto abaixo da imagem ocupa largura inteira
     }
 }
 
-/* ==================================================
-   CELULARES PEQUENOS
-================================================== */
+/*CELULARES MENORES */
 
 @media (max-width: 400px) {
 
