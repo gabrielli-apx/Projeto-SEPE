@@ -1,10 +1,10 @@
-/* === main === */
+/* main */
 
 main{
     padding: 3vw 3vw 3vw 3vw;
 }
 
-/* === section === */
+/* section */
 
 .cuneiforme{
     background-color: #F5E9D5;
@@ -31,7 +31,7 @@ main{
     font-size: 1.2rem;
 }
 
-/* === Título === */
+/* Título */
 
 .titulo{
     width: fit-content;
@@ -61,7 +61,7 @@ main{
     color: rgb(201, 201, 201);
 }
 
-/* === PrimeiraDiv === */
+/* PrimeiraDiv */
 
 .primeiraDiv{
     text-align: center;
@@ -71,7 +71,7 @@ main{
     padding: 0vw 0vw 3vw 0vw;
 }
 
-/* === SegundaDiv === */
+/*SegundaDiv */
 
 .segundaDiv{
     text-align: center;
@@ -83,7 +83,7 @@ main{
     width: 100%;
 }
 
-/* === terceiraDiv === */
+/* terceiraDiv */
 
 .terceiraDiv{
     text-align: center;
@@ -94,7 +94,7 @@ main{
     width: 120%;
 }
 
-/* === terceiraDiv === */
+/*terceiraDiv */
 
 .quartaDiv{
     text-align: center;
@@ -106,7 +106,7 @@ main{
     width: 120%;
 }
 
-/* === quintaDiv === */
+/*quintaDiv */
 
 .quintaDiv{
     text-align: center;
@@ -117,7 +117,7 @@ main{
     width: 120%;
 }
 
-/* === sextaDiv === */
+/* sextaDiv */
 
 .sextaDiv{
     text-align: center;
@@ -128,14 +128,14 @@ main{
     width: 120%;
 }
 
-/* === setimaDiv === */
+/*setimaDiv */
 
 .setimaDiv{
     text-align: center;
     padding: 2vw 0vw 2vw 0vw;
 }
 
-/* === oitavaDiv === */
+/* oitavaDiv */
 
 .oitavaDiv{
     text-align: center;
@@ -148,14 +148,14 @@ main{
 
 @media screen {
 
-    /* === Título === */
+    /*  titulo */
 
     .titulo{
         display: flex;
         align-items: center;
     }
 
-    /* === PrimeiraDiv === */
+    /* primeiraDiv */
 
     .espacoPrimeira{
         align-items: center;
@@ -163,7 +163,7 @@ main{
         gap: 20px;
     }
 
-    /* === SegundaDiv === */
+    /* segundaDiv  */
 
     .segundaDiv{
        align-items: center;
@@ -171,7 +171,7 @@ main{
         gap: 20px; 
     }
 
-    /* === terceiraDiv === */
+    /* terceiraDiv */
 
     .terceiraDiv{
         align-items: center;
@@ -179,7 +179,7 @@ main{
         gap: 20px; 
     }
 
-    /* === quartaDiv === */
+    /* quartaDiv */
 
     .quartaDiv{
         align-items: center;
@@ -187,7 +187,7 @@ main{
         gap: 20px; 
     }
 
-    /* === quintaDiv === */
+    /* quintaDiv */
 
     .quintaDiv{
         align-items: center;
@@ -195,7 +195,7 @@ main{
         gap: 20px; 
     }
 
-    /* === sextaDiv === */
+    /* sextaDiv */
 
     .sextaDiv{
         align-items: center;

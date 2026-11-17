@@ -1,4 +1,4 @@
-/* === VARIÁVEIS === */
+/* VARIÁVEIS */
 
 :root {
     --vermelho: #841919;
@@ -13,14 +13,14 @@
 }
 
 
-/* === MAIN === */
+/* MAIN */
 
 main {
     padding: clamp(10px, 3vw, 30px);
 }
 
 
-/* === SEÇÃO MAIA === */
+/* SEÇÃO MAIA */
 
 .maia {
     background-color: var(--bege);
@@ -36,7 +36,7 @@ main {
 }
 
 
-/* === TEXTOS GERAIS === */
+/* TEXTOS GERAIS */
 
 .maia h3 {
     color: var(--vermelho);
@@ -69,7 +69,7 @@ main {
 }
 
 
-/* === DESCUBRA === */
+/*  DESCUBRA */
 
 h3.descubra {
     color: var(--dourado);
@@ -82,9 +82,8 @@ h3.descubra {
 }
 
 
-/* ================================================= */
-/* === TÍTULO === */
-/* ================================================= */
+/* TÍTULO */
+
 
 .titulo {
     width: fit-content;
@@ -151,9 +150,7 @@ h3.descubra {
 }
 
 
-/* ================================================= */
-/* === PRIMEIRA DIV === */
-/* ================================================= */
+/* PRIMEIRA DIV */
 
 .primeiraDiv {
     display: flex;
@@ -204,9 +201,7 @@ h3.descubra {
 }
 
 
-/* ================================================= */
-/* === SEGUNDA DIV === */
-/* ================================================= */
+/*  SEGUNDA DIV  */
 
 .segundaDiv {
     display: flex;
@@ -257,9 +252,7 @@ h3.descubra {
 }
 
 
-/* ================================================= */
-/* === CELULAR === */
-/* ================================================= */
+/* CELULAR */
 
 @media (max-width: 768px) {
 
@@ -350,9 +343,8 @@ h3.descubra {
 }
 
 
-/* ================================================= */
-/* === CELULARES MUITO PEQUENOS === */
-/* ================================================= */
+/* CELULARES MUITO PEQUENOS */
+
 
 @media (max-width: 350px) {
 
@@ -404,9 +396,7 @@ h3.descubra {
 }
 
 
-/* ================================================= */
-/* === COMPUTADOR / TABLET === */
-/* ================================================= */
+/* COMPUTADOR / TABLET */
 
 @media (min-width: 768px) {
 

@@ -1,4 +1,4 @@
-/* === VARIÁVEIS === */
+/* VARIÁVEIS */
 
 :root {
     --vermelho: #841919;
@@ -13,14 +13,14 @@
 }
 
 
-/* === MAIN === */
+/* MAIN */
 
 main {
     padding: clamp(10px, 3vw, 30px);
 }
 
 
-/* === SEÇÃO AVESTICA === */
+/* SEÇÃO AVESTICA */
 
 .avestica {
     background-color: var(--bege);
@@ -35,7 +35,7 @@ main {
 }
 
 
-/* === TÍTULOS E TEXTOS === */
+/* TÍTULOS E TEXTOS */
 
 .avestica h3 {
     color: var(--vermelho);
@@ -68,7 +68,7 @@ main {
 }
 
 
-/* === "DESCUBRA A ESCRITA DA" === */
+/* "DESCUBRA A ESCRITA DA" */
 
 .avestica h3.descubra {
     color: var(--dourado);
@@ -81,7 +81,7 @@ main {
 }
 
 
-/* === TÍTULO === */
+/* TÍTULO */
 
 .titulo {
     width: fit-content;
@@ -146,7 +146,7 @@ main {
 }
 
 
-/* === PRIMEIRA DIV === */
+/* PRIMEIRA DIV */
 
 .primeiraDiv {
     display: flex;
@@ -194,7 +194,7 @@ main {
 }
 
 
-/* === SEGUNDA DIV === */
+/* SEGUNDA DIV */
 
 .segundaDiv {
     display: flex;
@@ -242,7 +242,7 @@ main {
 }
 
 
-/* === CELULAR === */
+/* CELULAR */
 
 @media (max-width: 768px) {
 
@@ -330,7 +330,7 @@ main {
 }
 
 
-/* === CELULARES MUITO PEQUENOS === */
+/* CELULARES MUITO PEQUENOS */
 
 @media (max-width: 350px) {
 
@@ -366,7 +366,7 @@ main {
 }
 
 
-/* === COMPUTADOR / TABLET === */
+/* COMPUTADOR / TABLET */
 
 @media (min-width: 768px) {
 
