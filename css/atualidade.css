@@ -1,4 +1,4 @@
-/* === VARIÁVEIS === */
+/* VARIÁVEIS */
 
 :root {
     --vermelho: #841919;
@@ -13,13 +13,13 @@
 }
 
 
-/* === MAIN === */
+/* MAIN */
 
 main {
     padding: clamp(10px, 3vw, 30px);
 }
 
-/* === SEÇÃO ATUALIDADE === */
+/* SEÇÃO ATUALIDADE */
 
 .atualidade {
     background-color: var(--bege);
@@ -32,7 +32,7 @@ main {
     box-sizing: border-box;
 }
 
-/* === "DESCUBRA A ESCRITA DA" === */
+/* "DESCUBRA A ESCRITA DA" */
 
 .atualidade h3.descubra {
     color: var(--dourado);
@@ -44,10 +44,8 @@ main {
     margin: 0 0 clamp(10px, 3vw, 20px);
 }
 
-/* === "DESCUBRA A ESCRITA DA" === */
-/* ==================================================
-   TÍTULO ATUALIDADE
-================================================== */
+/* "DESCUBRA A ESCRITA DA" */
+/* TÍTULO ATUALIDADE */
 
 .titulo {
     width: fit-content;
@@ -110,9 +108,8 @@ main {
 }
 
 
-/* ==================================================
-   PRIMEIRA DIV
-================================================== */
+/*
+   PRIMEIRA DIV*/
 
 .primeiraDiv {
     display: flex;
@@ -160,9 +157,7 @@ main {
 }
 
 
-/* ==================================================
-   SEGUNDA DIV
-================================================== */
+/* SEGUNDA DIV*/
 
 .segundaDiv {
     display: flex;
@@ -210,9 +205,7 @@ main {
 }
 
 
-/* ==================================================
-   CELULAR
-================================================== */
+/* CELULAR */
 
 @media (max-width: 768px) {
 
@@ -300,9 +293,7 @@ main {
 }
 
 
-/* ==================================================
-   CELULARES MUITO PEQUENOS
-================================================== */
+/* CELULARES MUITO PEQUENOS */
 
 @media (max-width: 350px) {
 
@@ -338,9 +329,7 @@ main {
 }
 
 
-/* ==================================================
-   COMPUTADOR / TABLET
-================================================== */
+/* COMPUTADOR E TABLET */
 
 @media (min-width: 768px) {
 
