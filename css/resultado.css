@@ -164,7 +164,7 @@
 .botao-home {
     display: inline-block;
     text-decoration: none;
-    /* Reaproveite aqui as mesmas propriedades visuais do botão refazerQuiz */
+   
 }
 @media (max-width: 768px) {
     .caixa-resultado {
