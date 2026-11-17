@@ -36,7 +36,6 @@
   padding: 0 0 0 2vw;
 }
 
-/* Animação do texto da .hints */
 @keyframes hints-entrada {
   from {
     opacity: 0;
@@ -55,7 +54,7 @@
   animation: hints-entrada 0.8s ease-out both;
 }
 
-/* Um de cada vez */
+
 .hints h2 {
   animation-delay: 0.1s;
 }
@@ -291,7 +290,7 @@ main::before {
   background-color: var(--primary-color);
 }
 
-/* Responsividade para celular */
+
 @media (max-width: 768px) {
   .hints h2 {
     font-size: 5vw;
@@ -344,7 +343,7 @@ main::before {
     right: 1rem;
   }
 
-  /* Título e data */
+
   .timeline li .title,
   .timeline li::after {
     top: 50%;
@@ -361,7 +360,7 @@ main::before {
     font-size: clamp(0.9rem, 4vw, 1.3rem);
   }
 
-  /* Ímpares: lado esquerdo */
+  /* Ímpares lado esquerdo */
   .timeline li:nth-child(odd) .title {
     left: 2.4rem;
     right: auto;
@@ -377,7 +376,7 @@ main::before {
     font-size: clamp(0.9rem, 4vw, 1.3rem);
   }
 
-  /* Pares: lado direito */
+  /* Pares lado direito */
   .timeline li:nth-child(even) .title {
     left: auto;
     right: 2.6rem;
@@ -393,13 +392,13 @@ main::before {
     font-size: clamp(0.9rem, 4vw, 1.3rem);
   }
 
-  /* Bolinha central */
+  /* Bolinha */
   .data {
     left: 50%;
     top: 50%;
   }
 
-  /* Balão expandido no celular */
+  /* Balão */
   .data.show {
     position: fixed;
     left: 50%;
@@ -432,7 +431,7 @@ main::before {
   }
 }
 
-/* Respeita quem prefere menos animação */
+
 @media (prefers-reduced-motion: reduce) {
   .hints h2,
   .hints h3,
