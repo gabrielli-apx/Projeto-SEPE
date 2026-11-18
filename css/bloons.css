@@ -1,5 +1,8 @@
 main {
-    background: url("fundo.png") center / cover no-repeat;
+    background-image: url("fundo.png");
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
     margin: 0;
     padding-bottom: 0;
 }
@@ -129,7 +132,7 @@ main h1 {
 .showcase {
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 2px;
+    padding: 0 2px 90px 2px;
 }
 
 .showcase:last-of-type {
