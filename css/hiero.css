@@ -172,7 +172,9 @@ main {
 
 .bloco img {
     width: 100%;
-    max-height: 430px;
+    max-width: 380px;
+    margin: 0 auto;
+    max-height: 300px;
 
     object-fit: contain;
 
@@ -182,7 +184,7 @@ main {
 /* blocos com imagem um pouco menor (curiosidades) */
 
 .bloco.menor img {
-    max-height: 370px;
+    max-height: 240px;
 }
 
 /* título dentro do texto ao lado da imagem */
@@ -253,17 +255,20 @@ main {
 .bloco-ler .ler-grande {
     grid-column: 1 / -1;
 
-    width: min(100%, 950px);
+    width: min(100%, 800px);
+    max-width: none;
 
     margin: 0 auto;
 
-    max-height: 500px;
+    max-height: 420px;
 }
 
 /* última imagem (coluna direita) */
 
 .bloco-ler img:not(.ler-grande) {
-    max-height: 420px;
+    max-width: 340px;
+    margin: 0 auto;
+    max-height: 300px;
 }
 
 /*DESKTOP*/
@@ -347,7 +352,7 @@ main {
 
     .bloco img,
     .bloco.menor img {
-        width: min(100%, 420px);
+        width: min(100%, 260px);
 
         margin: 0 auto;
 
@@ -377,7 +382,7 @@ main {
     }
 
     .bloco-ler .ler-grande {
-        width: min(100%, 500px);
+        width: min(100%, 400px);
 
         margin: 0 auto;
 
@@ -385,7 +390,7 @@ main {
     }
 
     .bloco-ler img:not(.ler-grande) {
-        width: min(100%, 420px);
+        width: min(100%, 260px);
 
         margin: 0 auto;
 

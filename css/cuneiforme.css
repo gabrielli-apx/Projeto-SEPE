@@ -15,17 +15,18 @@ main {
 
 .cuneiforme h3 {
     color: #841919;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 .cuneiforme h4 {
     color: #713434;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .cuneiforme p {
     color: gray;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
 }
 
 /* Título */
@@ -54,12 +55,12 @@ main {
 }
 
 .escrita h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color: white;
 }
 
 .escrita p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(201, 201, 201);
 }
 
@@ -92,7 +93,9 @@ main {
 .bloco img {
     display: block;
     width: 100%;
+    max-width: 320px;
     height: auto;
+    margin: 0 auto;
 }
 
 .bloco figure {
@@ -103,7 +106,7 @@ main {
 
 .behistun {
     color: #713434;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /* PRIMEIRO BLOCO: texto + imagem em cima, texto em largura total embaixo */
@@ -133,7 +136,7 @@ main {
 
 .bloco-destaque strong {
     color: #841919;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 /* CELULAR */
@@ -162,11 +165,33 @@ main {
     }
 
     .bloco img {
-        width: min(100%, 420px);
+        width: min(100%, 240px);
         margin: 0 auto;
     }
 
     .bloco > * {
         width: 100%;
+    }
+
+    /* textos um pouco menores no celular */
+
+    .cuneiforme h3 {
+        font-size: 1.5rem;
+    }
+
+    .cuneiforme h4 {
+        font-size: 1.3rem;
+    }
+
+    .cuneiforme p {
+        font-size: 1.25rem;
+    }
+
+    .escrita h2 {
+        font-size: 1.5rem;
+    }
+
+    .escrita p {
+        font-size: 1.2rem;
     }
 }
