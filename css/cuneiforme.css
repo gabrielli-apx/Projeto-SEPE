@@ -1,205 +1,172 @@
 /* main */
 
-main{
-    padding: 3vw 3vw 3vw 3vw;
+main {
+    padding: 3vw;
 }
 
 /* section */
 
-.cuneiforme{
+.cuneiforme {
     background-color: #F5E9D5;
     border-radius: 50px;
-    gap: 40px;
-    justify-content: center;
     padding: 20px;
-    border: 10px solid #841919
+    border: 10px solid #841919;
 }
-.cuneiforme img{
-    width: 50%;
-    height: 50%;
-}
-.cuneiforme h3{
+
+.cuneiforme h3 {
     color: #841919;
     font-size: 1.3rem;
 }
-.cuneiforme h4{
+
+.cuneiforme h4 {
     color: #713434;
     font-size: 1.2rem;
 }
-.cuneiforme p{
+
+.cuneiforme p {
     color: gray;
     font-size: 1.2rem;
 }
 
 /* Título */
 
-.titulo{
+.titulo {
     width: fit-content;
+    display: flex;
+    align-items: center;
     background-color: #841919;
-    padding: 8px 15px 8px 15px;
+    padding: 8px 15px;
     border-radius: 360px;
-    justify-content: first baseline;
-    margin: 15px 0px 15px 0px;
+    margin: 15px 0;
 }
-.titulo img{
+
+.titulo img {
+    flex-shrink: 0;
     height: 50px;
     width: 50px;
     background-color: #FFF5E2;
-    align-items: center;
-    padding: 1vw 1vw 1vw 1vw;
+    padding: 1vw;
     border-radius: 360px;
 }
-.escrita{
+
+.escrita {
     text-align: center;
 }
-.escrita h2{
+
+.escrita h2 {
     font-size: 1.5rem;
     color: white;
 }
-.escrita p{
+
+.escrita p {
     font-size: 1.3rem;
     color: rgb(201, 201, 201);
 }
 
-/* PrimeiraDiv */
+/*
+   LISTA PRINCIPAL (ul.blocos)
+   Cada li é um bloco de conteúdo.
+*/
 
-.primeiraDiv{
+.blocos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* BLOCO PADRÃO: duas colunas (imagem + texto, ou texto + imagem) */
+
+.bloco {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
-}
-.espacoPrimeira{
-    padding: 0vw 0vw 3vw 0vw;
+    padding: 2vw 0;
 }
 
-/*SegundaDiv */
-
-.segundaDiv{
-    text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
+.bloco > * {
+    flex: 1;
+    min-width: 0;
 }
 
-.segundaDiv img{
-    height: 100%;
+.bloco img {
+    display: block;
     width: 100%;
+    height: auto;
 }
 
-/* terceiraDiv */
-
-.terceiraDiv{
-    text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
-}
-.terceiraDiv img{
-    height: 120%;
-    width: 120%;
+.bloco figure {
+    margin: 0;
 }
 
-/*terceiraDiv */
+/* legenda da imagem (Behistun) */
 
-.quartaDiv{
-    text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
+.behistun {
+    color: #713434;
+    font-size: 1.2rem;
 }
 
-.quartaDiv img{
-    height: 120%;
-    width: 120%;
+/* PRIMEIRO BLOCO: texto + imagem em cima, texto em largura total embaixo */
+
+.bloco-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3vw 20px;
 }
 
-/*quintaDiv */
-
-.quintaDiv{
-    text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
-}
-.quintaDiv img{
-    height: 120%;
-    width: 120%;
+.bloco-grid .largura-total {
+    grid-column: 1 / -1;
 }
 
-/* sextaDiv */
+/* blocos só com texto */
 
-.sextaDiv{
-    text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
-}
-.sextaDiv img{
-    height: 120%;
-    width: 120%;
+.bloco-texto {
+    display: block;
 }
 
-/*setimaDiv */
+/* "Você sabia?" */
 
-.setimaDiv{
-    text-align: center;
-    padding: 2vw 0vw 2vw 0vw;
+.bloco-destaque {
+    padding: 5vw 0;
 }
 
-/* oitavaDiv */
-
-.oitavaDiv{
-    text-align: center;
-    padding: 5vw 0vw 5vw 0vw;
-}
-.oitavaDiv strong{
+.bloco-destaque strong {
     color: #841919;
     font-size: 1.3rem;
 }
 
-@media screen {
+/* CELULAR */
 
-    /*  titulo */
+@media (max-width: 768px) {
 
-    .titulo{
-        display: flex;
-        align-items: center;
+    main {
+        padding: 8px;
     }
 
-    /* primeiraDiv */
-
-    .espacoPrimeira{
-        align-items: center;
-        display: flex;
-        gap: 20px;
+    .cuneiforme {
+        border-width: 5px;
+        border-radius: 28px;
+        padding: 15px 12px;
     }
 
-    /* segundaDiv  */
-
-    .segundaDiv{
-       align-items: center;
-        display: flex;
-        gap: 20px; 
+    .bloco {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 0;
     }
 
-    /* terceiraDiv */
-
-    .terceiraDiv{
-        align-items: center;
+    .bloco-grid {
         display: flex;
-        gap: 20px; 
+        flex-direction: column;
     }
 
-    /* quartaDiv */
-
-    .quartaDiv{
-        align-items: center;
-        display: flex;
-        gap: 20px; 
+    .bloco img {
+        width: min(100%, 420px);
+        margin: 0 auto;
     }
 
-    /* quintaDiv */
-
-    .quintaDiv{
-        align-items: center;
-        display: flex;
-        gap: 20px; 
-    }
-
-    /* sextaDiv */
-
-    .sextaDiv{
-        align-items: center;
-        display: flex;
-        gap: 20px; 
+    .bloco > * {
+        width: 100%;
     }
 }

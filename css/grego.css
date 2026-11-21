@@ -80,9 +80,8 @@ h3.descubra {
     margin: 0 0 clamp(10px, 3vw, 20px);
 }
 
-
-/* TÍTULO  */
 
+/* TÍTULO  */
 
 .titulo {
     width: fit-content;
@@ -148,11 +147,23 @@ h3.descubra {
     margin: 0;
 }
 
-
-/* PRIMEIRA DIV */
+
+/*
+   LISTA PRINCIPAL (ul.blocos)
+   Cada li é um bloco de conteúdo.
+*/
+
+.blocos {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
 
 
-.primeiraDiv {
+/* BLOCO PADRÃO: duas colunas (texto + imagem, ou imagem + texto) */
+
+.bloco {
     display: flex;
 
     align-items: center;
@@ -164,43 +175,12 @@ h3.descubra {
     padding: clamp(10px, 2vw, 30px) 0;
 }
 
-.primeiraDiv > div {
+.bloco > * {
     flex: 1;
+    min-width: 0;
 }
 
-.primeiraDiv img {
-    display: block;
-
-    width: 50%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
-
-
-/*  SEGUNDA DIV  */
-
-
-.segundaDiv {
-    display: flex;
-
-    align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    text-align: center;
-
-    padding: clamp(10px, 2vw, 30px) 0;
-}
-
-.segundaDiv > div {
-    flex: 1;
-}
-
-.segundaDiv img {
+.bloco img {
     display: block;
 
     width: 100%;
@@ -210,75 +190,9 @@ h3.descubra {
 
     margin: 0 auto;
 }
-
-
-
-/* TERCEIRA DIV */
-
-
-.terceiraDiv {
-    display: flex;
-
-    align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    text-align: center;
-
-    padding: clamp(10px, 2vw, 30px) 0;
-}
-
-.terceiraDiv > div {
-    flex: 1;
-}
-
-.terceiraDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
-
-
-/* QUARTA DIV */
-
-
-.quartaDiv {
-    display: flex;
-
-    align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    text-align: center;
-
-    padding: clamp(10px, 2vw, 30px) 0;
-}
-
-.quartaDiv > div {
-    flex: 1;
-}
-
-.quartaDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
 
 
 /* CELULAR*/
-
 
 @media (max-width: 768px) {
 
@@ -306,12 +220,9 @@ h3.descubra {
     }
 
 
-    /* blocos */
+    /* blocos viram coluna */
 
-    .primeiraDiv,
-    .segundaDiv,
-    .terceiraDiv,
-    .quartaDiv {
+    .bloco {
         flex-direction: column;
 
         gap: 20px;
@@ -319,13 +230,7 @@ h3.descubra {
         padding: 10px 5px;
     }
 
-
-    /* elementos internos */
-
-    .primeiraDiv > div,
-    .segundaDiv > div,
-    .terceiraDiv > div,
-    .quartaDiv > div {
+    .bloco > * {
         width: 100%;
     }
 
@@ -346,10 +251,7 @@ h3.descubra {
 
     /* imagens */
 
-    .primeiraDiv img,
-    .segundaDiv img,
-    .terceiraDiv img,
-    .quartaDiv img {
+    .bloco img {
         width: min(100%, 280px);
 
         height: auto;
@@ -359,8 +261,7 @@ h3.descubra {
 }
 
 
-
-/*  CELULARES MUITO PEQUENOS */
+/*  CELULARES MUITO PEQUENOS */
 
 @media (max-width: 350px) {
 
@@ -411,11 +312,10 @@ h3.descubra {
     }
 }
 
-
+
 /* COMPUTADOR / TABLET */
 
-
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
     .grego p {
         font-size: clamp(1.3rem, 2vw, 1.8rem);

@@ -1,3 +1,4 @@
+
 /* VARIÁVEIS */
 
 :root {
@@ -81,9 +82,8 @@ h3.descubra {
     margin: 0 0 clamp(10px, 3vw, 20px);
 }
 
-
-/* TÍTULO PRINCIPAL */
 
+/* TÍTULO PRINCIPAL */
 
 .titulo {
     width: fit-content;
@@ -150,106 +150,53 @@ h3.descubra {
 }
 
 
-
-/* PRIMEIRA DIV */
-
-
-.primeiraDiv {
-    display: flex;
-
-    align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    text-align: center;
-
-    padding: clamp(10px, 2vw, 30px) 0;
-}
-
-.primeiraDiv > div {
-    flex: 1;
-}
-
-.primeiraDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
-
-
-/* SEGUNDA DIV */
-
-
-.segundaDiv {
-    display: flex;
-
-    align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    text-align: center;
-
-    padding: clamp(10px, 2vw, 30px) 0;
-}
-
-.segundaDiv > div {
-    flex: 1;
-}
-
-.segundaDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
-
-
-/* TERCEIRA DIV */
-
-
-.terceiraDiv {
-    display: flex;
-
-    align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    text-align: center;
-
-    padding: clamp(10px, 2vw, 30px) 0;
-}
-
-.terceiraDiv > div {
-    flex: 1;
-}
-
-.terceiraDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
-
-/* TÍTULO 2 */
 /*
+   LISTA PRINCIPAL (ul.blocos)
+   Cada li é um bloco de conteúdo.
+*/
 
-.titulo2 {
+.blocos {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* BLOCO PADRÃO: duas colunas (texto + imagem, ou imagem + texto) */
+
+.bloco {
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(15px, 4vw, 40px);
+
+    text-align: center;
+
+    padding: clamp(10px, 2vw, 30px) 0;
+}
+
+.bloco > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.bloco img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* TÍTULO DE SEÇÃO (li só com h3) */
+
+.bloco-titulo {
     text-align: center;
 
     width: 100%;
@@ -257,52 +204,17 @@ h3.descubra {
     margin: clamp(15px, 3vw, 30px) 0;
 }
 
-.titulo2 h3,
-.titulo2 h4 {
-    text-align: center;
-}
 
-
-/* QUARTA DIV */
+/* VOCÊ SABIA? (li só com texto) */
 
-.quartaDiv {
-    display: flex;
-
-    align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    text-align: center;
-
-    padding: clamp(10px, 2vw, 30px) 0;
-}
-
-.quartaDiv > div {
-    flex: 1;
-}
-
-.quartaDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
-
-/* QUINTA DIV */
-
-.quintaDiv {
+.bloco-texto {
     text-align: center;
 
     padding: clamp(20px, 4vw, 50px)
              clamp(10px, 8vw, 100px);
 }
 
-.quintaDiv strong {
+.bloco-texto strong {
     color: var(--vermelho);
 
     font-size: clamp(1.2rem, 4vw, 2rem);
@@ -310,8 +222,8 @@ h3.descubra {
     line-height: 1.4;
 }
 
-
-/* CELULAR */
+
+/* CELULAR */
 
 @media (max-width: 768px) {
 
@@ -339,12 +251,9 @@ h3.descubra {
     }
 
 
-    /* blocos de conteúdo */
+    /* blocos viram coluna */
 
-    .primeiraDiv,
-    .segundaDiv,
-    .terceiraDiv,
-    .quartaDiv {
+    .bloco {
         flex-direction: column;
 
         gap: 20px;
@@ -352,13 +261,7 @@ h3.descubra {
         padding: 10px 5px;
     }
 
-
-    /* divs internas */
-
-    .primeiraDiv > div,
-    .segundaDiv > div,
-    .terceiraDiv > div,
-    .quartaDiv > div {
+    .bloco > * {
         width: 100%;
     }
 
@@ -379,10 +282,7 @@ h3.descubra {
 
     /* imagens */
 
-    .primeiraDiv img,
-    .segundaDiv img,
-    .terceiraDiv img,
-    .quartaDiv img {
+    .bloco img {
         width: min(100%, 280px);
 
         height: auto;
@@ -391,26 +291,26 @@ h3.descubra {
     }
 
 
-    /* segundo título */
+    /* título de seção */
 
-    .titulo2 {
+    .bloco-titulo {
         margin: 20px 0 10px;
     }
 
 
-    /* quinta div */
+    /* você sabia */
 
-    .quintaDiv {
+    .bloco-texto {
         padding: 20px 5px;
     }
 
-    .quintaDiv strong {
+    .bloco-texto strong {
         font-size: clamp(1.1rem, 4.5vw, 1.4rem);
     }
 }
 
-
-/*  CELULARES MUITO PEQUENOS */
+
+/*  CELULARES MUITO PEQUENOS */
 
 @media (max-width: 350px) {
 
@@ -461,18 +361,17 @@ h3.descubra {
     }
 
 
-    /* quinta div */
+    /* você sabia */
 
-    .quintaDiv strong {
+    .bloco-texto strong {
         font-size: 1.1rem;
     }
 }
 
 
+/* COMPUTADOR / TABLET */
 
-/* COMPUTADOR / TABLET */
-
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
     .fenicio p {
         font-size: clamp(1.3rem, 2vw, 1.8rem);
@@ -512,9 +411,9 @@ h3.descubra {
     }
 
 
-    /* quinta div */
+    /* você sabia */
 
-    .quintaDiv strong {
+    .bloco-texto strong {
         font-size: 2rem;
     }
 }

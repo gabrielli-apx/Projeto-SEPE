@@ -1,4 +1,3 @@
-
 :root {
     --vermelho: #841919;
     --vermelho-claro: #713434;
@@ -70,7 +69,7 @@ main {
 
 /* DESCUBRA  */
 
-.descubra h3 {
+.hieroglifo .descubra {
     color: var(--dourado);
 
     text-align: left;
@@ -104,15 +103,13 @@ main {
     box-sizing: border-box;
 }
 
-.titulo > div:first-child {
-    flex-shrink: 0; /* Não deixa comprimir esse elemento */
-}
-
 .titulo img {
+    flex-shrink: 0; /* Não deixa comprimir a imagem */
+
     width: clamp(50px, 8vw, 100px);
     height: clamp(50px, 8vw, 100px);
 
-    object-fit: contain;/* Não deixa comprimir esse video ou img */
+    object-fit: contain;
 
     background-color: var(--branco);
 
@@ -144,22 +141,21 @@ main {
 }
 
 /*
-   BLOCOS EM DUAS COLUNAS
+   LISTA PRINCIPAL (ul.blocos)
+   Cada li é um bloco de conteúdo.
 */
 
-.primeiraDiv,
-.segundaDiv,
-.quartaDiv,
-.sextaDiv,
-.setimaDiv,
-.oitavaDiv,
-.nonaDiv,
-.decimaDiv,
-.decimapriDiv,
-.decimasegDiv,
-.decimaterDiv {
-    display: flex;
+.blocos {
+    list-style: none;
 
+    padding: 0;
+    margin: 0;
+}
+
+/* BLOCO PADRÃO: duas colunas (texto + imagem, ou imagem + texto) */
+
+.bloco {
+    display: flex;
     align-items: center;
 
     gap: clamp(20px, 4vw, 55px);
@@ -167,23 +163,14 @@ main {
     padding: clamp(15px, 3vw, 35px) 0;
 }
 
-/* faz cada lado ocupar metade */
+/* cada lado ocupa metade */
 
-.primeiraDiv > *,
-.segundaDiv > *,
-.quartaDiv > *,
-.sextaDiv > *,
-.decimaDiv > *,
-.decimapriDiv > *,
-.decimasegDiv > *,
-.decimaterDiv > * {
+.bloco > * {
     flex: 1;
     min-width: 0;
 }
 
-/*PRIMEIRO BLOCO*/
-
-.primeiraDiv img {
+.bloco img {
     width: 100%;
     max-height: 430px;
 
@@ -192,137 +179,60 @@ main {
     border-radius: clamp(15px, 3vw, 35px);
 }
 
-/* SEGUNDO BLOCO */
+/* blocos com imagem um pouco menor (curiosidades) */
 
-.segundaDiv img {
-    width: 100%;
-    max-height: 430px;
-
-    object-fit: contain;
-
-    border-radius: clamp(15px, 3vw, 35px);
+.bloco.menor img {
+    max-height: 370px;
 }
 
-.segundaDiv h3 {
+/* título dentro do texto ao lado da imagem */
+
+.bloco .texto h3 {
     margin-top: 0;
 }
 
-/* TIPOS DE HIEROGLIFOS*/
+/* TÍTULOS DE SEÇÃO (li só com h3) */
 
-.terceiraDiv {
-    width: 100%;
+.bloco-titulo {
+    padding: 0;
+}
+
+/* TIPOS DE HIEROGLIFOS (li com h3 + lista interna) */
+
+.bloco-lista {
+    display: block;
 
     padding: clamp(20px, 4vw, 45px) 0;
 }
 
-.terceiraDiv ul {
+.bloco-lista ul {
     list-style: none;
 
     padding: 0;
     margin: 0;
 }
 
-.terceiraDiv li {
+.bloco-lista ul li {
     margin-bottom: clamp(8px, 1.5vw, 18px);
 }
 
-/*PEDRA DA ROSETA*/
+/* texto Champollion (só um parágrafo) */
 
-.quartaDiv img {
-    width: 100%;
+.bloco-texto {
+    display: block;
 
-    max-height: 480px;
-
-    object-fit: contain;
-
-    border-radius: clamp(15px, 3vw, 35px);
-}
-
-.quartaDiv h3 {
-    margin-top: 0;
-}
-
-/* texto Champollion */
-
-.quintaDiv {
     padding: clamp(15px, 3vw, 35px) 4%;
 }
 
-.quintaDiv p {
+.bloco-texto p {
     max-width: 1100px;
 
     margin: 0 auto;
 }
 
-/* CURIOSIDADES */
+/* COMO LER OS HIEROGLIFOS (grid de 2 colunas) */
 
-.sextaDiv img {
-    width: 100%;
-
-    max-height: 380px;
-
-    object-fit: contain;
-
-    border-radius: clamp(15px, 3vw, 35px);
-}
-
-/*
-   Esses blocos tem div interna nos dois lados,
-   então imagem e p funcionam como as duas colunas.
-*/
-
-.setimaDiv > *,
-.oitavaDiv > *,
-.nonaDiv > * {
-    flex: 1;
-    min-width: 0;
-}
-
-.setimaDiv img,
-.oitavaDiv img,
-.nonaDiv img {
-    width: 100%;
-
-    max-height: 360px;
-
-    object-fit: contain;
-
-    border-radius: clamp(15px, 3vw, 35px);
-}
-
-/*ORIGEM DOS HIEROGLIFOS */
-
-.decimaDiv img,
-.decimapriDiv img {
-    width: 100%;
-
-    max-height: 480px;
-
-    object-fit: contain;
-
-    border-radius: clamp(15px, 3vw, 35px);
-}
-
-.decimaDiv h3 {
-    margin-top: 0;
-}
-
-/*CARACTERÍSTICAS*/
-
-.decimasegDiv img,
-.decimaterDiv img {
-    width: 100%;
-
-    max-height: 430px;
-
-    object-fit: contain;
-
-    border-radius: clamp(15px, 3vw, 35px);
-}
-
-/* COMO LER OS HIEROGLIFOS */
-
-.decimaquaDiv {
+.bloco-ler {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -334,19 +244,13 @@ main {
     padding: clamp(15px, 3vw, 35px) 0;
 }
 
-/*
-Primeiro texto
-*/
+/* textos e imagem que ocupam a largura inteira */
 
-.decimaquaDiv > p:first-child {
+.bloco-ler .largura-total {
     grid-column: 1 / -1;
 }
 
-/*
-Imagem 105
-*/
-
-.decimaquaDiv > img {
+.bloco-ler .ler-grande {
     grid-column: 1 / -1;
 
     width: min(100%, 950px);
@@ -354,35 +258,12 @@ Imagem 105
     margin: 0 auto;
 
     max-height: 500px;
-
-    object-fit: contain;
-
-    border-radius: clamp(15px, 3vw, 35px);
 }
 
-/*
-Texto abaixo da imagem ocupa largura inteira
-*/
+/* última imagem (coluna direita) */
 
-.decimaquaDiv > img + p {
-    grid-column: 1 / -1;
-}
-
-/*
-Último texto = coluna esquerda
-Última imagem = coluna direita
-*/
-
-.decimaquaDiv > div {
-    min-width: 0;
-}
-
-.decimaquaDiv > div img {
-    width: 100%;
-
+.bloco-ler img:not(.ler-grande) {
     max-height: 420px;
-
-    object-fit: contain;
 }
 
 /*DESKTOP*/
@@ -397,21 +278,6 @@ Texto abaixo da imagem ocupa largura inteira
 
     .titulo {
         margin-left: 0;
-    }
-
-    /*
-    Mantém proporção das duas colunas
-    */
-
-    .primeiraDiv > div,
-    .segundaDiv > div,
-    .quartaDiv > div,
-    .sextaDiv > div,
-    .decimaDiv > div,
-    .decimapriDiv > div,
-    .decimasegDiv > div,
-    .decimaterDiv > div {
-        width: 50%;
     }
 }
 
@@ -433,7 +299,7 @@ Texto abaixo da imagem ocupa largura inteira
 
     /* -------- TÍTULO -------- */
 
-    .descubra h3 {
+    .hieroglifo .descubra {
         text-align: center;
     }
 
@@ -469,21 +335,9 @@ Texto abaixo da imagem ocupa largura inteira
         font-size: clamp(1.3rem, 5vw, 1.8rem);
     }
 
-    /*
-    bloco vira coluna
-    */
+    /* blocos viram coluna */
 
-    .primeiraDiv,
-    .segundaDiv,
-    .quartaDiv,
-    .sextaDiv,
-    .setimaDiv,
-    .oitavaDiv,
-    .nonaDiv,
-    .decimaDiv,
-    .decimapriDiv,
-    .decimasegDiv,
-    .decimaterDiv {
+    .bloco {
         flex-direction: column;
 
         gap: 18px;
@@ -491,19 +345,8 @@ Texto abaixo da imagem ocupa largura inteira
         padding: 18px 0;
     }
 
-    /* imagens */
-
-    .primeiraDiv img,
-    .segundaDiv img,
-    .quartaDiv img,
-    .sextaDiv img,
-    .setimaDiv img,
-    .oitavaDiv img,
-    .nonaDiv img,
-    .decimaDiv img,
-    .decimapriDiv img,
-    .decimasegDiv img,
-    .decimaterDiv img {
+    .bloco img,
+    .bloco.menor img {
         width: min(100%, 420px);
 
         margin: 0 auto;
@@ -513,13 +356,13 @@ Texto abaixo da imagem ocupa largura inteira
 
     /* tipos */
 
-    .terceiraDiv {
+    .bloco-lista {
         padding: 15px 0;
     }
 
     /* -------- COMO LER -------- */
 
-    .decimaquaDiv {
+    .bloco-ler {
         display: flex;
 
         flex-direction: column;
@@ -529,20 +372,24 @@ Texto abaixo da imagem ocupa largura inteira
         padding: 15px 0;
     }
 
-    .decimaquaDiv > * {
+    .bloco-ler > * {
         width: 100%;
     }
 
-    .decimaquaDiv > img {
+    .bloco-ler .ler-grande {
         width: min(100%, 500px);
 
         margin: 0 auto;
+
+        max-height: none;
     }
 
-    .decimaquaDiv > div img {
+    .bloco-ler img:not(.ler-grande) {
         width: min(100%, 420px);
 
         margin: 0 auto;
+
+        max-height: none;
     }
 }
 
