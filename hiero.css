@@ -1,0 +1,428 @@
+:root {
+    --vermelho: #841919;
+    --vermelho-claro: #713434;
+    --bege: #F5E9D5;
+    --branco: #FFF5E2;
+    --dourado: #986912;
+    --cinza: gray;
+}
+
+/* MAIN  */
+
+main {
+    padding: clamp(10px, 3vw, 35px);
+}
+
+/* SEÇÃO*/
+
+.hieroglifo {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: var(--bege);
+
+    border: clamp(5px, 1vw, 10px) solid var(--vermelho);
+    border-radius: clamp(25px, 5vw, 50px);
+
+    padding: clamp(15px, 3vw, 35px);
+
+    overflow: hidden;
+}
+
+/*TEXTOS GERAIS */
+
+.hieroglifo p {
+    color: var(--cinza);
+
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    line-height: 1.35;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+.hieroglifo h3 {
+    color: var(--vermelho);
+
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
+
+    margin:
+        clamp(15px, 3vw, 30px)
+        0
+        clamp(12px, 2vw, 25px);
+
+    text-align: center;
+}
+
+.hieroglifo h4 {
+    color: var(--vermelho-claro);
+}
+
+/* evita imagens estourando */
+
+.hieroglifo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* DESCUBRA  */
+
+.hieroglifo .descubra {
+    color: var(--dourado);
+
+    text-align: left;
+
+    margin: 0 0 clamp(8px, 2vw, 15px);
+
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* TÍTULO */
+
+.titulo {
+    width: fit-content;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: clamp(7px, 2vw, 15px);
+
+    background-color: var(--vermelho);
+
+    padding:
+        clamp(7px, 1.5vw, 15px)
+        clamp(12px, 2vw, 25px);
+
+    border-radius: 999px;
+
+    margin-bottom: clamp(20px, 4vw, 45px);
+
+    box-sizing: border-box;
+}
+
+.titulo img {
+    flex-shrink: 0; /* Não deixa comprimir a imagem */
+
+    width: clamp(50px, 8vw, 100px);
+    height: clamp(50px, 8vw, 100px);
+
+    object-fit: contain;
+
+    background-color: var(--branco);
+
+    padding: clamp(5px, 1vw, 12px);
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+.escrita {
+    text-align: center;
+}
+
+.escrita h2 {
+    color: white;
+
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+
+    margin: 0;
+}
+
+.escrita p {
+    color: rgb(201, 201, 201);
+
+    font-size: clamp(1rem, 2.2vw, 2rem);
+
+    margin: 0;
+}
+
+/*
+   LISTA PRINCIPAL (ul.blocos)
+   Cada li é um bloco de conteúdo.
+*/
+
+.blocos {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* BLOCO PADRÃO: duas colunas (texto + imagem, ou imagem + texto) */
+
+.bloco {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(20px, 4vw, 55px);
+
+    padding: clamp(15px, 3vw, 35px) 0;
+}
+
+/* cada lado ocupa metade */
+
+.bloco > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.bloco img {
+    width: 100%;
+    max-height: 430px;
+
+    object-fit: contain;
+
+    border-radius: clamp(15px, 3vw, 35px);
+}
+
+/* blocos com imagem um pouco menor (curiosidades) */
+
+.bloco.menor img {
+    max-height: 370px;
+}
+
+/* título dentro do texto ao lado da imagem */
+
+.bloco .texto h3 {
+    margin-top: 0;
+}
+
+/* TÍTULOS DE SEÇÃO (li só com h3) */
+
+.bloco-titulo {
+    padding: 0;
+}
+
+/* TIPOS DE HIEROGLIFOS (li com h3 + lista interna) */
+
+.bloco-lista {
+    display: block;
+
+    padding: clamp(20px, 4vw, 45px) 0;
+}
+
+.bloco-lista ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.bloco-lista ul li {
+    margin-bottom: clamp(8px, 1.5vw, 18px);
+}
+
+/* texto Champollion (só um parágrafo) */
+
+.bloco-texto {
+    display: block;
+
+    padding: clamp(15px, 3vw, 35px) 4%;
+}
+
+.bloco-texto p {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+/* COMO LER OS HIEROGLIFOS (grid de 2 colunas) */
+
+.bloco-ler {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: clamp(20px, 3vw, 40px);
+
+    align-items: center;
+
+    padding: clamp(15px, 3vw, 35px) 0;
+}
+
+/* textos e imagem que ocupam a largura inteira */
+
+.bloco-ler .largura-total {
+    grid-column: 1 / -1;
+}
+
+.bloco-ler .ler-grande {
+    grid-column: 1 / -1;
+
+    width: min(100%, 950px);
+
+    margin: 0 auto;
+
+    max-height: 500px;
+}
+
+/* última imagem (coluna direita) */
+
+.bloco-ler img:not(.ler-grande) {
+    max-height: 420px;
+}
+
+/*DESKTOP*/
+
+@media (min-width: 769px) {
+
+    .hieroglifo {
+        padding:
+            clamp(25px, 4vw, 55px)
+            clamp(30px, 5vw, 70px);
+    }
+
+    .titulo {
+        margin-left: 0;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 8px;
+    }
+
+    .hieroglifo {
+        border-width: 5px;
+
+        border-radius: 28px;
+
+        padding: 15px 12px;
+    }
+
+    /* -------- TÍTULO -------- */
+
+    .hieroglifo .descubra {
+        text-align: center;
+    }
+
+    .titulo {
+        margin-left: auto;
+        margin-right: auto;
+
+        gap: 8px;
+    }
+
+    .titulo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .escrita h2 {
+        font-size: 1.4rem;
+    }
+
+    .escrita p {
+        font-size: 1rem;
+    }
+
+    /* -------- TEXTOS -------- */
+
+    .hieroglifo p {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+
+        line-height: 1.4;
+    }
+
+    .hieroglifo h3 {
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+    }
+
+    /* blocos viram coluna */
+
+    .bloco {
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 18px 0;
+    }
+
+    .bloco img,
+    .bloco.menor img {
+        width: min(100%, 420px);
+
+        margin: 0 auto;
+
+        max-height: none;
+    }
+
+    /* tipos */
+
+    .bloco-lista {
+        padding: 15px 0;
+    }
+
+    /* -------- COMO LER -------- */
+
+    .bloco-ler {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 15px 0;
+    }
+
+    .bloco-ler > * {
+        width: 100%;
+    }
+
+    .bloco-ler .ler-grande {
+        width: min(100%, 500px);
+
+        margin: 0 auto;
+
+        max-height: none;
+    }
+
+    .bloco-ler img:not(.ler-grande) {
+        width: min(100%, 420px);
+
+        margin: 0 auto;
+
+        max-height: none;
+    }
+}
+
+/*CELULARES MENORES */
+
+@media (max-width: 400px) {
+
+    .hieroglifo {
+        padding: 12px 9px;
+    }
+
+    .titulo {
+        padding: 7px 11px;
+    }
+
+    .titulo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .escrita h2 {
+        font-size: 1.25rem;
+    }
+
+    .escrita p {
+        font-size: 0.9rem;
+    }
+
+    .hieroglifo p {
+        font-size: 1rem;
+    }
+
+    .hieroglifo h3 {
+        font-size: 1.25rem;
+    }
+}
