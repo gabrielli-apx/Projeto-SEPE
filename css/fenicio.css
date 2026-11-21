@@ -149,10 +149,7 @@ h3.descubra {
 }
 
 
-/*
-   LISTA PRINCIPAL (ul.blocos)
-   Cada li é um bloco de conteúdo.
-*/
+/* Blocos Geral */
 
 .blocos {
     list-style: none;
@@ -162,7 +159,7 @@ h3.descubra {
 }
 
 
-/* BLOCO PADRÃO: duas colunas (texto + imagem, ou imagem + texto) */
+/* Blocos */
 
 .bloco {
     display: flex;
@@ -193,7 +190,7 @@ h3.descubra {
 }
 
 
-/* TÍTULO DE SEÇÃO (li só com h3) */
+/* TÍTULO */
 
 .bloco-titulo {
     text-align: center;
@@ -204,7 +201,7 @@ h3.descubra {
 }
 
 
-/* VOCÊ SABIA? (li só com texto) */
+/* VOCÊ SABIA? */
 
 .bloco-texto {
     text-align: center;
@@ -229,9 +226,6 @@ h3.descubra {
     main {
         padding: 8px;
     }
-
-
-    /* seção */
 
     .fenicio {
         border-width: 5px;
@@ -309,7 +303,7 @@ h3.descubra {
 }
 
 
-/*  CELULARES MUITO PEQUENOS */
+/*  CELULARES PEQUENOS */
 
 @media (max-width: 350px) {
 

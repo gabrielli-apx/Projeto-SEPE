@@ -6,359 +6,456 @@
     --bege: #F5E9D5;
     --branco: #FFF5E2;
     --dourado: #986912;
-
-    --espaco: clamp(10px, 3vw, 40px);
-    --texto: clamp(1rem, 3.8vw, 1.8rem);
-    --titulo: clamp(1.2rem, 5vw, 2.5rem);
+    --cinza: gray;
 }
-
 
 /* MAIN */
 
 main {
-    padding: clamp(10px, 3vw, 30px);
+    padding: clamp(10px, 3vw, 35px);
 }
 
 /* SEÇÃO ATUALIDADE */
 
 .atualidade {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
     background-color: var(--bege);
-    border: clamp(5px, 1vw, 10px) solid var(--vermelho);
+
+    border: clamp(5px, 1vw, 10px)
+            solid var(--vermelho);
+
     border-radius: clamp(25px, 5vw, 50px);
 
-    padding: clamp(12px, 3vw, 30px);
+    padding: clamp(15px, 3vw, 35px);
 
-    width: 100%;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* "DESCUBRA A ESCRITA DA" */
+/* TEXTOS GERAIS */
 
-.atualidade h3.descubra {
-    color: var(--dourado);
+.atualidade p {
+    color: var(--cinza);
 
-    font-size: clamp(1.1rem, 4.5vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.8rem);
+
+    line-height: 1.4;
+
+    margin: 0;
 
     text-align: center;
 
-    margin: 0 0 clamp(10px, 3vw, 20px);
+    overflow-wrap: break-word;
 }
 
-/* "DESCUBRA A ESCRITA DA" */
-/* TÍTULO ATUALIDADE */
+.atualidade h3 {
+    color: var(--vermelho);
 
-.titulo {
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
+
+    margin:
+        clamp(15px, 3vw, 30px)
+        0
+        clamp(12px, 2vw, 25px);
+
+    text-align: center;
+}
+
+.atualidade h4 {
+    color: var(--vermelho-claro);
+
+    font-size: clamp(1.1rem, 3vw, 2rem);
+}
+
+/* IMAGENS GERAIS */
+
+.atualidade img {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+/* DESCUBRA A ESCRITA */
+
+.atualidade .descubra {
+    color: var(--dourado);
+
+    text-align: left;
+
+    margin: 0 0 clamp(8px, 2vw, 15px);
+
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* TÍTULO */
+
+.atualidade .titulo {
     width: fit-content;
     max-width: 100%;
 
     display: flex;
+
     align-items: center;
 
-    gap: clamp(6px, 2vw, 15px);
+    gap: clamp(7px, 2vw, 15px);
 
     background-color: var(--vermelho);
 
-    padding: clamp(7px, 2vw, 15px)
-             clamp(10px, 3vw, 20px);
+    padding:
+        clamp(7px, 1.5vw, 15px)
+        clamp(12px, 2vw, 25px);
 
-    border-radius: 360px;
+    border-radius: 999px;
 
-    margin: 0 auto clamp(20px, 4vw, 35px);
+    margin-bottom: clamp(20px, 4vw, 45px);
 
     box-sizing: border-box;
 }
 
+/* IMAGEM DO TÍTULO */
 
-/* círculo da letra A */
+.atualidade .titulo img {
+    flex-shrink: 0;
 
-.titulo img {
-    width: clamp(45px, 15vw, 100px);
-    height: clamp(45px, 15vw, 100px);
+    width: clamp(50px, 8vw, 100px);
 
-    padding: clamp(5px, 1.5vw, 12px);
+    height: clamp(50px, 8vw, 100px);
+
+    object-fit: contain;
 
     background-color: var(--branco);
+
+    padding: clamp(5px, 1vw, 12px);
 
     border-radius: 50%;
 
     box-sizing: border-box;
 }
 
+/* TEXTO DO TÍTULO */
 
-/* escrita do título */
+.atualidade .escrita {
+    min-width: 0;
 
-.escrita {
     text-align: center;
 }
 
-.escrita h2 {
+.atualidade .escrita h2 {
     color: white;
 
-    font-size: clamp(1.2rem, 5vw, 2.5rem);
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
 
     margin: 0;
 }
 
-.escrita p {
+.atualidade .escrita p {
     color: rgb(201, 201, 201);
 
-    font-size: clamp(0.9rem, 3.5vw, 2rem);
+    font-size: clamp(1rem, 2.2vw, 2rem);
 
     margin: 0;
 }
 
+/* LISTA PRINCIPAL */
 
-/*
-   PRIMEIRA DIV*/
+.atualidade .blocos {
+    list-style: none;
 
-.primeiraDiv {
+    padding: 0;
+
+    margin: 0;
+}
+
+/* BLOCOS DE CONTEÚDO */
+
+.atualidade .bloco {
     display: flex;
 
     align-items: center;
 
-    gap: clamp(15px, 4vw, 40px);
+    gap: clamp(20px, 4vw, 55px);
 
-    padding: clamp(10px, 2vw, 30px) 0;
+    padding: clamp(15px, 3vw, 35px) 0;
 }
 
+/* DUAS COLUNAS */
 
-/* texto */
+.atualidade .bloco > * {
+    flex: 1 1 0;
 
-.primeiraDiv > div:first-child {
-    flex: 1;
+    min-width: 0;
 }
 
-.primeiraDiv p {
-    color: gray;
+/* TEXTO DOS BLOCOS */
 
-    font-size: var(--texto);
+.atualidade .bloco .texto {
+    width: 100%;
+
+    min-width: 0;
+}
+
+.atualidade .bloco .texto p {
+    color: var(--cinza);
+
+    font-size: clamp(1rem, 2vw, 1.8rem);
 
     line-height: 1.4;
 
-    margin: 0;
-
     text-align: center;
+
+    margin: 0;
 }
 
+/* ÁREA DAS IMAGENS */
 
-/* imagem */
-
-.primeiraDiv > div:last-child {
-    flex: 1;
-}
-
-.primeiraDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-}
-
-
-/* SEGUNDA DIV*/
-
-.segundaDiv {
+.atualidade .bloco .imagem {
     display: flex;
 
     align-items: center;
 
-    gap: clamp(15px, 4vw, 40px);
+    justify-content: center;
 
-    padding: clamp(10px, 2vw, 30px) 0;
+    min-width: 0;
 }
 
+/* IMAGEM PADRÃO DOS BLOCOS */
 
-/* imagem */
-
-.segundaDiv > div:first-child {
-    flex: 1;
-}
-
-.segundaDiv img {
+.atualidade .bloco .imagem img {
     display: block;
 
     width: 100%;
+
+    max-width: 480px;
+
     height: auto;
 
-    max-width: 100%;
+    max-height: 360px;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+
+    border-radius: clamp(15px, 3vw, 35px);
 }
 
+/* IMAGEM DO SEGUNDO BLOCO - MAIOR */
 
-/* texto */
+.atualidade .bloco:nth-child(2) .imagem img {
+    width: 100%;
 
-.segundaDiv > div:last-child {
-    flex: 1;
+    max-width: 650px;
+
+    height: auto;
+
+    max-height: 500px;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+
+    border-radius: clamp(15px, 3vw, 35px);
 }
 
-.segundaDiv p {
-    color: gray;
+/* COMPUTADOR */
 
-    font-size: var(--texto);
+@media (min-width: 769px) {
 
-    line-height: 1.4;
+    .atualidade {
+        padding:
+            clamp(25px, 4vw, 55px)
+            clamp(30px, 5vw, 70px);
+    }
 
-    margin: 0;
+    /* TÍTULO */
 
-    text-align: center;
+    .atualidade .titulo {
+        margin-left: 0;
+    }
+
+    /* SEGUNDO BLOCO COM IMAGEM MAIOR */
+
+    .atualidade .bloco:nth-child(2) .imagem {
+        flex: 1.3 1 0;
+    }
+
+    .atualidade .bloco:nth-child(2) .texto {
+        flex: 1 1 0;
+    }
 }
 
-
-/* CELULAR */
+/* CELULAR E TABLET */
 
 @media (max-width: 768px) {
+
+    /* MAIN */
 
     main {
         padding: 8px;
     }
 
+    /* SEÇÃO */
+
     .atualidade {
         border-width: 5px;
 
-        padding: 12px 10px;
+        border-radius: 28px;
+
+        padding: 15px 12px;
     }
 
+    /* DESCUBRA */
 
-    /* título */
+    .atualidade .descubra {
+        text-align: center;
+    }
 
-    .titulo {
+    /* TÍTULO */
+
+    .atualidade .titulo {
         margin-left: auto;
+
         margin-right: auto;
 
-        gap: 7px;
+        gap: 8px;
     }
 
+    .atualidade .titulo img {
+        width: 55px;
 
-    /* PRIMEIRO BLOCO */
-
-    .primeiraDiv {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 20px;
-
-        padding: 10px 5px;
+        height: 55px;
     }
 
-    .primeiraDiv > div {
-        width: 100%;
+    .atualidade .escrita h2 {
+        font-size: 1.4rem;
     }
 
-    .primeiraDiv p {
-        font-size: clamp(1rem, 4.5vw, 1.3rem);
-
-        line-height: 1.35;
-
-        text-align: center;
-    }
-
-    .primeiraDiv img {
-        width: min(100%, 280px);
-
-        margin: 0 auto;
-    }
-
-
-    /* SEGUNDO BLOCO */
-
-    .segundaDiv {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 20px;
-
-        padding: 10px 5px;
-    }
-
-    .segundaDiv > div {
-        width: 100%;
-    }
-
-    .segundaDiv p {
-        font-size: clamp(1rem, 4.5vw, 1.3rem);
-
-        line-height: 1.35;
-
-        text-align: center;
-    }
-
-    .segundaDiv img {
-        width: min(100%, 280px);
-
-        margin: 0 auto;
-    }
-}
-
-
-/* CELULARES MUITO PEQUENOS */
-
-@media (max-width: 350px) {
-
-    .atualidade {
-        padding: 10px 7px;
-    }
-
-    .atualidade h3.descubra {
-        font-size: 1.1rem;
-    }
-
-    .titulo {
-        padding: 6px 10px;
-    }
-
-    .titulo img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .escrita h2 {
-        font-size: 1.25rem;
-    }
-
-    .escrita p {
-        font-size: 0.9rem;
-    }
-
-    .primeiraDiv p,
-    .segundaDiv p {
+    .atualidade .escrita p {
         font-size: 1rem;
     }
-}
 
-
-/* COMPUTADOR E TABLET */
-
-@media (min-width: 768px) {
+    /* TEXTOS GERAIS */
 
     .atualidade p {
-        font-size: clamp(1.3rem, 2vw, 1.8rem);
+        font-size: clamp(1rem, 4vw, 1.25rem);
+
+        line-height: 1.4;
     }
 
     .atualidade h3 {
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
     }
 
-    .atualidade h4 {
-        font-size: 2rem;
+    /* BLOCOS EM COLUNA */
+
+    .atualidade .bloco {
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 18px 0;
     }
 
-    .titulo {
-        margin-left: 0;
+    .atualidade .bloco > * {
+        flex: 0 1 auto;
+
+        width: 100%;
     }
 
-    .titulo img {
-        width: 100px;
-        height: 100px;
+    /* TEXTO */
+
+    .atualidade .bloco .texto p {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+
+        line-height: 1.4;
+
+        text-align: center;
     }
 
-    .escrita h2 {
-        font-size: 2.5rem;
+    /* PRIMEIRA IMAGEM */
+
+    .atualidade .bloco .imagem img {
+        width: 100%;
+
+        max-width: 360px;
+
+        max-height: none;
+
+        height: auto;
+
+        margin: 0 auto;
     }
 
-    .escrita p {
-        font-size: 2rem;
+    /* SEGUNDA IMAGEM MAIOR */
+
+    .atualidade .bloco:nth-child(2) .imagem img {
+        width: 100%;
+
+        max-width: 420px;
+
+        max-height: none;
+
+        height: auto;
+
+        margin: 0 auto;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 400px) {
+
+    /* SEÇÃO */
+
+    .atualidade {
+        padding: 12px 9px;
+    }
+
+    /* TÍTULO */
+
+    .atualidade .titulo {
+        padding: 7px 11px;
+    }
+
+    .atualidade .titulo img {
+        width: 48px;
+
+        height: 48px;
+    }
+
+    .atualidade .escrita h2 {
+        font-size: 1.25rem;
+    }
+
+    .atualidade .escrita p {
+        font-size: 0.9rem;
+    }
+
+    /* TEXTOS */
+
+    .atualidade p {
+        font-size: 1rem;
+    }
+
+    .atualidade .bloco .texto p {
+        font-size: 1rem;
+    }
+
+    .atualidade h3 {
+        font-size: 1.25rem;
+    }
+
+    /* SEGUNDA IMAGEM */
+
+    .atualidade .bloco:nth-child(2) .imagem img {
+        width: 100%;
+
+        max-width: 420px;
+
+        height: auto;
     }
 }

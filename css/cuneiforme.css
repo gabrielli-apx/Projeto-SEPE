@@ -64,10 +64,7 @@ main {
     color: rgb(201, 201, 201);
 }
 
-/*
-   LISTA PRINCIPAL (ul.blocos)
-   Cada li é um bloco de conteúdo.
-*/
+/* Blocos Geral */
 
 .blocos {
     list-style: none;
@@ -75,7 +72,7 @@ main {
     padding: 0;
 }
 
-/* BLOCO PADRÃO: duas colunas (imagem + texto, ou texto + imagem) */
+/* Blocos */
 
 .bloco {
     display: flex;
@@ -102,14 +99,14 @@ main {
     margin: 0;
 }
 
-/* legenda da imagem (Behistun) */
+/* Behistun */
 
 .behistun {
     color: #713434;
     font-size: 1.4rem;
 }
 
-/* PRIMEIRO BLOCO: texto + imagem em cima, texto em largura total embaixo */
+/* Primeiro Bloco */
 
 .bloco-grid {
     display: grid;
@@ -122,13 +119,13 @@ main {
     grid-column: 1 / -1;
 }
 
-/* blocos só com texto */
+/* Texto */
 
 .bloco-texto {
     display: block;
 }
 
-/* "Você sabia?" */
+/* Você Sabia? */
 
 .bloco-destaque {
     padding: 5vw 0;
@@ -173,7 +170,7 @@ main {
         width: 100%;
     }
 
-    /* textos um pouco menores no celular */
+  /* CELULARES PEQUENOS */
 
     .cuneiforme h3 {
         font-size: 1.5rem;

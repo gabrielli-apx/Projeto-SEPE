@@ -147,10 +147,7 @@ h3.descubra {
 }
 
 
-/*
-   LISTA PRINCIPAL (ul.blocos)
-   Cada li é um bloco de conteúdo.
-*/
+/* Blocos Geral*/
 
 .blocos {
     list-style: none;
@@ -160,7 +157,7 @@ h3.descubra {
 }
 
 
-/* BLOCO PADRÃO: duas colunas (texto + imagem, ou imagem + texto) */
+/* Blocos */
 
 .bloco {
     display: flex;
@@ -199,9 +196,6 @@ h3.descubra {
         padding: 8px;
     }
 
-
-    /* seção */
-
     .grego {
         border-width: 5px;
 
@@ -219,7 +213,7 @@ h3.descubra {
     }
 
 
-    /* blocos viram coluna */
+    /* blocos Coluna */
 
     .bloco {
         flex-direction: column;

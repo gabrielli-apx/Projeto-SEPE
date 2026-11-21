@@ -140,10 +140,7 @@ main {
     margin: 0;
 }
 
-/*
-   LISTA PRINCIPAL (ul.blocos)
-   Cada li é um bloco de conteúdo.
-*/
+/* Blocos Geral */
 
 .blocos {
     list-style: none;
@@ -152,7 +149,7 @@ main {
     margin: 0;
 }
 
-/* BLOCO PADRÃO: duas colunas (texto + imagem, ou imagem + texto) */
+/* Blocos */
 
 .bloco {
     display: flex;
@@ -193,13 +190,13 @@ main {
     margin-top: 0;
 }
 
-/* TÍTULOS DE SEÇÃO (li só com h3) */
+/* TÍTULOS DE SEÇÃO */
 
 .bloco-titulo {
     padding: 0;
 }
 
-/* TIPOS DE HIEROGLIFOS (li com h3 + lista interna) */
+/* TIPOS DE HIEROGLIFOS */
 
 .bloco-lista {
     display: block;
@@ -232,7 +229,7 @@ main {
     margin: 0 auto;
 }
 
-/* COMO LER OS HIEROGLIFOS (grid de 2 colunas) */
+/* COMO LER OS HIEROGLIFOS */
 
 .bloco-ler {
     display: grid;
@@ -263,7 +260,7 @@ main {
     max-height: 420px;
 }
 
-/* última imagem (coluna direita) */
+/* última imagem */
 
 .bloco-ler img:not(.ler-grande) {
     max-width: 340px;
@@ -302,7 +299,7 @@ main {
         padding: 15px 12px;
     }
 
-    /* -------- TÍTULO -------- */
+    /* TÍTULO */
 
     .hieroglifo .descubra {
         text-align: center;
@@ -328,7 +325,7 @@ main {
         font-size: 1rem;
     }
 
-    /* -------- TEXTOS -------- */
+    /* TEXTOS */
 
     .hieroglifo p {
         font-size: clamp(1rem, 4vw, 1.25rem);
@@ -340,7 +337,7 @@ main {
         font-size: clamp(1.3rem, 5vw, 1.8rem);
     }
 
-    /* blocos viram coluna */
+    /* blocos coluna */
 
     .bloco {
         flex-direction: column;
@@ -365,7 +362,7 @@ main {
         padding: 15px 0;
     }
 
-    /* -------- COMO LER -------- */
+    /* COMO LER */
 
     .bloco-ler {
         display: flex;

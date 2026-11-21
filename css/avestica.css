@@ -6,43 +6,56 @@
     --bege: #F5E9D5;
     --branco: #FFF5E2;
     --dourado: #986912;
-
-    --espaco: clamp(10px, 3vw, 40px);
-    --texto: clamp(1rem, 3.8vw, 1.8rem);
-    --titulo: clamp(1.2rem, 5vw, 2.5rem);
+    --cinza: gray;
 }
-
 
 /* MAIN */
 
 main {
-    padding: clamp(10px, 3vw, 30px);
+    padding: clamp(10px, 3vw, 35px);
 }
 
-
-/* SEÇÃO AVESTICA */
+/* SEÇÃO AVÉSTICA */
 
 .avestica {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
     background-color: var(--bege);
 
     border: clamp(5px, 1vw, 10px) solid var(--vermelho);
     border-radius: clamp(25px, 5vw, 50px);
 
-    padding: clamp(12px, 3vw, 30px);
+    padding: clamp(15px, 3vw, 35px);
 
-    width: 100%;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
+/* TEXTOS GERAIS */
 
-/* TÍTULOS E TEXTOS */
+.avestica p {
+    color: var(--cinza);
+
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    line-height: 1.4;
+
+    margin: 0;
+
+    text-align: center;
+    overflow-wrap: break-word;
+}
 
 .avestica h3 {
     color: var(--vermelho);
 
-    font-size: clamp(1.3rem, 4vw, 2.5rem);
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
 
-    margin: clamp(10px, 2vw, 15px);
+    margin:
+        clamp(15px, 3vw, 30px)
+        0
+        clamp(12px, 2vw, 25px);
 
     text-align: center;
 }
@@ -50,199 +63,184 @@ main {
 .avestica h4 {
     color: var(--vermelho-claro);
 
-    font-size: clamp(1.1rem, 3.5vw, 2rem);
-
-    margin: clamp(8px, 2vw, 12px);
-
-    text-align: center;
+    font-size: clamp(1.1rem, 3vw, 2rem);
 }
 
-.avestica p {
-    color: gray;
+/* IMAGENS GERAIS */
 
-    font-size: var(--texto);
+.avestica img {
+    display: block;
 
-    line-height: 1.4;
-
-    text-align: center;
+    max-width: 100%;
+    height: auto;
 }
 
+/* DESCUBRA */
 
-/* "DESCUBRA A ESCRITA DA" */
-
-.avestica h3.descubra {
+.avestica .descubra {
     color: var(--dourado);
 
-    font-size: clamp(1.1rem, 4.5vw, 2rem);
+    text-align: left;
 
-    text-align: center;
+    margin: 0 0 clamp(8px, 2vw, 15px);
 
-    margin: 0 0 clamp(10px, 3vw, 20px);
+    font-size: clamp(1.2rem, 3vw, 2rem);
 }
-
 
 /* TÍTULO */
 
-.titulo {
+.avestica .titulo {
     width: fit-content;
     max-width: 100%;
 
     display: flex;
     align-items: center;
 
-    gap: clamp(6px, 2vw, 15px);
+    gap: clamp(7px, 2vw, 15px);
 
     background-color: var(--vermelho);
 
-    padding: clamp(7px, 2vw, 15px)
-             clamp(10px, 3vw, 20px);
+    padding:
+        clamp(7px, 1.5vw, 15px)
+        clamp(12px, 2vw, 25px);
 
-    border-radius: 360px;
+    border-radius: 999px;
 
-    margin: 0 auto clamp(20px, 4vw, 35px);
+    margin-bottom: clamp(20px, 4vw, 45px);
 
     box-sizing: border-box;
 }
 
+/* IMAGEM DO TÍTULO */
 
-/* círculo da imagem */
+.avestica .titulo img {
+    flex-shrink: 0;
 
-.titulo img {
-    width: clamp(45px, 15vw, 100px);
-    height: clamp(45px, 15vw, 100px);
-
-    padding: clamp(5px, 1.5vw, 12px);
-
-    background-color: var(--branco);
-
-    border-radius: 50%;
+    width: clamp(50px, 8vw, 100px);
+    height: clamp(50px, 8vw, 100px);
 
     object-fit: contain;
 
+    background-color: var(--branco);
+
+    padding: clamp(5px, 1vw, 12px);
+
+    border-radius: 50%;
+
     box-sizing: border-box;
 }
 
+/* TEXTO DO TÍTULO */
 
-/* escrita do título */
-
-.escrita {
+.avestica .escrita {
+    min-width: 0;
     text-align: center;
 }
 
-.escrita h2 {
+.avestica .escrita h2 {
     color: white;
 
-    font-size: clamp(1.2rem, 5vw, 2.5rem);
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
 
     margin: 0;
 }
 
-.escrita p {
+.avestica .escrita p {
     color: rgb(201, 201, 201);
 
-    font-size: clamp(0.9rem, 3.5vw, 2rem);
+    font-size: clamp(1rem, 2.2vw, 2rem);
 
     margin: 0;
 }
 
+/* LISTA PRINCIPAL */
 
-/* PRIMEIRA DIV */
+.avestica .blocos {
+    list-style: none;
 
-.primeiraDiv {
+    padding: 0;
+    margin: 0;
+}
+
+/* BLOCOS DE CONTEÚDO */
+
+.avestica .bloco {
     display: flex;
-
     align-items: center;
 
-    gap: clamp(15px, 4vw, 40px);
+    gap: clamp(20px, 4vw, 55px);
 
-    padding: clamp(10px, 2vw, 30px) 0;
-
-    text-align: center;
+    padding: clamp(15px, 3vw, 35px) 0;
 }
 
+/* DUAS COLUNAS */
 
-/* elementos da primeira div */
-
-.primeiraDiv > div {
-    flex: 1;
+.avestica .bloco > * {
+    flex: 1 1 0;
+    min-width: 0;
 }
 
-.primeiraDiv p {
-    color: gray;
+/* TEXTO DOS BLOCOS */
 
-    font-size: var(--texto);
+.avestica .bloco .texto {
+    width: 100%;
+    min-width: 0;
+}
+
+.avestica .bloco .texto p {
+    color: var(--cinza);
+
+    font-size: clamp(1rem, 2vw, 1.8rem);
 
     line-height: 1.4;
 
-    margin: 0;
-
     text-align: center;
+
+    margin: 0;
 }
 
+/* ÁREA DAS IMAGENS */
 
-/* imagem */
-
-.primeiraDiv img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
-
-/* SEGUNDA DIV */
-
-.segundaDiv {
+.avestica .bloco .imagem {
     display: flex;
-
     align-items: center;
-
-    gap: clamp(15px, 4vw, 40px);
-
-    padding: clamp(10px, 2vw, 30px) 0;
-
-    text-align: center;
+    justify-content: center;
 }
 
+/* IMAGENS DOS BLOCOS */
 
-/* elementos da segunda div */
-
-.segundaDiv > div {
-    flex: 1;
-}
-
-.segundaDiv p {
-    color: gray;
-
-    font-size: var(--texto);
-
-    line-height: 1.4;
-
-    margin: 0;
-
-    text-align: center;
-}
-
-
-/* imagem */
-
-.segundaDiv img {
+.avestica .bloco .imagem img {
     display: block;
 
     width: 100%;
-    height: auto;
+    max-width: 480px;
 
-    max-width: 100%;
+    height: auto;
+    max-height: 360px;
+
+    object-fit: contain;
 
     margin: 0 auto;
+
+    border-radius: clamp(15px, 3vw, 35px);
 }
 
+/* COMPUTADOR */
 
-/* CELULAR */
+@media (min-width: 769px) {
+
+    .avestica {
+        padding:
+            clamp(25px, 4vw, 55px)
+            clamp(30px, 5vw, 70px);
+    }
+
+    .avestica .titulo {
+        margin-left: 0;
+    }
+}
+
+/* CELULAR E TABLET */
 
 @media (max-width: 768px) {
 
@@ -250,152 +248,132 @@ main {
         padding: 8px;
     }
 
+    /* SEÇÃO */
+
     .avestica {
         border-width: 5px;
 
-        padding: 12px 10px;
+        border-radius: 28px;
+
+        padding: 15px 12px;
     }
 
+    /* DESCUBRA */
 
-    /* título */
+    .avestica .descubra {
+        text-align: center;
+    }
 
-    .titulo {
+    /* TÍTULO */
+
+    .avestica .titulo {
         margin-left: auto;
         margin-right: auto;
 
-        gap: 7px;
+        gap: 8px;
     }
 
+    .avestica .titulo img {
+        width: 55px;
+        height: 55px;
+    }
 
-    /* PRIMEIRO BLOCO */
+    .avestica .escrita h2 {
+        font-size: 1.4rem;
+    }
 
-    .primeiraDiv {
+    .avestica .escrita p {
+        font-size: 1rem;
+    }
+
+    /* TEXTOS GERAIS */
+
+    .avestica p {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+
+        line-height: 1.4;
+    }
+
+    .avestica h3 {
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+    }
+
+    /* BLOCOS EM COLUNA */
+
+    .avestica .bloco {
         flex-direction: column;
 
-        gap: 20px;
+        gap: 18px;
 
-        padding: 10px 5px;
+        padding: 18px 0;
     }
 
-    .primeiraDiv > div {
+    .avestica .bloco > * {
+        flex: 0 1 auto;
         width: 100%;
     }
 
-    .primeiraDiv p {
-        font-size: clamp(1rem, 4.5vw, 1.3rem);
+    /* TEXTO */
 
-        line-height: 1.35;
+    .avestica .bloco .texto p {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+
+        line-height: 1.4;
 
         text-align: center;
     }
 
-    .primeiraDiv img {
-        width: min(100%, 280px);
+    /* IMAGENS */
 
-        height: auto;
-
-        margin: 0 auto;
-    }
-
-
-    /* SEGUNDO BLOCO */
-
-    .segundaDiv {
-        flex-direction: column;
-
-        gap: 20px;
-
-        padding: 10px 5px;
-    }
-
-    .segundaDiv > div {
+    .avestica .bloco .imagem img {
         width: 100%;
-    }
+        max-width: 360px;
 
-    .segundaDiv p {
-        font-size: clamp(1rem, 4.5vw, 1.3rem);
-
-        line-height: 1.35;
-
-        text-align: center;
-    }
-
-    .segundaDiv img {
-        width: min(100%, 280px);
-
+        max-height: none;
         height: auto;
 
         margin: 0 auto;
     }
 }
 
+/* CELULARES PEQUENOS */
 
-/* CELULARES MUITO PEQUENOS */
-
-@media (max-width: 350px) {
+@media (max-width: 400px) {
 
     .avestica {
-        padding: 10px 7px;
+        padding: 12px 9px;
     }
 
-    .avestica h3.descubra {
-        font-size: 1.1rem;
+    /* TÍTULO */
+
+    .avestica .titulo {
+        padding: 7px 11px;
     }
 
-    .titulo {
-        padding: 6px 10px;
-    }
-
-    .titulo img {
+    .avestica .titulo img {
         width: 48px;
         height: 48px;
     }
 
-    .escrita h2 {
+    .avestica .escrita h2 {
         font-size: 1.25rem;
     }
 
-    .escrita p {
+    .avestica .escrita p {
         font-size: 0.9rem;
     }
 
-    .primeiraDiv p,
-    .segundaDiv p {
-        font-size: 1rem;
-    }
-}
-
-
-/* COMPUTADOR / TABLET */
-
-@media (min-width: 768px) {
+    /* TEXTOS */
 
     .avestica p {
-        font-size: clamp(1.3rem, 2vw, 1.8rem);
+        font-size: 1rem;
+    }
+
+    .avestica .bloco .texto p {
+        font-size: 1rem;
     }
 
     .avestica h3 {
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-    }
-
-    .avestica h4 {
-        font-size: 2rem;
-    }
-
-    .titulo {
-        margin-left: 0;
-    }
-
-    .titulo img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .escrita h2 {
-        font-size: 2.5rem;
-    }
-
-    .escrita p {
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
 }
