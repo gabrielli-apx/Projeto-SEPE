@@ -29,8 +29,8 @@ section {
     transform: translateY(-14px);
 }
 
-.primeiro h2,
-.segundo h2 {
+.primeiro h3,
+.segundo h3 {
     color: #f8e9c9;
     margin: -18px -18px 15px;
     padding: 12px;
@@ -39,11 +39,11 @@ section {
     border-radius: 20px 20px 0 0;
 }
 
-.primeiro h2 {
+.primeiro h3 {
     background-color: #841919;
 }
 
-.segundo h2 {
+.segundo h3 {
     background-color: #704438;
 }
 
@@ -94,13 +94,17 @@ h6 {
 
     .primeiro img,
     .segundo img {
-        width: 42%;
-        height: 120px;
-    }
+    float: none;
+    display: block;
+    width: 100%;
+    height: 180px;
+    margin: 0 auto 12px;
+    box-sizing: border-box;
+}
 
     .primeiro p,
     .segundo p {
-        font-size: 13px;
+        font-size: 1.2rem;
     }
 }
 
