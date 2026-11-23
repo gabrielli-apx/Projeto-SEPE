@@ -11,8 +11,9 @@
     background-color: #F5E9D2;
     padding: 20px 30px 30px;
     border-radius: 26px;
-    margin: 10px;
-    font-size: 1.5rem;
+    margin: 30px;
+    font-size: 1.2rem;
+    padding: 40px;
 }
 
 .opcoes h1 {
@@ -34,6 +35,8 @@
     border: 10px solid #714A3E;
     border-radius: 40px;
     text-align: center;
+    color: white;
+    
 }
 
 .opcoes ul li div {
@@ -79,7 +82,7 @@
 
 .opcoes p,
 .opcoes .botao-categoria {
-    background-color: #f5e4c4;
+    background-color: #714A3E;
     border-radius: 20px;
     padding: 15px 0;
     margin: 40px 15px 30px;
