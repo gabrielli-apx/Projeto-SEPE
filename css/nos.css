@@ -14,7 +14,7 @@ main {
 .titulo-secao {
     width: 100%;
     background-color: #841919;
-    padding: 7px 20px;
+    padding: 12px 20px;
     box-sizing: border-box;
 
     transition: background-color 0.3s ease;
@@ -22,7 +22,7 @@ main {
 
 .titulo-secao h2 {
     margin: 0;
-    font-size: 13px;
+    font-size: 22px;
     font-weight: 400;
     color: white;
 }
@@ -57,7 +57,7 @@ main {
     margin: 0 0 12px;
     text-align: center;
     color: #841919;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
 
     transition: color 0.3s ease;
@@ -66,7 +66,7 @@ main {
 .card p {
     margin: 0 0 10px;
     color: #4c2924;
-    font-size: 9px;
+    font-size: 17px;
     line-height: 1.35;
     text-align: justify;
 }
@@ -97,7 +97,7 @@ main {
 
 .integrantes ul {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px 8px;
     padding: 0;
     margin: 0;
@@ -112,7 +112,7 @@ main {
     align-items: center;
     text-align: center;
     color: #4c2924;
-    font-size: 7px;
+    font-size: 12px;
     line-height: 1.2;
     background-color: white;
     padding: 10px;
